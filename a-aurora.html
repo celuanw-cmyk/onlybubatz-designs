@@ -1661,6 +1661,40 @@ html.age-ok .gate{display:none}
   renderCart();
 })();
 </script>
+
+  <!-- Reveal-Fallback: garantiert sichtbare Inhalte, auch wenn der IntersectionObserver nicht feuert -->
+  <script>
+  (function () {
+    var MARK = "data-reveal-fallback";
+    if (document.documentElement.hasAttribute(MARK)) return;
+    document.documentElement.setAttribute(MARK, "1");
+    function showVisible() {
+      var vh = window.innerHeight || 800;
+      var els = document.querySelectorAll("[data-reveal]:not(.in)");
+      for (var i = 0; i < els.length; i++) {
+        var r = els[i].getBoundingClientRect();
+        if (r.top < vh * 1.15 && r.bottom > -100) els[i].classList.add("in");
+      }
+    }
+    function arm() {
+      showVisible();
+      setTimeout(showVisible, 400);
+      setTimeout(showVisible, 1200);
+      setTimeout(showVisible, 2500);
+    }
+    if (document.readyState === "complete") arm();
+    else window.addEventListener("load", arm);
+    document.addEventListener("scroll", showVisible, { passive: true });
+    window.addEventListener("resize", showVisible);
+    // Letzte Absicherung: nach 6 s alles sichtbar, was im Dokument steht
+    setTimeout(function () {
+      var els = document.querySelectorAll("[data-reveal]:not(.in)");
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].getBoundingClientRect().top < (window.innerHeight || 800) * 3) els[i].classList.add("in");
+      }
+    }, 6000);
+  })();
+  </script>
 </body>
 </html>
 
