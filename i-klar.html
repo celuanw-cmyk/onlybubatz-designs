@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Only Bubatz — Premium Cannabis Gear</title>
+<meta name="description" content="Filter, Papers, Grinder und Aufbewahrung. Handverlesen, diskret versendet, versandkostenfrei ab 49 €.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<script>
+  document.documentElement.classList.add('js');
+  try { if (localStorage.getItem('ob_klar_age_v1') === '1') document.documentElement.classList.add('age-ok'); } catch (e) {}
+</script>
+<style>
+  /* ---------- Tokens ---------- */
+  :root{
+    --ink:#0e1412;
+    --ink-soft:#3b423e;
+    --muted:#5f6662;
+    --faint:#8b918d;
+    --line:#e7e8e4;
+    --line-strong:#c6c9c2;
+    --surface:#f7f7f4;
+    --surface-2:#fafaf8;
+    --green:#00372c;
+    --rust:#e04f1a;
+    --rust-dark:#c94514;
+    --radius:24px;
+    --container:1180px;
+    --gutter:32px;
+  }
+
+  /* ---------- Reset ---------- */
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
+  body{
+    margin:0;background:#fff;color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:16px;font-weight:400;line-height:1.55;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  h1,h2,h3,p,figure{margin:0}
+  ul,ol{margin:0;padding:0;list-style:none}
+  a{color:inherit;text-decoration:none}
+  button,input{font:inherit;color:inherit}
+  button{background:none;border:0;padding:0}
+  :focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+  ::selection{background:#f6d3c4;color:#0e1412}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  [hidden]{display:none !important}
+
+  .container{width:min(var(--container),calc(100% - var(--gutter) * 2));margin-inline:auto}
+
+  /* ---------- Type ---------- */
+  .h2{
+    font-size:clamp(26px,2.5vw,34px);line-height:1.14;font-weight:700;
+    letter-spacing:-.025em;text-wrap:balance;
+  }
+  .sub{margin-top:10px;font-size:15.5px;line-height:1.6;color:var(--muted);max-width:54ch;text-wrap:pretty}
+
+  /* ---------- Buttons / links ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:48px;padding:0 22px;border-radius:10px;border:1px solid transparent;
+    font-size:14.5px;font-weight:550;letter-spacing:-.005em;cursor:pointer;
+    transition:background-color .18s ease,border-color .18s ease,color .18s ease;
+    white-space:nowrap;
+  }
+  .btn-rust{background:var(--rust);color:#050806}
+  .btn-rust:hover{background:var(--rust-dark);color:#fff}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-ink:hover{background:#000}
+  .btn-block{width:100%}
+  .link-arrow{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;color:var(--ink-soft);padding-bottom:2px;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+  .link-arrow svg{transition:transform .2s ease}
+  .link-arrow:hover{color:var(--ink);border-color:var(--ink)}
+  .link-arrow:hover svg{transform:translateX(2px)}
+
+  /* ---------- Announcement ---------- */
+  .announce{background:var(--green);color:#fff}
+  .announce-in{height:36px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:450;letter-spacing:.005em;color:rgba(255,255,255,.9);white-space:nowrap}
+  .a-short{display:none}
+
+  /* ---------- Header ---------- */
+  .header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.88);
+    -webkit-backdrop-filter:blur(18px) saturate(1.4);
+    backdrop-filter:blur(18px) saturate(1.4);
+    border-bottom:1px solid var(--line);
+    transition:box-shadow .25s ease;
+  }
+  .header.scrolled{box-shadow:0 8px 28px -18px rgba(14,20,18,.35)}
+  .header-in{height:72px;display:flex;align-items:center;gap:30px}
+  .brand{display:flex;align-items:center;gap:10px;flex:none}
+  .brand img{height:38px;width:auto}
+  .brand-txt{display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-size:14.5px;font-weight:600;letter-spacing:-.01em}
+  .brand-claim{font-size:8px;font-weight:550;letter-spacing:.17em;color:var(--faint);margin-top:4px}
+  .nav{display:flex;align-items:center;gap:26px;margin-left:6px}
+  .nav a{font-size:13.8px;font-weight:450;color:var(--ink-soft);padding:6px 0;transition:color .15s}
+  .nav a:hover{color:var(--ink)}
+  .header-actions{margin-left:auto;display:flex;align-items:center;gap:4px}
+  .icon-btn{
+    width:38px;height:38px;border-radius:9px;display:grid;place-items:center;
+    color:var(--ink);cursor:pointer;transition:background-color .15s;
+  }
+  .icon-btn:hover{background:var(--surface)}
+  .cart-btn{
+    display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 12px;
+    border:1px solid var(--line);border-radius:9px;background:#fff;
+    font-size:13.2px;font-weight:500;cursor:pointer;transition:border-color .15s;
+  }
+  .cart-btn:hover{border-color:var(--line-strong)}
+  .cart-count{
+    min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--ink);
+    color:#fff;font-size:10.5px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;
+    transition:transform .2s ease;
+  }
+  .cart-count.pop{transform:scale(1.28)}
+  .cart-count.zero{background:#f0f1ed;color:#6b726d}
+  .burger{display:none;width:38px;height:38px;border-radius:9px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center}
+  .burger span{display:block;width:16px;height:1.5px;background:var(--ink);border-radius:2px;transition:transform .22s ease,opacity .18s}
+  .burger span + span{margin-top:4px}
+  .burger[aria-expanded="true"] span:first-child{transform:translateY(5.5px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:last-child{transform:translateY(-5.5px) rotate(-45deg)}
+
+  /* ---------- Search ---------- */
+  .search{
+    position:absolute;left:0;right:0;top:100%;background:#fff;
+    border-bottom:1px solid var(--line);box-shadow:0 24px 48px -32px rgba(14,20,18,.45);
+    padding:18px 0 22px;
+  }
+  .search-form{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px}
+  .search-form svg{flex:none;color:var(--faint)}
+  .search-form input{
+    flex:1;min-width:0;border:0;background:transparent;font-size:16px;padding:6px 0;
+  }
+  .search-form input:focus{outline:none}
+  .search-form input::placeholder{color:#a2a8a3}
+  .search-form input::-webkit-search-cancel-button,
+  .search-form input::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+  .search-results{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:2px 28px}
+  .search-hint{font-size:13.5px;color:var(--muted);padding:8px 0}
+  .search-hit{display:flex;align-items:center;gap:12px;padding:8px;border-radius:10px;transition:background-color .15s}
+  .search-hit:hover{background:var(--surface-2)}
+  .sh-thumb{width:44px;height:44px;border-radius:8px;background:var(--surface);display:grid;place-items:center;flex:none;overflow:hidden}
+  .sh-thumb img{width:82%;height:82%;object-fit:contain;mix-blend-mode:multiply}
+  .sh-text{min-width:0}
+  .sh-name{display:block;font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sh-meta{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+  /* ---------- Mobile menu ---------- */
+  .mobile-menu{
+    position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);
+    padding:10px 0 18px;box-shadow:0 24px 48px -30px rgba(14,20,18,.35);
+  }
+  .mobile-menu a{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:16px;font-weight:450;border-bottom:1px solid var(--line)}
+  .mobile-menu a:last-child{border-bottom:0}
+  .mobile-menu .mm-foot{padding-top:16px;font-size:12px;color:var(--faint)}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:40px 0 0}
+  .hero-card{
+    display:grid;grid-template-columns:1.04fr 1fr;gap:12px;padding:12px;
+    background:linear-gradient(180deg,#f8f8f5 0%,#f4f4ef 100%);
+    border:1px solid var(--line);border-radius:var(--radius);
+  }
+  .hero-media{
+    position:relative;background:#fff;border-radius:16px;
+    display:flex;align-items:center;justify-content:center;
+    min-height:492px;padding:26px;overflow:hidden;
+  }
+  .hero-media img{width:138%;max-width:none;height:auto;object-fit:contain}
+  .hero-copy{padding:36px 40px 36px 32px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  .eyebrow{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  .hero h1{
+    margin-top:16px;font-size:clamp(38px,4.25vw,58px);line-height:1.06;font-weight:700;
+    letter-spacing:-.032em;text-wrap:balance;max-width:11ch;
+  }
+  .hero-lead{margin-top:18px;font-size:16.5px;line-height:1.62;color:var(--muted);max-width:42ch;text-wrap:pretty}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin-top:26px}
+  .price-now{font-size:24px;font-weight:600;letter-spacing:-.02em}
+  .price-was{font-size:15px;color:var(--faint);text-decoration:line-through}
+  .hero-cta{margin-top:22px}
+  .hero-note{margin-top:14px;font-size:12.5px;color:var(--faint)}
+
+  .trust{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    margin-top:22px;padding:0 4px;
+  }
+  .trust-item + .trust-item{padding-left:22px;border-left:1px solid var(--line)}
+  .t-k{display:block;font-size:13px;font-weight:550;letter-spacing:-.005em}
+  .t-v{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+
+  /* ---------- Sections ---------- */
+  .sec{padding-top:104px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px}
+  .sec-head .sub{margin-bottom:2px}
+
+  /* ---------- Categories ---------- */
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .tile{
+    display:block;padding:10px 10px 16px;background:#fff;
+    border:1px solid var(--line);border-radius:16px;
+    transition:border-color .2s ease;
+  }
+  .tile:hover{border-color:var(--line-strong)}
+  .tile .ph{
+    aspect-ratio:1/1;border-radius:10px;background:var(--surface);
+    display:grid;place-items:center;overflow:hidden;isolation:isolate;
+  }
+  .tile .ph img{width:82%;height:82%;object-fit:contain;mix-blend-mode:multiply;transition:transform .4s ease}
+  .tile:hover .ph img{transform:scale(1.03)}
+  .tile-name{display:block;margin-top:13px;font-size:14px;font-weight:550;letter-spacing:-.012em}
+  .tile-count{display:block;margin-top:3px;font-size:12px;color:var(--muted)}
+
+  /* ---------- Product grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .p-card{
+    display:flex;flex-direction:column;padding:10px 10px 16px;background:#fff;
+    border:1px solid var(--line);border-radius:16px;
+    transition:border-color .2s ease;
+  }
+  .p-card:hover{border-color:var(--line-strong)}
+  .p-media{position:relative;aspect-ratio:1/1;border-radius:10px;background:var(--surface);overflow:hidden;isolation:isolate}
+  .p-media > a{display:block;width:100%;height:100%}
+  .p-media img{width:100%;height:100%;object-fit:contain;padding:7%;mix-blend-mode:multiply;transition:transform .45s ease}
+  .p-card:hover .p-media img{transform:scale(1.02)}
+  .quick{
+    position:absolute;right:10px;bottom:10px;height:34px;padding:0 12px;
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--ink);color:#fff;border-radius:8px;
+    font-size:12.2px;font-weight:500;cursor:pointer;
+    opacity:0;transform:translateY(4px);pointer-events:none;
+    transition:opacity .18s ease,transform .18s ease,background-color .15s;
+  }
+  .quick:hover{background:#000}
+  @media (hover:hover) and (pointer:fine){
+    .p-card:hover .quick,.p-card:focus-within .quick{opacity:1;transform:none;pointer-events:auto}
+  }
+  @media (hover:none){.quick{display:none}}
+
+  .p-vendor{display:block;margin-top:13px;font-size:10.5px;font-weight:550;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+  .p-title{margin-top:5px;font-size:15px;line-height:1.4;font-weight:500;letter-spacing:-.008em;min-height:42px;text-wrap:balance}
+  .p-title a{transition:color .15s}
+  .p-title a:hover{color:var(--muted)}
+  .p-price{display:flex;align-items:baseline;gap:8px;margin-top:8px;font-size:14px;font-weight:600;letter-spacing:-.005em}
+  .p-price s{font-size:12.8px;font-weight:400;color:var(--faint)}
+
+  /* ---------- Deal bar ---------- */
+  .deal-bar{
+    display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;
+    background:var(--green);color:#fff;border-radius:16px;padding:16px 22px;
+    transition:background-color .2s ease;
+  }
+  .deal-bar:hover{background:#004436}
+  .deal-thumb{width:58px;height:58px;border-radius:9px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:none}
+  .deal-thumb img{width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+  .deal-label{display:block;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+  .deal-name{display:block;margin-top:4px;font-size:15px;font-weight:500;letter-spacing:-.01em}
+  .deal-price{display:flex;align-items:baseline;gap:9px;margin-top:4px;font-size:13.5px;font-weight:600}
+  .deal-price s{font-size:12.5px;font-weight:400;color:rgba(255,255,255,.5)}
+  .deal-cta{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;white-space:nowrap}
+  .deal-cta svg{transition:transform .2s ease}
+  .deal-bar:hover .deal-cta svg{transform:translateX(3px)}
+
+  /* ---------- Newsletter ---------- */
+  .sec-news{padding:104px 0 112px}
+  .nl-grid{display:grid;grid-template-columns:1fr minmax(320px,400px);gap:64px;align-items:center}
+  .nl-copy .sub{max-width:38ch}
+  .nl-form{display:flex;gap:8px}
+  .nl-form input{
+    flex:1;min-width:0;height:48px;padding:0 14px;background:#fff;
+    border:1px solid #dfe1db;border-radius:10px;font-size:14.5px;
+    transition:border-color .15s ease,box-shadow .15s ease;
+  }
+  .nl-form input::placeholder{color:#a2a8a3}
+  .nl-form input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(14,20,18,.08)}
+  .nl-form.invalid input{border-color:var(--rust);box-shadow:0 0 0 3px rgba(224,79,26,.1)}
+  .nl-form button{
+    height:48px;padding:0 20px;border-radius:10px;background:var(--ink);color:#fff;
+    font-size:14px;font-weight:550;cursor:pointer;transition:background-color .15s;white-space:nowrap;
+  }
+  .nl-form button:hover{background:#000}
+  .nl-note{margin-top:10px;font-size:12px;color:var(--muted);min-height:18px}
+  .nl-form.invalid + .nl-note{color:var(--rust)}
+  .nl-done{font-size:15px;line-height:1.6;color:var(--ink);padding:14px 0}
+
+  /* ---------- Footer ---------- */
+  .footer{background:var(--surface-2);border-top:1px solid var(--line)}
+  .foot{padding:64px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+  .foot-brand .brand img{height:32px}
+  .foot-brand .brand-name{font-size:13.5px}
+  .foot-brand p{margin-top:16px;font-size:13px;line-height:1.6;color:var(--muted);max-width:25ch}
+  .foot h3{font-size:10.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
+  .foot-links{display:grid;gap:9px;font-size:13.5px;color:var(--ink-soft)}
+  .foot-links a{width:fit-content;transition:color .15s}
+  .foot-links a:hover{color:var(--ink)}
+  .foot-bottom{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    margin-top:52px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:11.8px;color:var(--faint);
+  }
+
+  /* ---------- Age gate ---------- */
+  .gate{
+    position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;
+    background:rgba(250,250,248,.84);
+    -webkit-backdrop-filter:blur(22px) saturate(1.1);
+    backdrop-filter:blur(22px) saturate(1.1);
+  }
+  html.age-ok .gate{display:none}
+  html:not(.age-ok) body,html.no-scroll body{overflow:hidden}
+  .gate-card{
+    width:min(452px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:36px 36px 28px;box-shadow:0 40px 90px -40px rgba(14,20,18,.35);
+  }
+  .gate-card h2{margin-top:26px;font-size:25px;line-height:1.2;font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+  .gate-card p{margin-top:10px;font-size:14px;line-height:1.6;color:var(--muted);text-wrap:pretty}
+  .gate-actions{margin-top:26px}
+  .gate-no{margin-top:6px;width:100%;height:40px;font-size:13px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .gate-no:hover{color:var(--ink)}
+  .gate-fine{margin-top:16px;font-size:11.3px;line-height:1.55;color:var(--faint)}
+  .gate-msg{margin-top:12px;font-size:12.5px;color:var(--rust)}
+
+  /* ---------- Cart drawer ---------- */
+  .drawer{position:fixed;inset:0;z-index:80;pointer-events:none}
+  .drawer-scrim{
+    position:absolute;inset:0;background:rgba(14,20,18,.28);
+    opacity:0;transition:opacity .25s ease;
+  }
+  .drawer-panel{
+    position:absolute;top:0;right:0;bottom:0;width:min(392px,100%);
+    background:#fff;border-left:1px solid var(--line);
+    display:flex;flex-direction:column;
+    transform:translateX(102%);transition:transform .3s cubic-bezier(.3,.7,.2,1);
+    box-shadow:-30px 0 60px -40px rgba(14,20,18,.4);
+  }
+  .drawer.open{pointer-events:auto}
+  .drawer.open .drawer-scrim{opacity:1}
+  .drawer.open .drawer-panel{transform:none}
+  .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line)}
+  .drawer-head h2{font-size:16px;font-weight:600;letter-spacing:-.01em}
+  .drawer-body{flex:1;overflow-y:auto;padding:6px 22px 20px}
+  .cart-empty{padding:34px 0;font-size:14px;color:var(--muted)}
+  .cart-row{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .cart-thumb{width:56px;height:56px;border-radius:8px;background:var(--surface);display:grid;place-items:center;flex:none;overflow:hidden}
+  .cart-thumb img{width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+  .cart-info{min-width:0;flex:1}
+  .cart-name{display:block;font-size:13px;font-weight:500;line-height:1.4}
+  .cart-meta{display:block;margin-top:2px;font-size:11px;color:var(--faint)}
+  .cart-price{display:block;margin-top:4px;font-size:12.5px;font-weight:600}
+  .cart-remove{font-size:11px;color:var(--faint);padding:2px 0;cursor:pointer;white-space:nowrap}
+  .cart-remove:hover{color:var(--rust)}
+  .drawer-foot{border-top:1px solid var(--line);padding:18px 22px 24px}
+  .ship-note{font-size:12px;color:var(--muted)}
+  .ship-bar{height:3px;border-radius:3px;background:var(--line);margin-top:9px;overflow:hidden}
+  .ship-bar span{display:block;height:100%;width:0;background:var(--green);border-radius:3px;transition:width .3s ease}
+  .cart-sum{display:flex;align-items:baseline;justify-content:space-between;margin-top:18px;font-size:13.5px;color:var(--muted)}
+  .cart-sum b{font-size:16px;font-weight:600;color:var(--ink)}
+  .drawer-hint{margin-top:6px;font-size:11.3px;color:var(--faint)}
+  .drawer-foot .btn{margin-top:16px}
+  .drawer-foot .link-btn{display:block;width:100%;margin-top:6px;height:38px;font-size:12.5px;color:var(--muted);cursor:pointer}
+  .drawer-foot .link-btn:hover{color:var(--ink)}
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position:fixed;left:50%;bottom:28px;z-index:90;transform:translate(-50%,12px);
+    background:var(--ink);color:#fff;font-size:13px;font-weight:450;
+    padding:12px 18px;border-radius:10px;opacity:0;pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease;
+    max-width:calc(100vw - 32px);text-align:center;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  /* ---------- Reveal ---------- */
+  .js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .6s cubic-bezier(.2,.65,.25,1),transform .6s cubic-bezier(.2,.65,.25,1);transition-delay:var(--d,0ms)}
+  .js [data-reveal].in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .js [data-reveal]{opacity:1 !important;transform:none !important;transition:none !important}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- Breakpoints ---------- */
+  @media (max-width:1080px){
+    .hero-copy{padding:28px 26px}
+    .hero h1{font-size:clamp(36px,4.4vw,46px)}
+    .hero-media{min-height:440px}
+    .nav{gap:20px}
+    .search-results{grid-template-columns:1fr}
+  }
+  @media (max-width:980px){
+    .nav{display:none}
+    .burger{display:flex}
+    .header-in{gap:16px}
+    .cats{grid-template-columns:repeat(2,1fr)}
+    .grid{grid-template-columns:repeat(2,1fr);gap:16px}
+    .sec{padding-top:88px}
+    .sec-news{padding:88px 0 96px}
+  }
+  @media (max-width:860px){
+    .hero{padding-top:24px}
+    .hero-card{grid-template-columns:1fr;gap:8px;padding:8px;border-radius:20px}
+    .hero-media{min-height:0;aspect-ratio:3/2;padding:22px;border-radius:14px}
+    .hero-media img{width:122%;max-width:none}
+    .hero-copy{padding:22px 18px 24px}
+    .hero h1{font-size:clamp(36px,7vw,46px);max-width:14ch}
+    .hero-lead{font-size:15.5px;max-width:none}
+    .trust{grid-template-columns:1fr;margin-top:18px;padding:0 4px}
+    .trust-item{padding:12px 4px;display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+    .trust-item + .trust-item{border-left:0;border-top:1px solid var(--line)}
+    .t-v{margin-top:0;text-align:right}
+    .nl-grid{grid-template-columns:1fr;gap:26px}
+  }
+  @media (max-width:720px){
+    :root{--gutter:20px}
+    .header-in{height:64px}
+    .brand img{height:32px}
+    .brand-name{font-size:13px}
+    .brand-claim{font-size:7.5px}
+    .a-full{display:none}
+    .a-short{display:inline}
+    .sec{padding-top:64px}
+    .sec-news{padding:64px 0 72px}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:24px}
+    .sec-head .link-arrow{font-size:13.5px}
+    .sub{font-size:14.5px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px 24px}
+    .foot-brand{grid-column:1/-1}
+    .foot{padding:48px 0 24px}
+    .foot-bottom{margin-top:36px}
+    .price-now{font-size:22px}
+    .search{max-height:calc(100vh - 110px);overflow-y:auto}
+    .search-results{grid-template-columns:1fr}
+    .drawer-panel{width:100%}
+  }
+  @media (max-width:560px){
+    .hero-media{aspect-ratio:1/1}
+    .hero-media img{width:166%}
+    .cart-label{display:none}
+    .cart-btn{padding:0 10px}
+    .tile-name{font-size:13.2px}
+    .tile-count{font-size:11.5px}
+    .p-title{font-size:13.6px;line-height:1.4;min-height:38px}
+    .p-vendor{font-size:9.5px}
+    .p-price{font-size:13px}
+    .p-price s{font-size:11.8px}
+    .deal-bar{grid-template-columns:auto 1fr;gap:14px;padding:14px 16px}
+    .deal-thumb{width:50px;height:50px}
+    .deal-name{font-size:14px}
+    .deal-cta{grid-column:2;font-size:12.5px;margin-top:-2px}
+    .nl-form{flex-direction:column}
+    .nl-form button{width:100%}
+    .gate{padding:14px}
+    .gate-card{padding:28px 22px 22px}
+    .gate-card h2{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Age gate -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-card">
+    <a class="brand" href="#" aria-label="Only Bubatz Startseite">
+      <img src="assets/logo.png" alt="Only Bubatz" width="37" height="40">
+      <span class="brand-txt"><span class="brand-name">Only Bubatz</span><span class="brand-claim">PREMIUM GEAR</span></span>
+    </a>
+    <h2 id="gate-title">Nur für Erwachsene.</h2>
+    <p>Only Bubatz verkauft Produkte rund um Cannabis. Der Zutritt ist Personen ab 18 Jahren vorbehalten.</p>
+    <div class="gate-actions">
+      <button class="btn btn-rust btn-block" type="button" data-age-yes>Ja, ich bin 18+</button>
+      <button class="gate-no" type="button" data-age-no>Nein, danke</button>
+      <p class="gate-msg" data-age-msg hidden>Der Shop ist nur für Erwachsene zugänglich.</p>
+    </div>
+    <p class="gate-fine">Deine Bestätigung wird ausschließlich lokal in diesem Browser gespeichert.</p>
+  </div>
+</div>
+
+<div class="announce">
+  <div class="container announce-in">
+    <span class="a-full">Kostenfreier Versand ab 49 € — Express-Lieferung idR. in 24 h</span>
+    <span class="a-short">Versand ab 49 € frei · Lieferung in 24 h</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header-in">
+    <a class="brand" href="#" data-page="home" aria-label="Only Bubatz — Startseite">
+      <img src="assets/logo.png" alt="Only Bubatz" width="37" height="40">
+      <span class="brand-txt"><span class="brand-name">Only Bubatz</span><span class="brand-claim">PREMIUM GEAR</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#auswahl" data-page="shop">Shop</a>
+      <a href="#kategorien" data-page="categories">Kategorien</a>
+      <a href="#deal" data-page="deals">Deals</a>
+      <a href="#newsletter" data-page="about">Über uns</a>
+      <a href="#footer" data-page="contact">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" data-search-open aria-label="Suche öffnen" aria-expanded="false" aria-controls="search">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+      </button>
+      <button class="cart-btn" type="button" data-cart-open aria-label="Warenkorb öffnen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="cart-label">Warenkorb</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+      <button class="burger" type="button" data-burger aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search" id="search" hidden>
+    <div class="container">
+      <form class="search-form" role="search" data-search-form>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+        <input type="search" placeholder="Produkte suchen — z. B. Grinder, Purize, RAW" aria-label="Produkte suchen" data-search-input autocomplete="off">
+        <button class="icon-btn" type="button" data-search-close aria-label="Suche schließen">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </form>
+      <div class="search-results" data-search-results>
+        <p class="search-hint">Suche nach Marke oder Produkt — z. B. „Purize“, „Grinder“ oder „RAW“.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="menu" hidden>
+    <div class="container">
+      <nav aria-label="Mobile Navigation">
+        <a href="#auswahl" data-page="shop">Shop</a>
+        <a href="#kategorien" data-page="categories">Kategorien</a>
+        <a href="#deal" data-page="deals">Deals</a>
+        <a href="#newsletter" data-page="about">Über uns</a>
+        <a href="#footer" data-page="contact">Kontakt</a>
+      </nav>
+      <p class="mm-foot">Versandkostenfrei ab 49 € · Lieferung idR. in 24 h</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1 · Hero -->
+  <section class="hero" id="start" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero-card" data-reveal>
+        <div class="hero-media" data-handle="volcano-hybrid-vaporizer">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/volcano-hybrid-vaporizer-2103241.webp?v=1764966080&amp;width=900"
+            srcset="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/volcano-hybrid-vaporizer-2103241.webp?v=1764966080&amp;width=900 900w,
+                    https://cdn.shopify.com/s/files/1/0953/4865/4410/files/volcano-hybrid-vaporizer-2103241.webp?v=1764966080&amp;width=1400 1400w"
+            sizes="(max-width: 860px) 86vw, 500px"
+            width="900" height="900"
+            alt="VOLCANO HYBRID Vaporizer von Storz &amp; Bickel"
+            loading="eager" fetchpriority="high" decoding="async">
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Storz &amp; Bickel · Made in Germany</p>
+          <h1 id="hero-title">Zwei Systeme. Ein Gerät.</h1>
+          <p class="hero-lead">Ballon oder Direktzug: Der VOLCANO HYBRID kann beides. Gebaut in Tübingen, seit Jahren die Referenz unter den Desktop-Verdampfern.</p>
+          <div class="price-row">
+            <span class="price-now">549,00 €</span>
+            <s class="price-was">598,00 €</s>
+          </div>
+          <button class="btn btn-rust hero-cta" type="button" data-add="volcano-hybrid-vaporizer">In den Warenkorb</button>
+          <p class="hero-note">Auf Lager · Lieferung in 1–2 Werktagen</p>
+        </div>
+      </div>
+
+      <div class="trust" data-reveal>
+        <div class="trust-item"><span class="t-k">Versand in 24 h</span><span class="t-v">Werktags vor 14 Uhr bestellt</span></div>
+        <div class="trust-item"><span class="t-k">Diskrete Verpackung</span><span class="t-v">Neutraler Karton ohne Aufdruck</span></div>
+        <div class="trust-item"><span class="t-k">Ab 49 € versandkostenfrei</span><span class="t-v">Innerhalb Deutschlands</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Kategorien -->
+  <section class="sec" id="kategorien" aria-labelledby="cat-title">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <div>
+          <h2 class="h2" id="cat-title">Was du brauchst.</h2>
+          <p class="sub">Filter, Papers, Grinder, Aufbewahrung — alles ab Lager.</p>
+        </div>
+      </div>
+
+      <div class="cats">
+        <a class="tile" href="#auswahl" data-cat="filter" data-reveal style="--d:0ms">
+          <span class="ph">
+            <img src="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/purize-aktivkohlefilter-rainbow-100er-glas-4162524.webp?v=1764137530&amp;width=480"
+                 srcset="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/purize-aktivkohlefilter-rainbow-100er-glas-4162524.webp?v=1764137530&amp;width=480 480w, https://cdn.shopify.com/s/files/1/0953/4865/4410/files/purize-aktivkohlefilter-rainbow-100er-glas-4162524.webp?v=1764137530&amp;width=900 900w"
+                 sizes="(max-width: 720px) 40vw, 260px" width="480" height="480" alt="Purize Aktivkohlefilter im Glas" loading="lazy" decoding="async">
+          </span>
+          <span class="tile-name">Filter &amp; Tips</span>
+          <span class="tile-count" data-cat-count="filter">37 Produkte</span>
+        </a>
+
+        <a class="tile" href="#auswahl" data-cat="papes" data-reveal style="--d:60ms">
+          <span class="ph">
+            <img src="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/raw-classic-black-ks-slim-papier-1715564.jpg?v=1776011902&amp;width=480"
+                 srcset="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/raw-classic-black-ks-slim-papier-1715564.jpg?v=1776011902&amp;width=480 480w, https://cdn.shopify.com/s/files/1/0953/4865/4410/files/raw-classic-black-ks-slim-papier-1715564.jpg?v=1776011902&amp;width=900 900w"
+                 sizes="(max-width: 720px) 40vw, 260px" width="480" height="480" alt="RAW Classic Black King Size Slim Papers" loading="lazy" decoding="async">
+          </span>
+          <span class="tile-name">Papes &amp; Blättchen</span>
+          <span class="tile-count" data-cat-count="papes">26 Produkte</span>
+        </a>
+
+        <a class="tile" href="#auswahl" data-cat="grinder" data-reveal style="--d:120ms">
+          <span class="ph">
+            <img src="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/raw-cnc-aluminium-muehlegrinder-polinator-9365128.jpg?v=1776011891&amp;width=480"
+                 srcset="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/raw-cnc-aluminium-muehlegrinder-polinator-9365128.jpg?v=1776011891&amp;width=480 480w, https://cdn.shopify.com/s/files/1/0953/4865/4410/files/raw-cnc-aluminium-muehlegrinder-polinator-9365128.jpg?v=1776011891&amp;width=900 900w"
+                 sizes="(max-width: 720px) 40vw, 260px" width="480" height="480" alt="RAW CNC Aluminium Grinder" loading="lazy" decoding="async">
+          </span>
+          <span class="tile-name">Grinder &amp; Mühlen</span>
+          <span class="tile-count" data-cat-count="grinder">12 Produkte</span>
+        </a>
+
+        <a class="tile" href="#auswahl" data-cat="stash" data-reveal style="--d:180ms">
+          <span class="ph">
+            <img src="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/grannys-weed-premium-stash-jar-schwarz-3368471.webp?v=1764054667&amp;width=480"
+                 srcset="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/grannys-weed-premium-stash-jar-schwarz-3368471.webp?v=1764054667&amp;width=480 480w, https://cdn.shopify.com/s/files/1/0953/4865/4410/files/grannys-weed-premium-stash-jar-schwarz-3368471.webp?v=1764054667&amp;width=900 900w"
+                 sizes="(max-width: 720px) 40vw, 260px" width="480" height="480" alt="Granny's Weed Stash Jar, schwarz" loading="lazy" decoding="async">
+          </span>
+          <span class="tile-name">Aufbewahrung</span>
+          <span class="tile-count" data-cat-count="stash">18 Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Auswahl -->
+  <section class="sec" id="auswahl" aria-labelledby="sel-title">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <div>
+          <h2 class="h2" id="sel-title">Sechs für den Anfang.</h2>
+          <p class="sub">Handverlesen aus <span data-total>120</span> Produkten — vom ersten Grinder bis zum Desktop-Verdampfer.</p>
+        </div>
+        <a class="link-arrow" href="#" data-page="shop">
+          Alle Produkte
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="grid" data-grid></div>
+    </div>
+  </section>
+
+  <!-- 4 · Deal der Woche -->
+  <section class="sec" id="deal" aria-label="Deal der Woche">
+    <div class="container">
+      <a class="deal-bar" href="#" data-page="product" data-reveal>
+        <span class="deal-thumb">
+          <img src="https://cdn.shopify.com/s/files/1/0953/4865/4410/files/grannys-weed-cnc-aluminium-grinderpollinator-o-60mm-5283652.webp?v=1764966080&amp;width=160" width="160" height="160" alt="Granny's Weed CNC Grinder" loading="lazy" decoding="async">
+        </span>
+        <span class="deal-text">
+          <span class="deal-label">Deal der Woche</span>
+          <span class="deal-name">Granny’s Weed CNC Grinder, ø 60 mm</span>
+          <span class="deal-price"><span>14,99 €</span><s>19,99 €</s></span>
+        </span>
+        <span class="deal-cta">
+          Zum Angebot
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5 · Newsletter -->
+  <section class="sec sec-news" id="newsletter" aria-labelledby="nl-title">
+    <div class="container">
+      <div class="nl-grid">
+        <div class="nl-copy" data-reveal>
+          <h2 class="h2" id="nl-title">Ein Brief, kein Lärm.</h2>
+          <p class="sub">Neue Deals, neue Marken und gelegentlich ein Produkt, das wirklich etwas taugt. Kein täglicher Newsletter.</p>
+        </div>
+        <div data-reveal style="--d:80ms">
+          <form class="nl-form" data-nl-form novalidate>
+            <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+            <input id="nl-email" type="email" name="email" placeholder="deine@email.de" autocomplete="email" required>
+            <button type="submit">Anmelden</button>
+          </form>
+          <p class="nl-note" data-nl-note>Abmeldung jederzeit. Keine Weitergabe an Dritte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="container foot">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#" data-page="home" aria-label="Only Bubatz — Startseite">
+          <img src="assets/logo.png" alt="Only Bubatz" width="31" height="34">
+          <span class="brand-txt"><span class="brand-name">Only Bubatz</span><span class="brand-claim">PREMIUM GEAR</span></span>
+        </a>
+        <p>Premium Cannabis Gear. Nur für Erwachsene ab 18 Jahren.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <nav class="foot-links" aria-label="Shop">
+          <a href="#auswahl" data-page="shop">Alle Produkte</a>
+          <a href="#auswahl" data-page="shop">Filter &amp; Tips</a>
+          <a href="#auswahl" data-page="shop">Papes &amp; Blättchen</a>
+          <a href="#auswahl" data-page="shop">Grinder &amp; Mühlen</a>
+          <a href="#auswahl" data-page="shop">Aufbewahrung</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Service</h3>
+        <nav class="foot-links" aria-label="Service">
+          <a href="#" data-page="shipping">Versand</a>
+          <a href="#" data-page="payment">Zahlung</a>
+          <a href="#newsletter" data-page="faq">FAQ</a>
+          <a href="#" data-page="contact">Kontakt</a>
+          <a href="#" data-page="returns">Widerruf</a>
+        </nav>
+      </div>
+      <div>
+        <h3>Rechtliches</h3>
+        <nav class="foot-links" aria-label="Rechtliches">
+          <a href="#" data-page="imprint">Impressum</a>
+          <a href="#" data-page="privacy">Datenschutz</a>
+          <a href="#" data-page="terms">AGB</a>
+          <a href="#" data-page="cookies">Cookie-Einstellungen</a>
+        </nav>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Only Bubatz · Alle Preise inkl. MwSt.</span>
+      <span>Visa · Mastercard · PayPal · Klarna · Apple Pay</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<div class="drawer" id="cart" aria-hidden="true">
+  <div class="drawer-scrim" data-cart-close></div>
+  <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Warenkorb" tabindex="-1">
+    <div class="drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" type="button" data-cart-close aria-label="Warenkorb schließen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body" data-cart-items></div>
+    <div class="drawer-foot">
+      <p class="ship-note" data-ship-note>Noch 49,00 € bis versandkostenfrei.</p>
+      <div class="ship-bar" aria-hidden="true"><span data-ship-bar></span></div>
+      <div class="cart-sum"><span>Zwischensumme</span><b data-cart-total>0,00 €</b></div>
+      <p class="drawer-hint">Versand und Steuern werden an der Kasse berechnet.</p>
+      <button class="btn btn-rust btn-block" type="button" data-checkout>Zur Kasse</button>
+      <button class="link-btn" type="button" data-cart-close>Weiter einkaufen</button>
+    </div>
+  </aside>
+</div>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<script src="assets/products.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (sel, root) { return (root || document).querySelector(sel); };
+  var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+  var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  function esc(v) { return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) { return ESC[c]; }); }
+
+  var DATA = (typeof PRODUCTS !== 'undefined' && Array.isArray(PRODUCTS)) ? PRODUCTS : [];
+  var byHandle = {};
+  DATA.forEach(function (p) { byHandle[p.handle] = p; });
+  var money = function (n) { return n.toFixed(2).replace('.', ',') + ' €'; };
+  var cdn = function (url, w) { return url + (url.indexOf('?') > -1 ? '&' : '?') + 'width=' + w; };
+
+  /* ---------------- Age gate ---------------- */
+  var AGE_KEY = 'ob_klar_age_v1';
+  var gateYes = $('[data-age-yes]');
+  if (gateYes) {
+    gateYes.addEventListener('click', function () {
+      try { localStorage.setItem(AGE_KEY, '1'); } catch (e) {}
+      document.documentElement.classList.add('age-ok');
+      var gate = $('#gate');
+      if (gate) { gate.setAttribute('aria-hidden', 'true'); }
+    });
+  }
+  var gateNo = $('[data-age-no]');
+  if (gateNo) {
+    gateNo.addEventListener('click', function () {
+      var msg = $('[data-age-msg]');
+      if (msg) { msg.hidden = false; }
+    });
+  }
+
+  /* ---------------- Produktkarten ---------------- */
+  var PICKS = [
+    'storz-bickel-mighty-vaporizer',
+    'purize-018-aktivkohlefilter-xtra-slim-5-9mm-50er-packung-organic',
+    'poli-251-cnc-aluminium-holz-grinder-polinator-4teilig-wooden',
+    'dre-tray-103-glass-rolling-tray',
+    'stash-162-woodoo-luftdichte-edelstahl-vorratsdose',
+    'tip-234-black-active-filter-50-filter-beutel'
+  ];
+
+  var grid = $('[data-grid]');
+  if (grid) {
+    var cardsHtml = PICKS.map(function (handle, i) {
+      var p = byHandle[handle];
+      if (!p) { return ''; }
+      var hasDeal = p.compareAtNum && p.priceNum && p.compareAtNum > p.priceNum;
+      return '<article class="p-card" data-handle="' + esc(p.handle) + '" data-reveal style="--d:' + (i * 55) + 'ms">' +
+        '<div class="p-media">' +
+          '<a href="#" data-page="product" aria-label="' + esc(p.title) + '">' +
+            '<img src="' + esc(cdn(p.img, 480)) + '" ' +
+                 'srcset="' + esc(cdn(p.img, 480)) + ' 480w, ' + esc(cdn(p.img, 900)) + ' 900w" ' +
+                 'sizes="(max-width: 720px) 44vw, (max-width: 980px) 44vw, 340px" ' +
+                 'width="480" height="480" alt="' + esc(p.title) + '" loading="lazy" decoding="async">' +
+          '</a>' +
+          '<button class="quick" type="button" data-add="' + esc(p.handle) + '" aria-label="' + esc(p.title) + ' in den Warenkorb">' +
+            '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Hinzufügen' +
+          '</button>' +
+        '</div>' +
+        '<div class="p-body">' +
+          '<span class="p-vendor">' + esc(p.vendor) + '</span>' +
+          '<h3 class="p-title"><a href="#" data-page="product">' + esc(p.title) + '</a></h3>' +
+          '<p class="p-price"><span>' + esc(p.price) + '</span>' + (hasDeal ? '<s>' + esc(p.compareAt) + '</s>' : '') + '</p>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+    grid.innerHTML = cardsHtml;
+  }
+
+  /* ---------------- Kategorie-Stückzahlen ---------------- */
+  function categoryOf(p) {
+    var t = (p.title + ' ' + p.type).toLowerCase();
+    if (/paper|papier|blättchen|blätt|zigarettenpapier|rolling|dreh/.test(t)) { return 'papes'; }
+    if (/grinder|mühle|muehle/.test(t)) { return 'grinder'; }
+    if (/filter|tip|activ/.test(t)) { return 'filter'; }
+    if (/dose|vorrat|behälter|tightvac|glas|box|kiste|etui|case|versteck|bag|rucksack|schale/.test(t)) { return 'stash'; }
+    return null;
+  }
+  var counts = { filter: 0, papes: 0, grinder: 0, stash: 0 };
+  DATA.forEach(function (p) { var c = categoryOf(p); if (c) { counts[c] += 1; } });
+  Object.keys(counts).forEach(function (key) {
+    $$('[data-cat-count="' + key + '"]').forEach(function (el) {
+      el.textContent = counts[key] + (counts[key] === 1 ? ' Produkt' : ' Produkte');
+    });
+  });
+  $$('[data-total]').forEach(function (el) { el.textContent = DATA.length || 120; });
+
+  /* ---------------- Toast ---------------- */
+  var toastEl = $('[data-toast]');
+  var toastTimer = null;
+  function toast(msg) {
+    if (!toastEl) { return; }
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2400);
+  }
+
+  /* ---------------- Cart ---------------- */
+  var cart = new Map();
+  var cartItemsEl = $('[data-cart-items]');
+  var cartTotalEl = $('[data-cart-total]');
+  var shipNoteEl = $('[data-ship-note]');
+  var shipBarEl = $('[data-ship-bar]');
+  var FREE_SHIP = 49;
+
+  function totalQty() {
+    var n = 0;
+    cart.forEach(function (q) { n += q; });
+    return n;
+  }
+  function totalPrice() {
+    var sum = 0;
+    cart.forEach(function (q, h) { if (byHandle[h]) { sum += byHandle[h].priceNum * q; } });
+    return sum;
+  }
+  function bumpCounters() {
+    var n = totalQty();
+    $$('[data-cart-count]').forEach(function (el) {
+      el.textContent = n;
+      el.classList.toggle('zero', n === 0);
+      el.classList.remove('pop');
+      void el.offsetWidth;
+      el.classList.add('pop');
+      setTimeout(function () { el.classList.remove('pop'); }, 240);
+    });
+  }
+  function renderCart() {
+    if (!cartItemsEl) { return; }
+    if (cart.size === 0) {
+      cartItemsEl.innerHTML = '<p class="cart-empty">Dein Warenkorb ist noch leer.</p>';
+    } else {
+      var html = '';
+      cart.forEach(function (qty, handle) {
+        var p = byHandle[handle];
+        if (!p) { return; }
+        html += '<div class="cart-row">' +
+          '<span class="cart-thumb"><img src="' + esc(cdn(p.img, 160)) + '" width="160" height="160" alt="" loading="lazy"></span>' +
+          '<div class="cart-info">' +
+            '<a class="cart-name" href="#" data-page="product">' + esc(p.title) + '</a>' +
+            '<span class="cart-meta">' + esc(p.vendor) + ' · ' + qty + ' ×</span>' +
+            '<span class="cart-price">' + esc(p.price) + '</span>' +
+          '</div>' +
+          '<button class="cart-remove" type="button" data-remove="' + esc(handle) + '">Entfernen</button>' +
+        '</div>';
+      });
+      cartItemsEl.innerHTML = html;
+    }
+    var sum = totalPrice();
+    if (cartTotalEl) { cartTotalEl.textContent = money(sum); }
+    if (shipNoteEl) {
+      if (cart.size === 0) {
+        shipNoteEl.textContent = 'Versandkostenfrei ab 49 €.';
+      } else if (sum >= FREE_SHIP) {
+        shipNoteEl.textContent = 'Versandkostenfrei — geschafft.';
+      } else {
+        shipNoteEl.textContent = 'Noch ' + money(FREE_SHIP - sum) + ' bis versandkostenfrei.';
+      }
+    }
+    if (shipBarEl) {
+      shipBarEl.style.width = Math.min(100, (sum / FREE_SHIP) * 100) + '%';
+      shipBarEl.parentNode.style.display = (cart.size > 0 && sum >= FREE_SHIP) ? 'none' : '';
+    }
+  }
+  function addToCart(handle) {
+    if (!byHandle[handle]) { return; }
+    cart.set(handle, (cart.get(handle) || 0) + 1);
+    renderCart();
+    bumpCounters();
+    toast('Zum Warenkorb hinzugefügt');
+  }
+
+  /* ---------------- Drawer ---------------- */
+  var drawer = $('#cart');
+  var lastFocus = null;
+  function openCart() {
+    if (!drawer) { return; }
+    lastFocus = document.activeElement;
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('no-scroll');
+    var panel = $('.drawer-panel', drawer);
+    if (panel) { panel.focus({ preventScroll: true }); }
+  }
+  function closeCart() {
+    if (!drawer) { return; }
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('no-scroll');
+    if (lastFocus && lastFocus.focus) { lastFocus.focus({ preventScroll: true }); }
+  }
+
+  renderCart();
+  bumpCounters();
+  $$('[data-cart-count]').forEach(function (el) { el.classList.remove('pop'); });
+
+  /* ---------------- Search ---------------- */
+  var search = $('#search');
+  var searchBtn = $('[data-search-open]');
+  var searchInput = $('[data-search-input]');
+  var searchResults = $('[data-search-results]');
+
+  function openSearch() {
+    if (!search) { return; }
+    search.hidden = false;
+    if (searchBtn) { searchBtn.setAttribute('aria-expanded', 'true'); }
+    if (searchInput) { requestAnimationFrame(function () { searchInput.focus(); }); }
+  }
+  function closeSearch() {
+    if (!search) { return; }
+    search.hidden = true;
+    if (searchBtn) { searchBtn.setAttribute('aria-expanded', 'false'); }
+  }
+  function renderSearch(raw) {
+    if (!searchResults) { return; }
+    var q = raw.trim().toLowerCase();
+    if (q.length < 2) {
+      searchResults.innerHTML = '<p class="search-hint">Suche nach Marke oder Produkt — z. B. „Purize“, „Grinder“ oder „RAW“.</p>';
+      return;
+    }
+    var hits = DATA.filter(function (p) {
+      return (p.title + ' ' + p.vendor + ' ' + p.type).toLowerCase().indexOf(q) > -1;
+    }).slice(0, 6);
+    if (!hits.length) {
+      searchResults.innerHTML = '<p class="search-hint">Keine Treffer für „' + esc(raw.trim()) + '“.</p>';
+      return;
+    }
+    searchResults.innerHTML = hits.map(function (p) {
+      return '<a class="search-hit" href="#" data-page="product">' +
+        '<span class="sh-thumb"><img src="' + esc(cdn(p.img, 160)) + '" width="80" height="80" alt="" loading="eager"></span>' +
+        '<span class="sh-text"><span class="sh-name">' + esc(p.title) + '</span>' +
+        '<span class="sh-meta">' + esc(p.vendor) + ' · ' + esc(p.price) + '</span></span>' +
+      '</a>';
+    }).join('');
+  }
+
+  /* ---------------- Mobile menu ---------------- */
+  var menu = $('#menu');
+  var burger = $('[data-burger]');
+  function setMenu(open) {
+    if (!menu || !burger) { return; }
+    menu.hidden = !open;
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    document.documentElement.classList.toggle('no-scroll', open);
+  }
+
+  /* ---------------- Newsletter ---------------- */
+  var nlForm = $('[data-nl-form]');
+  var nlNote = $('[data-nl-note]');
+  var nlDefaultNote = nlNote ? nlNote.textContent : '';
+  if (nlForm) {
+    nlForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = $('input[type="email"]', nlForm);
+      var value = input ? input.value.trim() : '';
+      var valid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(value);
+      if (!valid) {
+        nlForm.classList.add('invalid');
+        if (nlNote) { nlNote.textContent = 'Bitte gib eine gültige E-Mail-Adresse ein.'; }
+        if (input) { input.focus(); }
+        return;
+      }
+      nlForm.classList.remove('invalid');
+      var wrap = nlForm.parentNode;
+      var done = document.createElement('p');
+      done.className = 'nl-done';
+      done.textContent = 'Danke — bitte bestätige die Anmeldung in deinem Postfach.';
+      wrap.replaceChild(done, nlForm);
+      if (nlNote) { nlNote.textContent = 'Du kannst dich jederzeit wieder abmelden.'; }
+    });
+    nlForm.addEventListener('input', function () {
+      nlForm.classList.remove('invalid');
+      if (nlNote) { nlNote.textContent = nlDefaultNote; }
+    });
+  }
+
+  /* ---------------- Events ---------------- */
+  document.addEventListener('click', function (e) {
+    var addBtn = e.target.closest('[data-add]');
+    if (addBtn) {
+      e.preventDefault();
+      addToCart(addBtn.getAttribute('data-add'));
+      return;
+    }
+    var removeBtn = e.target.closest('[data-remove]');
+    if (removeBtn) {
+      e.preventDefault();
+      cart.delete(removeBtn.getAttribute('data-remove'));
+      renderCart();
+      bumpCounters();
+      return;
+    }
+    if (e.target.closest('[data-cart-open]')) { e.preventDefault(); closeSearch(); setMenu(false); openCart(); return; }
+    if (e.target.closest('[data-cart-close]')) { e.preventDefault(); closeCart(); return; }
+    if (e.target.closest('[data-checkout]')) {
+      e.preventDefault();
+      toast('Demo — der Checkout ist nicht angebunden.');
+      return;
+    }
+    if (e.target.closest('[data-search-open]')) { e.preventDefault(); setMenu(false); openSearch(); return; }
+    if (e.target.closest('[data-search-close]')) { e.preventDefault(); closeSearch(); searchBtn && searchBtn.focus(); return; }
+    if (e.target.closest('.search-hit')) { closeSearch(); }
+
+    var menuLink = e.target.closest('.mobile-menu a');
+    if (menuLink) { setMenu(false); }
+
+    if (e.target.closest('[data-burger]')) {
+      e.preventDefault();
+      setMenu(!!menu && menu.hidden);
+      return;
+    }
+
+    var dead = e.target.closest('a[href="#"]');
+    if (dead) { e.preventDefault(); }
+
+    if (search && !search.hidden && !e.target.closest('#search')) { closeSearch(); }
+    if (menu && !menu.hidden && !e.target.closest('#menu')) { setMenu(false); }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') { return; }
+    if (drawer && drawer.classList.contains('open')) { closeCart(); return; }
+    if (search && !search.hidden) { closeSearch(); return; }
+    if (menu && !menu.hidden) { setMenu(false); }
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function () { renderSearch(searchInput.value); });
+  }
+  var searchForm = $('[data-search-form]');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function (e) { e.preventDefault(); });
+  }
+  if (searchInput) {
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); closeSearch(); }
+    });
+  }
+
+  /* ---------------- Header scroll ---------------- */
+  var header = $('#header');
+  function onScroll() {
+    if (!header) { return; }
+    header.classList.toggle('scrolled', window.scrollY > 6);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------------- Reveal ---------------- */
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = $$('[data-reveal]');
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------------- Resize guards ---------------- */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 980 && menu && !menu.hidden) { setMenu(false); }
+  });
+})();
+</script>
+</body>
+</html>
