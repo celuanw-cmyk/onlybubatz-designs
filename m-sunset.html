@@ -1,0 +1,1960 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Only Bubatz — Golden Hours · Festival-Gear &amp; Headshop</title>
+<meta name="description" content="Golden Hours von Only Bubatz: Papers, Filter, Taschen und Werkzeug. Handverlesen, diskret versandt, versandkostenfrei ab 49 €.">
+<meta name="theme-color" content="#d9a441">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;700&family=Rubik+Bubbles&family=Shrikhand&display=swap" rel="stylesheet">
+<script>
+  try { if (localStorage.getItem('ob_sunset_age_v1') === '1') { document.documentElement.classList.add('age-ok'); } } catch (e) {}
+</script>
+<style>
+  /* ============================================================
+     TOKENS
+     ============================================================ */
+  :root{
+    --senf:#d9a441;
+    --senf-light:#e8bd6a;
+    --braun:#4a3524;
+    --braun-soft:#6b4a2f;
+    --oliv:#6e7c3f;
+    --oliv-deep:#4b5730;
+    --lavendel:#c9b8dc;
+    --lavendel-deep:#a893bf;
+    --offwhite:#f3ede1;
+    --burnt:#c05a2a;
+    --burnt-deep:#a8481f;
+
+    --line:rgba(74,53,36,.16);
+    --line-2:rgba(74,53,36,.32);
+    --wrap:1240px;
+    --gutter:clamp(20px,4vw,40px);
+
+    --f-display:'Shrikhand',Georgia,serif;
+    --f-bubble:'Rubik Bubbles','Shrikhand',cursive;
+    --f-hand:'Caveat',cursive;
+    --f-body:'DM Sans',system-ui,-apple-system,sans-serif;
+
+    --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  }
+
+  /* ============================================================
+     RESET / BASE
+     ============================================================ */
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--offwhite);
+    color:var(--braun);
+    font-family:var(--f-body);
+    font-size:16.5px;
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:clip;
+  }
+  body.locked{overflow:hidden}
+  html:not(.age-ok) body{overflow:hidden}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit}
+  button,input{font:inherit;color:inherit}
+  button{cursor:pointer}
+  h1,h2,h3,h4,p,ul,figure,fieldset{margin:0}
+  ul{list-style:none;padding:0}
+  fieldset{border:0;padding:0}
+  s{text-decoration-thickness:1px}
+  ::selection{background:var(--burnt);color:#fdf8ef}
+  :focus-visible{outline:2px solid var(--burnt-deep);outline-offset:3px;border-radius:4px}
+
+  .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+  .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:-9999px;top:0;z-index:500;background:var(--offwhite);color:var(--braun);padding:12px 18px;border:1px solid var(--braun);text-decoration:none}
+  .skip:focus{left:12px;top:12px}
+
+  .i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .i--sm{width:16px;height:16px}
+  .i--lg{width:26px;height:26px}
+
+  .micro{
+    font-size:11px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;
+    line-height:1.4;color:var(--braun-soft);
+  }
+  .h2{
+    font-family:var(--f-display);font-weight:400;
+    font-size:clamp(34px,4.5vw,58px);
+    line-height:1.1;letter-spacing:.005em;
+    color:var(--braun);text-wrap:balance;
+    margin-top:12px;
+  }
+  .p{text-wrap:pretty}
+
+  /* ============================================================
+     ANNOUNCEMENT
+     ============================================================ */
+  .announce{
+    background:var(--senf);color:var(--braun);
+    border-bottom:1px solid rgba(74,53,36,.18);
+  }
+  .announce-in{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    min-height:34px;padding-top:5px;padding-bottom:5px;
+  }
+  .announce p{
+    display:flex;align-items:center;gap:9px;
+    font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;line-height:1.35;
+  }
+  .announce p .i{width:14px;height:14px;stroke-width:1.9;flex:0 0 auto}
+  .announce .a-short{display:none}
+  .announce .a-right{opacity:.8;letter-spacing:.13em}
+  @media(max-width:900px){
+    .announce-in{justify-content:center;min-height:32px}
+    .announce .a-right{display:none}
+    .announce p{font-size:9.5px;letter-spacing:.06em}
+  }
+  @media(max-width:560px){
+    .announce p{font-size:9.5px;letter-spacing:.03em}
+    .announce .a-full{display:none}
+    .announce .a-short{display:inline}
+  }
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+  .site-head{
+    position:sticky;top:0;z-index:90;
+    background:rgba(243,237,225,.92);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+    transition:box-shadow .3s ease,background .3s ease;
+  }
+  .site-head.is-scrolled{
+    box-shadow:0 14px 30px -28px rgba(74,53,36,.75);
+    background:rgba(243,237,225,.96);
+  }
+  .head-in{
+    display:flex;align-items:center;gap:clamp(14px,2.2vw,32px);
+    min-height:76px;
+  }
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+  .brand img{width:40px;height:auto}
+  .brand-txt b{
+    display:block;font-size:14.5px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;line-height:1.1;
+  }
+  .brand-txt span{
+    display:block;margin-top:4px;font-size:8.5px;font-weight:700;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--braun-soft);
+  }
+  .nav{display:flex;align-items:center;gap:clamp(14px,1.7vw,24px);margin-left:auto}
+  .nav a{
+    position:relative;text-decoration:none;font-size:13.5px;font-weight:500;
+    letter-spacing:.02em;padding:6px 0;white-space:nowrap;
+  }
+  .nav a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:var(--burnt);transform:scaleX(0);transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav a:hover::after{transform:scaleX(1)}
+  .head-tools{display:flex;align-items:center;gap:4px;margin-left:auto}
+  .icon-btn{
+    width:42px;height:42px;display:grid;place-items:center;
+    background:none;border:1px solid transparent;border-radius:50%;
+    transition:background .2s,border-color .2s;
+  }
+  .icon-btn:hover{background:rgba(74,53,36,.06);border-color:var(--line)}
+  .cart-btn{
+    display:flex;align-items:center;gap:9px;
+    height:42px;padding:0 14px;margin-left:2px;
+    background:transparent;border:1px solid var(--line-2);border-radius:999px;
+    font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    transition:background .2s,border-color .2s,color .2s;
+  }
+  .cart-btn:hover{background:var(--braun);color:var(--offwhite);border-color:var(--braun)}
+  .cart-count{
+    min-width:22px;height:22px;padding:0 5px;display:grid;place-items:center;
+    background:var(--burnt);color:#fdf8ef;border-radius:999px;
+    font-size:11px;font-weight:700;letter-spacing:0;line-height:1;
+    transition:transform .25s ease;
+  }
+  .cart-count.bump{animation:bump .45s ease}
+  @keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.35)}100%{transform:scale(1)}}
+  .burger{display:none}
+  @media(max-width:1080px){
+    .nav{display:none}
+    .burger{display:grid}
+    .head-tools{margin-left:auto}
+  }
+  @media(max-width:560px){
+    .head-in{min-height:64px;gap:10px}
+    .brand img{width:34px}
+    .brand-txt b{font-size:12px;letter-spacing:.1em}
+    .brand-txt span{font-size:7.5px;letter-spacing:.18em}
+    .cart-btn{padding:0 11px;height:38px}
+    .cart-btn .c-label{display:none}
+    .icon-btn{width:38px;height:38px}
+  }
+
+  /* Mobile nav */
+  .mnav{
+    display:none;position:sticky;top:76px;z-index:88;
+    background:var(--offwhite);border-bottom:1px solid var(--line);
+    box-shadow:0 20px 30px -30px rgba(74,53,36,.6);
+  }
+  .mnav.is-open{display:block;animation:menuIn .28s ease both}
+  @keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .mnav ul{padding:10px var(--gutter) 18px}
+  .mnav li + li{border-top:1px solid var(--line)}
+  .mnav a{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 2px;text-decoration:none;font-family:var(--f-display);
+    font-size:22px;line-height:1.2;
+  }
+  .mnav a .i{width:18px;height:18px;stroke-width:1.5;color:var(--braun-soft)}
+  .mnav-note{
+    padding:0 var(--gutter) 22px;font-size:11px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--braun-soft);
+  }
+  @media(max-width:560px){ .mnav{top:64px} }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero{
+    position:relative;isolation:isolate;overflow:hidden;
+    background:var(--senf);
+    padding:clamp(30px,4.4vw,54px) 0 0;
+  }
+  .hero-bg{
+    position:absolute;inset:-16%;z-index:-4;
+    background:
+      radial-gradient(36% 42% at 12% 16%, #f4d391 0%, rgba(244,211,145,0) 66%),
+      radial-gradient(40% 48% at 94% 6%, #c9b8dc 0%, rgba(201,184,220,0) 70%),
+      radial-gradient(44% 48% at 66% 40%, #c05a2a 0%, rgba(192,90,42,0) 64%),
+      radial-gradient(38% 42% at 42% 62%, #d9a441 0%, rgba(217,164,65,0) 68%),
+      radial-gradient(40% 44% at 96% 78%, #a893bf 0%, rgba(168,147,191,0) 72%),
+      radial-gradient(34% 38% at 4% 96%, #b8562f 0%, rgba(184,86,47,0) 70%),
+      radial-gradient(44% 50% at 30% 40%, rgba(250,238,216,.62) 0%, rgba(250,238,216,0) 70%),
+      linear-gradient(148deg,#e9c37e 0%,#d9a441 28%,#c97b4b 62%,#a993c0 100%);
+    filter:blur(20px) saturate(1.03);
+    transform:scale(1.06);
+  }
+  .hero-rings{
+    position:absolute;inset:0;z-index:-3;pointer-events:none;
+    background:repeating-radial-gradient(ellipse 66% 54% at 36% 38%,
+      rgba(255,248,235,.18) 0 1.5px, rgba(255,248,235,0) 1.5px 34px);
+    mix-blend-mode:soft-light;opacity:.5;filter:blur(1px);
+    -webkit-mask-image:radial-gradient(80% 80% at 34% 40%, #000 20%, transparent 78%);
+    mask-image:radial-gradient(80% 80% at 34% 40%, #000 20%, transparent 78%);
+  }
+  .hero-grain{
+    position:absolute;inset:0;z-index:-2;pointer-events:none;
+    background-image:var(--noise);background-size:180px 180px;
+    opacity:.075;mix-blend-mode:multiply;
+  }
+  .hero-in{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    align-items:center;gap:clamp(24px,4vw,58px);
+    min-height:calc(100svh - 168px);
+    padding-bottom:clamp(92px,9vw,122px);
+  }
+  .hero-copy{position:relative;max-width:620px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:11px;font-weight:700;letter-spacing:.21em;text-transform:uppercase;
+    color:var(--braun);
+  }
+  .eyebrow .i{width:16px;height:16px;stroke-width:1.8}
+  .hero h1{
+    margin:18px 0 0;
+    font-family:var(--f-display);font-weight:400;
+    font-size:clamp(66px,8.6vw,116px);
+    line-height:1.06;letter-spacing:.008em;
+    color:var(--braun);
+    text-wrap:nowrap;
+  }
+  .h1-line{display:block}
+  .h1-bubble{
+    display:block;margin-top:-.02em;margin-left:.3em;
+    font-family:var(--f-bubble);font-size:.78em;line-height:1.08;
+    letter-spacing:.005em;
+    text-shadow:3px 3px 0 rgba(192,90,42,.34);
+  }
+  .hand{
+    display:block;margin:2px 4% 0 auto;width:max-content;
+    font-family:var(--f-hand);font-weight:500;
+    font-size:clamp(27px,3vw,38px);line-height:1.1;
+    color:var(--braun-soft);
+    transform:rotate(-4deg);
+  }
+  .hand .i{display:inline-block;width:34px;height:14px;vertical-align:-2px;margin-left:8px;stroke-width:1.4;color:var(--burnt-deep)}
+  .hero-sub{
+    max-width:44ch;margin-top:22px;
+    font-size:17px;line-height:1.68;color:rgba(74,53,36,.9);
+    text-wrap:pretty;
+  }
+  .hero-cta{display:flex;align-items:center;flex-wrap:wrap;gap:16px 22px;margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:11px;
+    border:1px solid transparent;border-radius:999px;text-decoration:none;
+    font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:16px 26px;line-height:1;
+    transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s ease;
+  }
+  .btn-primary{
+    background:var(--burnt);color:#fdf8ef;
+    box-shadow:0 16px 30px -20px rgba(74,53,36,.9);
+  }
+  .btn-primary:hover{background:var(--burnt-deep);transform:translateY(-2px);box-shadow:0 20px 34px -18px rgba(74,53,36,.85)}
+  .btn-primary .i{width:17px;height:17px;stroke-width:1.9}
+  .hero-meta{
+    max-width:190px;font-size:11px;font-weight:700;letter-spacing:.09em;
+    text-transform:uppercase;line-height:1.6;color:var(--braun);opacity:.88;
+  }
+
+  /* Hero stage */
+  .hero-stage{position:relative;display:flex;justify-content:center;align-items:center;padding:8px 0}
+  .sun-disc{
+    position:absolute;z-index:0;width:min(600px,126%);height:auto;
+    right:-6%;top:-36%;color:rgba(74,53,36,.45);
+    opacity:.95;pointer-events:none;
+  }
+  .panel{
+    position:relative;z-index:1;width:min(100%,432px);
+    background:var(--offwhite);
+    border:1px solid rgba(74,53,36,.2);
+    border-radius:30px;
+    padding:16px 16px 10px;
+    box-shadow:0 40px 70px -46px rgba(74,53,36,.9);
+    transform:rotate(1.4deg);
+    transition:transform .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .panel:hover{transform:rotate(0deg)}
+  .print{
+    display:block;position:relative;overflow:hidden;
+    aspect-ratio:1/1;border-radius:20px;
+    background:#f1e8d7;
+    padding:clamp(16px,2.2vw,23px);
+  }
+  .print-wash{
+    position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(72% 64% at 16% 6%, rgba(217,164,65,.34) 0%, rgba(217,164,65,0) 68%),
+      radial-gradient(64% 60% at 90% 98%, rgba(201,184,220,.36) 0%, rgba(201,184,220,0) 72%),
+      linear-gradient(158deg,#f5eddd 0%,#e6d8bd 100%);
+  }
+  .print::before{
+    content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+    background:radial-gradient(112% 94% at 50% 42%, rgba(243,237,225,0) 44%, rgba(74,53,36,.18) 100%);
+  }
+  .print::after{
+    content:"";position:absolute;inset:0;z-index:4;pointer-events:none;
+    background-image:var(--noise);background-size:170px 170px;
+    opacity:.095;mix-blend-mode:multiply;
+  }
+  .print img{
+    position:relative;z-index:2;width:100%;height:100%;
+    object-fit:contain;mix-blend-mode:multiply;
+  }
+  .print .ghost{
+    position:absolute;inset:clamp(20px,3vw,30px);z-index:1;
+    width:calc(100% - clamp(40px,6vw,60px));height:calc(100% - clamp(40px,6vw,60px));
+    object-fit:contain;opacity:.1;filter:sepia(1) saturate(5) hue-rotate(-18deg);
+    transform:translate(3px,2px);mix-blend-mode:multiply;
+  }
+  .panel-foot{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:14px;
+    padding:12px 6px 6px;
+  }
+  .panel-prod{font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;line-height:1.5;color:var(--braun-soft);max-width:200px}
+  .panel-price{font-size:18px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+  .badge{
+    position:absolute;z-index:5;top:-26px;right:-18px;
+    width:96px;height:96px;border-radius:50%;
+    background:var(--senf-light);
+    border:1px solid rgba(74,53,36,.35);
+    display:grid;place-items:center;text-align:center;
+    box-shadow:0 12px 22px -16px rgba(74,53,36,.9);
+    transform:rotate(8deg);
+  }
+  .badge .i{width:22px;height:22px;margin:0 auto 1px;stroke-width:1.6}
+  .badge span{
+    display:block;font-size:8.5px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;line-height:1.35;
+  }
+
+  .hero-wave{
+    position:absolute;left:0;right:0;bottom:-1px;z-index:2;
+    width:100%;height:clamp(54px,7vw,96px);
+    pointer-events:none;
+  }
+
+  @media(max-width:900px){
+    .hero-in{
+      grid-template-columns:1fr;gap:34px;
+      min-height:0;padding-bottom:clamp(76px,12vw,104px);
+    }
+    .hero-copy{max-width:640px}
+    .hand{margin:2px 0 0 34%}
+    .hero-stage{order:2;margin-top:6px}
+    .sun-disc{width:min(340px,96%);right:-4%;top:0;opacity:.55}
+    .panel{transform:rotate(1deg)}
+    .hero-sub{max-width:52ch}
+  }
+  @media(max-width:560px){
+    .hero{padding-top:26px}
+    .hero h1{font-size:clamp(64px,19vw,86px)}
+    .h1-bubble{margin-left:.18em}
+     .hand{margin:2px 0 0 26%}
+    .hero-sub{font-size:16px;margin-top:18px}
+    .hero-cta{gap:14px;margin-top:24px}
+    .btn{padding:15px 22px;font-size:13px}
+    .hero-meta{max-width:none;font-size:10.5px}
+    .panel{width:min(100%,392px);padding:13px 13px 8px;border-radius:24px}
+    .badge{width:82px;height:82px;top:-20px;right:-8px}
+    .badge span{font-size:7.5px}
+    .badge .i{width:19px;height:19px}
+    .panel-price{font-size:16px}
+  }
+
+  /* ============================================================
+     SECTION HEAD
+     ============================================================ */
+  section{scroll-margin-top:96px}
+  .sec-head{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:28px;
+    margin-bottom:clamp(26px,3.4vw,42px);
+  }
+  .sec-note{max-width:36ch;font-size:15.5px;line-height:1.65;color:var(--braun-soft);text-wrap:pretty}
+
+  /* ============================================================
+     KATEGORIEN
+     ============================================================ */
+  .cats{padding:clamp(64px,8vw,112px) 0 clamp(56px,7vw,96px)}
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.8vw,22px)}
+  .cat{
+    position:relative;isolation:isolate;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:space-between;
+    min-height:clamp(248px,24vw,318px);
+    padding:clamp(20px,2.2vw,28px);
+    border-radius:26px;text-decoration:none;color:var(--braun);
+    transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease;
+  }
+  .cat::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background-image:var(--noise);background-size:170px 170px;
+    opacity:.06;mix-blend-mode:multiply;
+  }
+  .cat::after{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:radial-gradient(120% 90% at 70% 10%, rgba(255,248,232,.3), transparent 60%);
+  }
+  .cat:hover{transform:translateY(-4px);box-shadow:0 26px 40px -34px rgba(74,53,36,.75)}
+  .cat--senf{background:linear-gradient(158deg,#e8bd6a 0%,#d9a441 72%,#cf9738 100%)}
+  .cat--oliv{background:linear-gradient(158deg,#7e8b4d 0%,#68763c 48%,#4b5730 100%);color:var(--offwhite)}
+  .cat--lav{background:linear-gradient(158deg,#d8cbe7 0%,#c9b8dc 55%,#b3a0c8 100%)}
+  .cat-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .cat-icon{
+    width:58px;height:58px;display:grid;place-items:center;
+    border:1px solid currentColor;border-radius:50%;opacity:.9;
+  }
+  .cat-icon .i{width:30px;height:30px;stroke-width:1.5}
+  .cat-no{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.62}
+  .cat-body{position:relative;margin-top:22px}
+  .cat-name{font-size:clamp(21px,2vw,25px);font-weight:700;letter-spacing:.005em;line-height:1.25}
+  .cat-sub{margin-top:6px;font-size:13.5px;line-height:1.55;max-width:30ch;opacity:.9}
+  .cat-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px}
+  .cat-count{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;opacity:.92}
+  .cat-arrow{
+    width:42px;height:42px;flex:0 0 auto;display:grid;place-items:center;
+    border-radius:50%;border:1px solid currentColor;
+    transition:background .3s,color .3s,transform .3s;
+  }
+  .cat-arrow .i{width:18px;height:18px;stroke-width:1.7}
+  .cat:hover .cat-arrow{transform:translateX(3px)}
+  .cat--senf:hover .cat-arrow,.cat--lav:hover .cat-arrow{background:var(--braun);color:var(--offwhite)}
+  .cat--oliv:hover .cat-arrow{background:var(--offwhite);color:var(--oliv-deep)}
+  @media(max-width:980px){
+    .cat-grid{grid-template-columns:1fr}
+    .cat{min-height:0;padding:22px 24px}
+    .cat-top{align-items:center}
+    .cat-icon{width:50px;height:50px}
+    .cat-icon .i{width:26px;height:26px}
+    .cat-body{margin-top:18px}
+    .cat-foot{margin-top:18px}
+  }
+  @media(max-width:560px){
+    .cat-name{font-size:22px}
+    .cat-sub{font-size:13px}
+  }
+
+  /* ============================================================
+     SHOP / PRODUKTE
+     ============================================================ */
+  .shelf{
+    position:relative;
+    padding:clamp(52px,6.5vw,88px) 0 clamp(64px,8vw,112px);
+    background:
+      radial-gradient(95% 55% at 50% 0%, rgba(233,223,204,.75) 0%, rgba(233,223,204,0) 62%),
+      var(--offwhite);
+    border-top:1px solid var(--line);
+  }
+  .shelf-head{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:28px;
+    margin-bottom:clamp(26px,3.4vw,44px);
+  }
+  .shelf-head .h2{max-width:15ch}
+  .shelf-head-r{max-width:340px;padding-bottom:4px}
+  .shelf-head-r p{font-size:15.5px;line-height:1.65;color:var(--braun-soft);text-wrap:pretty}
+  .all-link{
+    display:inline-flex;align-items:center;gap:9px;margin-top:12px;
+    font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    text-decoration:none;color:var(--braun);
+    border-bottom:1px solid var(--line-2);padding-bottom:5px;
+    transition:color .2s,border-color .2s,gap .2s;
+  }
+  .all-link:hover{color:var(--burnt-deep);border-color:var(--burnt-deep);gap:13px}
+  .all-link .i{width:15px;height:15px;stroke-width:1.9}
+
+  .p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3.2vw,42px) clamp(16px,2.2vw,28px)}
+  .p-card{display:flex;flex-direction:column;gap:13px;min-width:0;height:100%}
+  .p-body{display:flex;flex-direction:column;flex:1 1 auto;min-width:0}
+  .p-media{
+    position:relative;display:block;overflow:hidden;
+    aspect-ratio:1/1;border-radius:22px;
+    background:#f1e8d7;
+    padding:clamp(18px,2.4vw,30px);
+    transition:box-shadow .35s ease;
+    box-shadow:inset 0 0 0 1px rgba(74,53,36,.09);
+  }
+  .p-wash{
+    position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(78% 70% at 16% 6%, rgba(217,164,65,.2) 0%, rgba(217,164,65,0) 66%),
+      radial-gradient(70% 64% at 92% 98%, rgba(201,184,220,.26) 0%, rgba(201,184,220,0) 70%),
+      linear-gradient(158deg,#f4ecdc 0%,#e9ddc6 100%);
+    transition:opacity .35s ease;
+  }
+  .p-media::before{
+    content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+    background:radial-gradient(112% 92% at 50% 42%, rgba(243,237,225,0) 48%, rgba(74,53,36,.15) 100%);
+  }
+  .p-media::after{
+    content:"";position:absolute;inset:0;z-index:4;pointer-events:none;
+    background-image:var(--noise);background-size:170px 170px;
+    opacity:.08;mix-blend-mode:multiply;
+  }
+  .p-media img{
+    position:relative;z-index:2;width:100%;height:100%;object-fit:contain;
+    mix-blend-mode:multiply;
+    transition:transform .55s cubic-bezier(.2,.7,.2,1);
+  }
+  .p-card:hover .p-media{box-shadow:inset 0 0 0 1px rgba(74,53,36,.2)}
+  .p-card:hover .p-wash{opacity:.72}
+  .p-card:hover .p-media img{transform:scale(1.035) rotate(-.7deg)}
+  .deal{
+    position:absolute;z-index:4;top:12px;left:12px;
+    padding:5px 10px;border-radius:999px;
+    background:var(--burnt);color:#fdf8ef;
+    font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.3;
+  }
+  .p-vendor{
+    font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--braun-soft);line-height:1.4;
+  }
+  .p-title{
+    font-size:16px;font-weight:500;line-height:1.45;letter-spacing:.002em;
+    min-height:2.9em;text-wrap:balance;
+  }
+  .p-title a{text-decoration:none}
+  .p-title a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+  .p-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+  .p-price{font-size:16.5px;font-weight:700;line-height:1.3;white-space:nowrap}
+  .p-compare{margin-left:7px;font-size:12.5px;font-weight:400;color:var(--braun-soft);opacity:.85}
+  .p-add{
+    width:42px;height:42px;flex:0 0 auto;display:grid;place-items:center;
+    background:transparent;border:1px solid var(--line-2);border-radius:50%;
+    color:var(--braun);
+    transition:background .25s,color .25s,border-color .25s,transform .25s;
+  }
+  .p-add .i{width:17px;height:17px;stroke-width:1.9}
+  .p-add:hover{background:var(--burnt);border-color:var(--burnt);color:#fdf8ef;transform:rotate(90deg)}
+  @media(max-width:980px){
+    .p-grid{grid-template-columns:repeat(2,1fr)}
+    .shelf-head{display:block}
+    .shelf-head-r{max-width:52ch;margin-top:16px}
+  }
+  @media(max-width:560px){
+    .shelf-head-r p{font-size:14.5px}
+    .p-grid{gap:24px 12px}
+    .p-media{border-radius:16px;padding:14px}
+    .p-title{font-size:14px;line-height:1.4;min-height:2.8em}
+    .p-vendor{font-size:9px;letter-spacing:.14em}
+    .p-price{font-size:14.5px}
+    .p-compare{font-size:11px;margin-left:4px}
+    .p-add{width:38px;height:38px}
+    .deal{font-size:8px;padding:4px 8px;top:8px;left:8px}
+  }
+
+  /* ============================================================
+     MANIFEST
+     ============================================================ */
+  .manifest{
+    position:relative;overflow:hidden;
+    padding:clamp(60px,7.5vw,104px) 0;
+    border-top:1px solid var(--line);
+  }
+  .manifest-in{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,70px);align-items:center}
+  .manifest h2{max-width:13ch}
+  .manifest p{max-width:48ch;margin-top:20px;font-size:16.5px;line-height:1.72;color:rgba(74,53,36,.88);text-wrap:pretty}
+  .squiggle{width:clamp(150px,16vw,220px);height:auto;margin-top:24px;color:var(--burnt);opacity:.85}
+  .seal-wrap{position:relative;display:grid;place-items:center;min-height:340px}
+  .seal-wrap::before{
+    content:"";position:absolute;width:min(430px,92%);aspect-ratio:1/.9;
+    background:radial-gradient(closest-side, rgba(201,184,220,.62), rgba(201,184,220,0) 72%);
+    filter:blur(8px);
+  }
+  .seal{
+    position:relative;width:min(320px,80%);aspect-ratio:1/1;
+    transform:rotate(-6deg);
+    filter:drop-shadow(0 30px 40px rgba(74,53,36,.18));
+    animation:sealFloat 9s ease-in-out infinite;
+  }
+  @keyframes sealFloat{0%,100%{transform:rotate(-6deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-7px)}}
+  .seal-logo{
+    position:absolute;inset:0;margin:auto;width:34%;height:auto;
+  }
+  @media(max-width:900px){
+    .manifest-in{grid-template-columns:1fr}
+    .seal-wrap{min-height:230px;margin-top:4px}
+    .seal{width:min(230px,66%)}
+  }
+  @media(max-width:560px){
+    .manifest p{font-size:15.5px}
+    .seal-wrap{min-height:210px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .seal{animation:none}
+  }
+
+  /* ============================================================
+     ABSCHLUSS-BAND
+     ============================================================ */
+  .closing{
+    position:relative;isolation:isolate;overflow:hidden;
+    margin-top:clamp(24px,4vw,48px);
+    background:var(--oliv-deep);
+    color:var(--offwhite);
+    border-radius:clamp(28px,4vw,44px) clamp(28px,4vw,44px) 0 0;
+    padding:clamp(52px,6.5vw,88px) 0 clamp(52px,6.5vw,84px);
+  }
+  .closing::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      radial-gradient(60% 70% at 12% 0%, rgba(110,124,63,.55), rgba(110,124,63,0) 60%),
+      radial-gradient(50% 70% at 92% 100%, rgba(74,53,36,.55), rgba(74,53,36,0) 65%);
+  }
+  .closing::after{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background-image:var(--noise);background-size:180px 180px;
+    opacity:.07;mix-blend-mode:soft-light;
+  }
+  .closing-in{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(36px,5vw,72px);align-items:center}
+  .closing .micro{color:rgba(243,237,225,.72)}
+  .closing h2{
+    font-family:var(--f-display);font-weight:400;
+    font-size:clamp(34px,4.2vw,54px);line-height:1.12;
+    margin-top:12px;color:var(--offwhite);text-wrap:balance;
+  }
+  .closing .lead{max-width:44ch;margin-top:14px;font-size:16px;line-height:1.65;color:rgba(243,237,225,.82);text-wrap:pretty}
+  .facts{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    margin-top:clamp(28px,3.4vw,40px);
+    border-top:1px solid rgba(243,237,225,.2);
+    padding-top:clamp(22px,2.4vw,28px);
+  }
+  .fact + .fact{border-left:1px solid rgba(243,237,225,.2);padding-left:clamp(14px,1.8vw,24px)}
+  .fact b{
+    display:block;font-family:var(--f-display);font-weight:400;
+    font-size:clamp(28px,3vw,38px);line-height:1.05;color:var(--senf-light);
+    letter-spacing:.01em;
+  }
+  .fact span{display:block;margin-top:7px;font-size:11.5px;line-height:1.5;letter-spacing:.04em;color:rgba(243,237,225,.78);max-width:18ch}
+  .pay{margin-top:24px;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(243,237,225,.62);line-height:1.7}
+
+  .news{
+    position:relative;isolation:isolate;overflow:hidden;
+    background:linear-gradient(158deg,#e8bd6a 0%,#d9a441 78%);
+    color:var(--braun);
+    border-radius:24px;
+    padding:clamp(24px,3vw,34px);
+    box-shadow:0 30px 50px -40px rgba(0,0,0,.6);
+  }
+  .news::after{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background-image:var(--noise);background-size:160px 160px;
+    opacity:.07;mix-blend-mode:multiply;
+  }
+  .news-sun{position:absolute;z-index:-1;width:190px;height:190px;right:-54px;bottom:-70px;opacity:.16;color:var(--braun)}
+  .news .micro{color:rgba(74,53,36,.72)}
+  .news h3{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,2.6vw,34px);line-height:1.15;margin-top:9px}
+  .news p{margin-top:9px;font-size:14px;line-height:1.6;color:rgba(74,53,36,.86);text-wrap:pretty}
+  .news-form{display:flex;gap:8px;margin-top:18px}
+  .news-input{
+    flex:1 1 auto;min-width:0;height:48px;padding:0 15px;
+    background:var(--offwhite);border:1px solid rgba(74,53,36,.28);border-radius:12px;
+    font-size:14.5px;color:var(--braun);
+  }
+  .news-input::placeholder{color:rgba(74,53,36,.55)}
+  .news-input:focus{outline:2px solid var(--burnt-deep);outline-offset:1px}
+  .news-btn{
+    flex:0 0 auto;height:48px;padding:0 20px;border:1px solid var(--burnt);
+    background:var(--burnt);color:#fdf8ef;border-radius:12px;
+    font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    transition:background .25s,border-color .25s;
+  }
+  .news-btn:hover{background:var(--burnt-deep);border-color:var(--burnt-deep)}
+  .news-note{margin-top:11px;font-size:10.5px;line-height:1.55;color:rgba(74,53,36,.8)}
+  .news-msg{margin-top:12px;font-size:13px;font-weight:700;line-height:1.5;color:var(--oliv-deep)}
+  .news-err{margin-top:12px;font-size:12.5px;font-weight:500;line-height:1.5;color:#8e2f12}
+  @media(max-width:900px){
+    .closing-in{grid-template-columns:1fr;gap:34px}
+    .closing{border-radius:24px 24px 0 0}
+  }
+  @media(max-width:560px){
+    .facts{grid-template-columns:1fr;border-top:0;padding-top:0;gap:0}
+    .fact{padding:14px 0;border-top:1px solid rgba(243,237,225,.2)}
+    .fact + .fact{border-left:0;padding-left:0}
+    .fact b{font-size:26px}
+    .fact span{max-width:none;margin-top:4px}
+    .news-form{flex-direction:column}
+    .news-btn{width:100%}
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .foot{padding:clamp(48px,6vw,74px) 0 26px;background:var(--offwhite)}
+  .foot-top{display:grid;grid-template-columns:1.5fr .85fr .85fr .95fr;gap:clamp(24px,4vw,52px)}
+  .foot-brand .brand{margin-bottom:14px}
+  .foot-brand .brand img{width:44px}
+  .foot-claim{max-width:34ch;font-size:13.5px;line-height:1.65;color:var(--braun-soft);text-wrap:pretty}
+  .pay-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:18px}
+  .pay-pills span{
+    padding:4px 7px;border:1px solid var(--line);border-radius:6px;
+    font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--braun-soft);
+  }
+  .foot-col h4{font-size:10.5px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--braun);margin-bottom:14px}
+  .foot-col ul{display:grid;gap:8px}
+  .foot-col a{font-size:13.5px;text-decoration:none;color:var(--braun-soft);transition:color .2s}
+  .foot-col a:hover{color:var(--burnt-deep)}
+  .foot-bottom{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 22px;
+    margin-top:clamp(34px,4vw,52px);padding-top:20px;border-top:1px solid var(--line);
+    font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--braun-soft);
+  }
+  .foot-bottom .f-left{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px}
+  .adult{
+    display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 5px;
+    border:1px solid var(--line-2);border-radius:50%;
+    font-size:10px;letter-spacing:.02em;
+  }
+  @media(max-width:900px){
+    .foot-top{grid-template-columns:1fr 1fr;gap:30px}
+    .foot-brand{grid-column:1/-1}
+  }
+  @media(max-width:560px){
+    .foot-top{grid-template-columns:1fr 1fr;gap:26px 18px}
+    .foot-bottom{display:block}
+    .foot-bottom .f-left{margin-bottom:10px}
+  }
+
+  /* ============================================================
+     AGE GATE
+     ============================================================ */
+  .gate{
+    position:fixed;inset:0;z-index:300;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;overflow:auto;
+    background:
+      radial-gradient(55% 60% at 18% 20%, #e8bd6a 0%, rgba(232,189,106,0) 65%),
+      radial-gradient(55% 65% at 84% 24%, #c05a2a 0%, rgba(192,90,42,0) 62%),
+      radial-gradient(75% 75% at 60% 100%, #a893bf 0%, rgba(168,147,191,0) 70%),
+      linear-gradient(150deg,#d9a441,#c4703f 52%,#8f7cab);
+  }
+  html.age-ok .gate{display:none}
+  .gate::before{
+    content:"";position:fixed;inset:0;pointer-events:none;
+    background-image:var(--noise);background-size:180px 180px;opacity:.09;mix-blend-mode:multiply;
+  }
+  .gate-card{
+    position:relative;outline:none;width:min(100%,470px);
+    background:var(--offwhite);
+    border:1px solid rgba(74,53,36,.28);
+    border-radius:26px;
+    padding:clamp(24px,3.4vw,34px);
+    box-shadow:0 50px 90px -50px rgba(30,20,10,.8);
+    animation:gateIn .6s cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes gateIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+  .gate-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+  .gate-top img{width:46px;height:auto}
+  .gate-chip{
+    display:inline-grid;place-items:center;height:30px;padding:0 12px;
+    border:1px solid var(--line-2);border-radius:999px;
+    font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--braun-soft);
+  }
+  .gate h2{
+    font-family:var(--f-display);font-weight:400;
+    font-size:clamp(30px,3.4vw,40px);line-height:1.14;letter-spacing:.005em;
+    text-wrap:balance;
+  }
+  .gate p{margin-top:12px;font-size:14.5px;line-height:1.65;color:rgba(74,53,36,.86);text-wrap:pretty}
+  .gate-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+  .gate-actions .btn{flex:1 1 190px;padding:15px 20px;font-size:12.5px}
+  .gate-no{
+    background:transparent;border:1px solid var(--line-2);color:var(--braun);
+    box-shadow:none;
+  }
+  .gate-no:hover{background:rgba(74,53,36,.07);border-color:var(--braun);transform:none;box-shadow:none}
+  .gate-msg{
+    margin-top:14px;padding:10px 12px;border-radius:10px;
+    background:rgba(192,90,42,.12);border:1px solid rgba(192,90,42,.3);
+    font-size:12.5px;line-height:1.5;font-weight:500;color:var(--braun);
+  }
+  .gate-small{margin-top:16px;font-size:10.5px;line-height:1.55;color:var(--braun-soft)}
+  .gate-deco{width:64px;height:auto;color:var(--burnt);opacity:.75;margin-top:18px}
+  @media(max-width:560px){
+    .gate{padding:14px}
+    .gate-card{padding:22px;border-radius:20px}
+    .gate-actions{flex-direction:column}
+    .gate-actions .btn{flex:1 1 auto}
+  }
+
+  /* ============================================================
+     SEARCH
+     ============================================================ */
+  .search[hidden]{display:none}
+  .search{
+    position:fixed;inset:0;z-index:220;
+    background:rgba(58,42,27,.6);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    padding:clamp(16px,8vh,90px) 16px 24px;overflow:auto;
+    opacity:0;transition:opacity .25s ease;
+  }
+  .search.is-open{opacity:1}
+  .search-box{
+    width:min(100%,720px);margin:0 auto;
+    background:var(--offwhite);border-radius:24px;
+    padding:clamp(20px,3vw,28px);
+    box-shadow:0 40px 80px -40px rgba(0,0,0,.7);
+  }
+  .search-head{display:flex;align-items:center;gap:12px;border-bottom:1.5px solid var(--braun);padding-bottom:12px}
+  .search-head .i{width:22px;height:22px;flex:0 0 auto;color:var(--braun-soft)}
+  .search-input{
+    flex:1 1 auto;min-width:0;border:0;background:none;padding:4px 0;
+    font-size:clamp(18px,2.2vw,24px);font-weight:500;color:var(--braun);
+  }
+  .search-input:focus{outline:none}
+  .search-input::-webkit-search-cancel-button,
+  .search-input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
+  .search-input::placeholder{color:rgba(74,53,36,.45)}
+  .search-close{
+    flex:0 0 auto;width:38px;height:38px;display:grid;place-items:center;
+    border:1px solid var(--line);border-radius:50%;background:none;
+  }
+  .search-hint{margin-top:14px;font-size:12px;letter-spacing:.03em;color:var(--braun-soft)}
+  .s-results{margin-top:8px}
+  .s-item{
+    display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:12px;
+    padding:11px 2px;border-bottom:1px solid var(--line);text-decoration:none;
+  }
+  .s-item:last-child{border-bottom:0}
+  .s-thumb{width:56px;height:56px;border-radius:10px;background:#e9dfcc;padding:5px;object-fit:contain;mix-blend-mode:multiply}
+  .s-thumb--ph{display:grid;place-items:center;padding:0;color:var(--braun-soft)}
+  .s-thumb--ph .i{width:22px;height:22px;stroke-width:1.4;opacity:.65}
+  .s-title{font-size:14px;font-weight:500;line-height:1.35}
+  .s-vendor{display:block;margin-top:2px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--braun-soft)}
+  .s-price{font-size:13.5px;font-weight:700;white-space:nowrap}
+  .s-empty{padding:20px 2px;font-size:14px;color:var(--braun-soft)}
+
+  /* ============================================================
+     CART
+     ============================================================ */
+  .scrim{
+    position:fixed;inset:0;z-index:170;background:rgba(58,42,27,.5);
+    opacity:0;pointer-events:none;transition:opacity .35s ease;
+  }
+  .scrim.is-on{opacity:1;pointer-events:auto}
+  .cart{
+    position:fixed;top:0;right:0;bottom:0;z-index:180;
+    width:min(430px,100%);
+    display:flex;flex-direction:column;
+    background:var(--offwhite);
+    border-left:1px solid var(--line);
+    box-shadow:-30px 0 60px -40px rgba(0,0,0,.6);
+    transform:translateX(102%);
+    transition:transform .42s cubic-bezier(.2,.7,.2,1);
+    visibility:hidden;
+  }
+  .cart.is-open{transform:none;visibility:visible}
+  .cart-head{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:20px 22px;border-bottom:1px solid var(--line);
+  }
+  .cart-head h2{font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.2}
+  .cart-head .cart-x{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:none}
+  .cart-body{flex:1 1 auto;overflow:auto;padding:14px 22px}
+  .cart-line{display:grid;grid-template-columns:66px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .cart-line:last-child{border-bottom:0}
+  .cart-thumb{width:66px;height:66px;border-radius:12px;background:#e9dfcc;padding:6px;object-fit:contain;mix-blend-mode:multiply}
+  .cart-name{font-size:13px;font-weight:500;line-height:1.4}
+  .cart-name a{text-decoration:none}
+  .cart-name a:hover{text-decoration:underline;text-underline-offset:2px}
+  .cart-meta{margin-top:3px;font-size:11.5px;color:var(--braun-soft)}
+  .qty{display:inline-flex;align-items:center;gap:2px;margin-top:8px;border:1px solid var(--line);border-radius:999px;padding:3px}
+  .qty button{width:26px;height:26px;display:grid;place-items:center;border:0;background:none;border-radius:50%;color:var(--braun)}
+  .qty button:hover{background:rgba(74,53,36,.08)}
+  .qty span{min-width:22px;text-align:center;font-size:12px;font-weight:700}
+  .qty .i{width:12px;height:12px;stroke-width:2}
+  .cart-side{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:10px}
+  .cart-line-price{font-size:13.5px;font-weight:700;white-space:nowrap}
+  .cart-remove{border:0;background:none;color:var(--braun-soft);font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px}
+  .cart-remove:hover{color:var(--burnt-deep)}
+  .cart-empty{display:grid;place-items:center;text-align:center;padding:46px 10px}
+  .cart-empty .i{width:44px;height:44px;stroke-width:1.2;color:var(--burnt)}
+  .cart-empty p{margin-top:14px;font-size:16px;font-weight:500}
+  .cart-empty span{display:block;margin-top:5px;font-size:13px;color:var(--braun-soft)}
+  .cart-empty .btn{margin-top:20px;padding:13px 20px;font-size:11.5px}
+  .cart-foot{border-top:1px solid var(--line);padding:16px 22px 22px}
+  .ship{margin-bottom:14px}
+  .ship-label{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--braun-soft)}
+  .ship-track{height:5px;margin-top:8px;background:rgba(74,53,36,.13);border-radius:999px;overflow:hidden}
+  .ship-bar{display:block;height:100%;width:0;background:var(--burnt);border-radius:999px;transition:width .4s ease}
+  .cart-total{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:4px}
+  .cart-total span{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--braun-soft)}
+  .cart-total b{font-size:20px}
+  .cart-note{margin:6px 0 14px;font-size:10.5px;color:var(--braun-soft)}
+  .cart-checkout{width:100%;padding:16px 20px;font-size:12.5px}
+  .cart-continue{display:block;width:100%;margin-top:10px;background:none;border:0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--braun-soft);text-decoration:underline;text-underline-offset:3px}
+
+  /* ============================================================
+     TOAST
+     ============================================================ */
+  .toast{
+    position:fixed;left:50%;bottom:24px;z-index:400;
+    transform:translate(-50%,14px);
+    display:flex;align-items:center;gap:10px;
+    max-width:calc(100% - 32px);
+    padding:13px 20px;border-radius:999px;
+    background:var(--braun);color:var(--offwhite);
+    font-size:13px;font-weight:500;line-height:1.4;
+    box-shadow:0 20px 40px -20px rgba(0,0,0,.6);
+    opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;
+  }
+  .toast.is-on{opacity:1;transform:translate(-50%,0)}
+  .toast .i{width:16px;height:16px;stroke-width:2;color:var(--senf-light);flex:0 0 auto}
+
+  /* ============================================================
+     REVEAL
+     ============================================================ */
+  [data-reveal]{
+    opacity:0;transform:translateY(14px);
+    transition:opacity .62s ease,transform .62s cubic-bezier(.2,.7,.2,1);
+    transition-delay:var(--d,0ms);
+  }
+  [data-reveal].is-in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+    .hero-copy > *{animation:none!important}
+    .seal{animation:none!important}
+  }
+
+  /* Hero entrance */
+  .hero-copy > *{animation:rise .85s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > *:nth-child(1){animation-delay:.02s}
+  .hero-copy > *:nth-child(2){animation-delay:.08s}
+  .hero-copy > *:nth-child(3){animation-delay:.14s}
+  .hero-copy > *:nth-child(4){animation-delay:.2s}
+  .hero-copy > *:nth-child(5){animation-delay:.26s}
+  .hero-copy > *:nth-child(6){animation-delay:.32s}
+  .hero-copy > .hand{animation:handIn .85s .14s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes handIn{from{opacity:0;transform:rotate(-4deg) translateY(12px)}to{opacity:1;transform:rotate(-4deg)}}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .hero-stage{animation:rise .9s .18s cubic-bezier(.2,.7,.2,1) both}
+
+  /* ============================================================
+     BREAKPOINT POLISH
+     ============================================================ */
+  @media(max-width:760px){
+    .sec-head{display:block}
+    .sec-note{margin-top:10px;max-width:46ch}
+  }
+  @media(max-width:420px){
+    .h1-bubble{font-size:.74em}
+    .hero-meta{display:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============================================================
+     SPRITE
+     ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-sun" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="8.6"/>
+    <path d="M24 3v6M24 39v6M3 24h6M39 24h6M9.2 9.2l4.2 4.2M34.6 34.6l4.2 4.2M38.8 9.2l-4.2 4.2M13.4 34.6l-4.2 4.2"/>
+  </symbol>
+  <symbol id="i-peace" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="18"/>
+    <path d="M24 6v36M24 24 13.2 38.4M24 24l10.8 14.4"/>
+  </symbol>
+  <symbol id="i-leaf" viewBox="0 0 48 48">
+    <path d="M24 44c-1.8-8-5.4-13.6-14-19 4-1.6 8-1.4 11.6.6C20 20 18.6 14 20.6 8.2c3.2 4.4 4.6 9.2 4.8 14.2 1.4-5.2 4.2-9.8 8.6-13 1 5.8-.4 11.4-3.4 16.2 3.4-1.6 7.4-1.6 11.8 0-8.2 5-12 10.8-14 18.4"/>
+    <path d="M24 43.4c.4-6.2.4-11 .2-15.8M24.8 30.4c-3-1.6-5.6-3.6-7.8-6M24.8 30.4c3-1.6 5.6-3.6 7.8-6"/>
+  </symbol>
+  <symbol id="i-spiral" viewBox="0 0 48 48">
+    <path d="M24 24c0-1.7 2.2-2.4 3.2-1.1 1.4 1.8.1 4.3-2.1 4.3-2.8 0-4.5-2.6-3.3-5.2 1.5-3.3 5.7-4.1 8.3-1.3 3 3.2 1.2 8.4-2.8 9.6-4.6 1.4-9.5-1.9-9.6-6.7 0-5.2 4.3-9.4 9.5-9.4 6.2 0 11.2 5 11.2 11.2 0 7.2-5.8 13-13 13-8.2 0-15-6.8-15-15"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 48 48">
+    <circle cx="21" cy="21" r="12.5"/>
+    <path d="M30.4 30.4 40 40"/>
+  </symbol>
+  <symbol id="i-bag" viewBox="0 0 48 48">
+    <path d="M8.5 15.5h31l-2.4 25.2h-26.2L8.5 15.5Z"/>
+    <path d="M17.5 15.5v-4a6.5 6.5 0 0 1 13 0v4"/>
+  </symbol>
+  <symbol id="i-menu" viewBox="0 0 48 48">
+    <path d="M8 16h32M8 24h32M8 32h32"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 48 48">
+    <path d="m14 14 20 20M34 14 14 34"/>
+  </symbol>
+  <symbol id="i-plus" viewBox="0 0 48 48">
+    <path d="M24 10v28M10 24h28"/>
+  </symbol>
+  <symbol id="i-minus" viewBox="0 0 48 48">
+    <path d="M10 24h28"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 48 48">
+    <path d="M7 24h33M27 11l13 13-13 13"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 48 48">
+    <path d="m9 25.5 9.5 9.5L39 12.5"/>
+  </symbol>
+  <symbol id="i-up-right" viewBox="0 0 48 48">
+    <path d="M14 34 34 14M18 14h16v16"/>
+  </symbol>
+  <symbol id="i-wave" viewBox="0 0 60 24">
+    <path d="M2 15c6-9 12-9 18 0s12 9 18 0 12-9 20 0"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<!-- ============================================================
+     ANNOUNCEMENT
+     ============================================================ -->
+<div class="announce">
+  <div class="wrap announce-in">
+    <p><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg><span class="a-full">Kostenfreier Versand ab 49 € — Express-Lieferung idR. in 24 h</span><span class="a-short">Versand ab 49 € frei · Lieferung idR. in 24 h</span></p>
+    <p class="a-right">Diskret verpackt · Versand aus Deutschland</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-head" data-head>
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Only Bubatz — zur Startseite">
+      <img src="assets/logo.png" width="40" height="44" alt="Only Bubatz">
+      <span class="brand-txt">
+        <b>Only Bubatz</b>
+        <span>Premium Gear</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#produkte" data-page="shop">Shop</a>
+      <a href="#kategorien" data-page="collections">Kategorien</a>
+      <a href="#" data-page="sessions">Sessions</a>
+      <a href="#ueber" data-page="about">Über uns</a>
+      <a href="#produkte" data-page="deals">Deals</a>
+    </nav>
+    <div class="head-tools">
+      <button class="icon-btn" type="button" data-search-open aria-label="Suche öffnen">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+      </button>
+      <button class="cart-btn" type="button" data-cart-open aria-label="Warenkorb öffnen">
+        <svg class="i i--sm" aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="c-label">Korb</span>
+        <span class="cart-count" data-cart-count aria-live="polite">0</span>
+      </button>
+      <button class="icon-btn burger" type="button" data-menu aria-expanded="false" aria-controls="mnav" aria-label="Menü öffnen">
+        <svg class="i" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <ul>
+    <li><a href="#produkte" data-page="shop">Shop <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    <li><a href="#kategorien" data-page="collections">Kategorien <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    <li><a href="#" data-page="sessions">Sessions <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    <li><a href="#ueber" data-page="about">Über uns <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    <li><a href="#produkte" data-page="deals">Deals <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+  </ul>
+  <p class="mnav-note">Versand in 24 h · ab 49 € versandkostenfrei</p>
+</div>
+
+<main id="main">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-rings" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg>Only Bubatz · Kollektion 26</p>
+        <h1 id="hero-title">
+          <span class="h1-line">Goldene</span>
+          <span class="h1-bubble">Stunden</span>
+        </h1>
+        <span class="hand">bis der Mond kommt<svg class="i" aria-hidden="true"><use href="#i-wave"/></svg></span>
+        <p class="hero-sub">Festival-Gear, weiche Taschen und Werkzeug, das man nicht wegwirft. Für goldene Stunden, die länger dauern als geplant.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#produkte">Kollektion ansehen <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="hero-meta">Versand in 24 h<br>ab 49 € versandkostenfrei</p>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <svg class="sun-disc" viewBox="0 0 400 400" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="200" cy="200" r="86" fill="rgba(244,211,145,.6)" stroke="rgba(74,53,36,.36)"/>
+            <circle cx="200" cy="200" r="104" stroke="rgba(74,53,36,.26)" stroke-dasharray="2 8"/>
+            <g opacity=".85">
+              <path d="M200 78v-26"/><path d="M200 322v26"/>
+              <path d="M78 200H52"/><path d="M322 200h26"/>
+              <path d="m114 114-18-18"/><path d="m286 286 18 18"/>
+              <path d="m286 114 18-18"/><path d="m114 286-18 18"/>
+              <path d="m157 84-7-22"/><path d="m243 316 7 22"/>
+              <path d="m84 157-22-7"/><path d="m316 243 22 7"/>
+              <path d="m316 157 22-7"/><path d="m84 243-22 7"/>
+            </g>
+          </g>
+        </svg>
+
+        <div class="panel">
+          <div class="badge" aria-hidden="true">
+            <div>
+              <svg class="i" aria-hidden="true"><use href="#i-sun"/></svg>
+              <span>Festival<br>Pick</span>
+            </div>
+          </div>
+          <a class="print" data-hero-link href="#" aria-label="Produkt ansehen">
+            <span class="print-wash" aria-hidden="true"></span>
+            <img class="ghost" data-hero-ghost alt="" width="900" height="900" aria-hidden="true">
+            <img data-hero-img alt="" width="900" height="900" loading="eager" fetchpriority="high" decoding="async">
+          </a>
+          <div class="panel-foot">
+            <p class="panel-prod" data-hero-vendor>RAW · Travel Bag</p>
+            <p class="panel-price" data-hero-price>68,99 €</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-wave" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 46 C 120 18, 240 68, 380 52 C 520 36, 620 6, 760 26 C 900 46, 1010 74, 1150 56 C 1270 41, 1360 44, 1440 34 L1440 96 L0 96 Z" fill="rgba(169,147,191,.38)"/>
+      <path d="M0 62 C 120 36, 240 82, 380 66 C 520 50, 620 24, 760 44 C 900 64, 1010 88, 1150 72 C 1270 58, 1360 60, 1440 50 L1440 96 L0 96 Z" fill="#f3ede1"/>
+      <path d="M0 62 C 120 36, 240 82, 380 66 C 520 50, 620 24, 760 44 C 900 64, 1010 88, 1150 72 C 1270 58, 1360 60, 1440 50" fill="none" stroke="#c05a2a" stroke-opacity=".45" stroke-width="1.6"/>
+    </svg>
+  </section>
+
+  <!-- ============================================================
+       KATEGORIEN
+       ============================================================ -->
+  <section class="cats" id="kategorien" aria-labelledby="cats-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div>
+          <p class="micro">Kategorien</p>
+          <h2 class="h2" id="cats-title">Drei Wege durch den Abend.</h2>
+        </div>
+        <p class="sec-note">Alles, was du brauchst, liegt nicht weit auseinander: Papier, Vorrat, Tasche.</p>
+      </div>
+
+      <div class="cat-grid">
+        <a class="cat cat--senf" href="#produkte" data-page="collection" data-reveal style="--d:0ms">
+          <div class="cat-top">
+            <span class="cat-icon"><svg class="i" aria-hidden="true"><use href="#i-peace"/></svg></span>
+            <span class="cat-no">01</span>
+          </div>
+          <div class="cat-body">
+            <p class="cat-name">Papers &amp; Filter</p>
+            <p class="cat-sub">Blättchen, Tips und Aktivkohle für den sauberen Zug.</p>
+          </div>
+          <div class="cat-foot">
+            <span class="cat-count"><span data-count="papers">57</span> Artikel</span>
+            <span class="cat-arrow"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </div>
+        </a>
+
+        <a class="cat cat--oliv" href="#produkte" data-page="collection" data-reveal style="--d:90ms">
+          <div class="cat-top">
+            <span class="cat-icon"><svg class="i" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <span class="cat-no">02</span>
+          </div>
+          <div class="cat-body">
+            <p class="cat-name">Grinder &amp; Vorrat</p>
+            <p class="cat-sub">Mühlen, Dosen und Gläser, die dicht halten.</p>
+          </div>
+          <div class="cat-foot">
+            <span class="cat-count"><span data-count="grind">36</span> Artikel</span>
+            <span class="cat-arrow"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </div>
+        </a>
+
+        <a class="cat cat--lav" href="#produkte" data-page="collection" data-reveal style="--d:180ms">
+          <div class="cat-top">
+            <span class="cat-icon"><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg></span>
+            <span class="cat-no">03</span>
+          </div>
+          <div class="cat-body">
+            <p class="cat-name">Taschen &amp; Etuis</p>
+            <p class="cat-sub">Für Festival, Rucksack und Jackentasche.</p>
+          </div>
+          <div class="cat-foot">
+            <span class="cat-count"><span data-count="bags">9</span> Artikel</span>
+            <span class="cat-arrow"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRODUKTE
+       ============================================================ -->
+  <section class="shelf" id="produkte" aria-labelledby="shelf-title">
+    <div class="wrap">
+      <div class="shelf-head" data-reveal>
+        <div>
+          <p class="micro">Aus dem Regal</p>
+          <h2 class="h2" id="shelf-title">Was mitkommt.</h2>
+        </div>
+        <div class="shelf-head-r">
+          <p>Sechs Stücke, die diesen Sommer nicht im Schrank bleiben. Preise wie im Laden, ohne Sternchen.</p>
+          <a class="all-link" href="https://onlybubatz.de/collections/all" data-page="shop">Alle <span data-total>120</span> Artikel ansehen <svg class="i" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+        </div>
+      </div>
+
+      <div class="p-grid" data-grid></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MANIFEST
+       ============================================================ -->
+  <section class="manifest" id="ueber" aria-labelledby="manifest-title">
+    <div class="wrap manifest-in">
+      <div data-reveal>
+        <p class="micro">Über Only Bubatz</p>
+        <h2 class="h2" id="manifest-title">Nicht mehr Zeug.<br>Bessere Sachen.</h2>
+        <p>Wir suchen nicht den nächsten Trend, sondern das, was bleibt: Papers, die sauber ziehen, Filter, die halten, Taschen, die einen Sommer aushalten. Was hier liegt, hatten wir selbst in der Hand.</p>
+        <svg class="squiggle" viewBox="0 0 220 16" fill="none" aria-hidden="true">
+          <path d="M2 10c22-8 38 6 60-2s38 6 60-2 38 6 60-2 24 4 36 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="seal-wrap" data-reveal style="--d:120ms">
+        <div class="seal">
+          <svg viewBox="0 0 320 320" aria-hidden="true">
+            <circle cx="160" cy="160" r="154" fill="#e8bd6a"/>
+            <circle cx="160" cy="160" r="154" fill="none" stroke="rgba(74,53,36,.35)" stroke-width="1.5"/>
+            <circle cx="160" cy="160" r="112" fill="none" stroke="rgba(74,53,36,.3)" stroke-width="1"/>
+            <circle cx="160" cy="160" r="146" fill="none" stroke="rgba(74,53,36,.22)" stroke-width="1" stroke-dasharray="1 6"/>
+            <defs>
+              <path id="sealArc" d="M160,160 m-128,0 a128,128 0 1,1 256,0 a128,128 0 1,1 -256,0"/>
+            </defs>
+            <text fill="#4a3524" font-family="DM Sans, sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.1">
+              <textPath href="#sealArc" startOffset="0">ONLY BUBATZ · SUNSET SUPPLY · GOLDEN HOURS · PREMIUM GEAR ·</textPath>
+            </text>
+          </svg>
+          <img class="seal-logo" src="assets/logo.png" alt="" width="120" height="132" aria-hidden="true">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABSCHLUSS
+       ============================================================ -->
+  <section class="closing" id="service" aria-labelledby="closing-title">
+    <div class="wrap closing-in">
+      <div data-reveal>
+        <p class="micro">Gut zu wissen</p>
+        <h2 id="closing-title">Gut nach Sonnenuntergang.</h2>
+        <p class="lead">Ein Karton, kein Tamtam: bestellt, verpackt, verschickt — und der Abend kann kommen.</p>
+
+        <div class="facts">
+          <div class="fact">
+            <b>24 h</b>
+            <span>Versand nach Bestelleingang</span>
+          </div>
+          <div class="fact">
+            <b>0</b>
+            <span>Aufdruck auf dem Karton</span>
+          </div>
+          <div class="fact">
+            <b>49 €</b>
+            <span>versandkostenfrei ab</span>
+          </div>
+        </div>
+
+        <p class="pay">PayPal · Klarna · Visa · Mastercard · Apple Pay · Vorkasse</p>
+      </div>
+
+      <div class="news" data-reveal style="--d:120ms">
+        <svg class="news-sun" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+          <circle cx="24" cy="24" r="8.6"/>
+          <path d="M24 3v6M24 39v6M3 24h6M39 24h6M9.2 9.2l4.2 4.2M34.6 34.6l4.2 4.2M38.8 9.2l-4.2 4.2M13.4 34.6l-4.2 4.2"/>
+        </svg>
+        <p class="micro">Newsletter</p>
+        <h3>Post vom Sunset</h3>
+        <p>Neue Stücke, Restposten und Termine — einmal im Monat, nie öfter.</p>
+        <form class="news-form" data-news novalidate>
+          <label class="sr-only" for="news-mail">E-Mail-Adresse</label>
+          <input class="news-input" id="news-mail" type="email" name="email" placeholder="deine@mail.de" autocomplete="email" required>
+          <button class="news-btn" type="submit">Anmelden</button>
+        </form>
+        <p class="news-msg" data-news-msg hidden>Danke — du stehst auf der Liste.</p>
+        <p class="news-err" data-news-err role="alert" hidden>Bitte gib eine gültige E-Mail-Adresse ein.</p>
+        <p class="news-note">Abmeldung jederzeit. Mit der Anmeldung stimmst du unserer Datenschutzerklärung zu.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Only Bubatz — nach oben">
+          <img src="assets/logo.png" width="44" height="48" alt="Only Bubatz">
+          <span class="brand-txt">
+            <b>Only Bubatz</b>
+            <span>Premium Gear</span>
+          </span>
+        </a>
+        <p class="foot-claim">Papers, Filter, Taschen und Werkzeug. Ausgesucht für lange Abende, verschickt aus Deutschland.</p>
+        <div class="pay-pills" aria-label="Zahlungsarten">
+          <span>PayPal</span><span>Klarna</span><span>Visa</span><span>Mastercard</span><span>Apple Pay</span>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#produkte" data-page="collection">Papers &amp; Filter</a></li>
+          <li><a href="#produkte" data-page="collection">Grinder &amp; Vorrat</a></li>
+          <li><a href="#produkte" data-page="collection">Taschen &amp; Etuis</a></li>
+          <li><a href="#produkte" data-page="shop">Alle Artikel</a></li>
+          <li><a href="#produkte" data-page="deals">Deals</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="#" data-page="versand">Versand</a></li>
+          <li><a href="#" data-page="zahlung">Zahlung</a></li>
+          <li><a href="#" data-page="faq">FAQ</a></li>
+          <li><a href="#" data-page="kontakt">Kontakt</a></li>
+          <li><a href="#" data-page="sessions">Sessions</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#" data-page="impressum">Impressum</a></li>
+          <li><a href="#" data-page="datenschutz">Datenschutz</a></li>
+          <li><a href="#" data-page="agb">AGB</a></li>
+          <li><a href="#" data-page="widerruf">Widerruf</a></li>
+          <li><a href="#" data-page="cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div class="f-left">
+        <span>© 2026 Only Bubatz</span>
+        <span>Alle Preise inkl. MwSt.</span>
+        <span>Nur für Erwachsene <span class="adult">18+</span></span>
+      </div>
+      <span>onlybubatz.de</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     AGE GATE
+     ============================================================ -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-card" tabindex="-1">
+    <div class="gate-top">
+      <img src="assets/logo.png" width="46" height="50" alt="Only Bubatz">
+      <span class="gate-chip">18+</span>
+    </div>
+    <h2 id="gate-title">Erst der Ausweis, dann der Sunset.</h2>
+    <p>Only Bubatz ist ein Laden für Erwachsene. Bestätige kurz, dass du 18 oder älter bist — dann geht die Sonne auf.</p>
+    <div class="gate-actions">
+      <button class="btn btn-primary" type="button" data-age-yes>Ja, ich bin 18+</button>
+      <button class="btn gate-no" type="button" data-age-no>Nein, ich bin jünger</button>
+    </div>
+    <p class="gate-msg" data-age-msg hidden>Dann müssen wir dich leider draußen lassen. Komm wieder, wenn es so weit ist.</p>
+    <p class="gate-small">Deine Bestätigung bleibt lokal in diesem Browser. Keine Weitergabe, kein Konto nötig.</p>
+    <svg class="gate-deco" viewBox="0 0 60 24" fill="none" aria-hidden="true">
+      <path d="M2 15c6-9 12-9 18 0s12 9 18 0 12-9 20 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ============================================================
+     SEARCH
+     ============================================================ -->
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <h2 class="sr-only" id="search-title">Produktsuche</h2>
+    <div class="search-head">
+      <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+      <input class="search-input" type="search" data-search-input placeholder="Papers, Grinder, Tasche …" aria-label="Produktsuche" autocomplete="off">
+      <button class="search-close" type="button" data-search-close aria-label="Suche schließen">
+        <svg class="i" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <p class="search-hint" data-search-hint>Tippe mindestens zwei Buchstaben — dann zeigen wir dir, was da ist.</p>
+    <div class="s-results" data-search-results></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CART
+     ============================================================ -->
+<div class="scrim" data-cart-close hidden></div>
+<aside class="cart" id="cart" aria-hidden="true" aria-labelledby="cart-title">
+  <div class="cart-head">
+    <h2 id="cart-title">Dein Korb</h2>
+    <button class="cart-x" type="button" data-cart-close aria-label="Warenkorb schließen">
+      <svg class="i" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot" data-cart-foot></div>
+</aside>
+
+<div class="toast" data-toast role="status" aria-live="polite">
+  <svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-toast-text></span>
+</div>
+
+<script src="assets/products.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
+  var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
+  var esc = function (str) {
+    return String(str == null ? '' : str).replace(/[&<>"']/g, function (m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+    });
+  };
+  var cdn = function (url, w) {
+    if (!url) { return ''; }
+    return url + (url.indexOf('?') > -1 ? '&' : '?') + 'width=' + w;
+  };
+  var eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
+  var money = function (n) { return eur.format(n); };
+
+  var CATALOG = [];
+  try { CATALOG = (typeof PRODUCTS !== 'undefined') ? PRODUCTS : []; } catch (e) { CATALOG = []; }
+  var byHandle = {};
+  CATALOG.forEach(function (p) { byHandle[p.handle] = p; });
+
+  /* ---------------- Age Gate ---------------- */
+  var AGE_KEY = 'ob_sunset_age_v1';
+  var gate = $('#gate');
+  var gateYes = $('[data-age-yes]');
+  var gateNo = $('[data-age-no]');
+  var gateMsg = $('[data-age-msg]');
+
+  if (gateYes) {
+    gateYes.addEventListener('click', function () {
+      try { localStorage.setItem(AGE_KEY, '1'); } catch (e) {}
+      document.documentElement.classList.add('age-ok');
+      if (gate) { gate.setAttribute('aria-hidden', 'true'); }
+      setTimeout(function () { var main = $('#main'); if (main) { main.setAttribute('tabindex', '-1'); } }, 10);
+    });
+  }
+  if (gateNo) {
+    gateNo.addEventListener('click', function () {
+      if (gateMsg) { gateMsg.hidden = false; }
+    });
+  }
+  if (gate && !document.documentElement.classList.contains('age-ok')) {
+    setTimeout(function () { var card = $('.gate-card'); if (card) { card.focus(); } }, 260);
+  }
+
+  /* ---------------- Hero product ---------------- */
+  var HERO = byHandle['raw-z-013-ultimative-smokers-travel-bag'];
+  if (HERO) {
+    var heroImg = $('[data-hero-img]');
+    var heroGhost = $('[data-hero-ghost]');
+    var heroLink = $('[data-hero-link]');
+    var heroVendor = $('[data-hero-vendor]');
+    var heroPrice = $('[data-hero-price]');
+    if (heroImg) {
+      heroImg.src = cdn(HERO.img, 900);
+      heroImg.srcset = cdn(HERO.img, 480) + ' 480w, ' + cdn(HERO.img, 900) + ' 900w';
+      heroImg.sizes = '(max-width: 560px) 84vw, 400px';
+      heroImg.alt = HERO.title;
+    }
+    if (heroGhost) { heroGhost.src = cdn(HERO.img, 480); }
+    if (heroLink) { heroLink.href = 'https://onlybubatz.de/products/' + HERO.handle; }
+    if (heroVendor) { heroVendor.textContent = HERO.vendor + ' · Travel Bag'; }
+    if (heroPrice) { heroPrice.textContent = HERO.price; }
+  }
+
+  /* ---------------- Produktkarten ---------------- */
+  var PICKS = [
+    'purize-082-aktivkohletasche-bauchtasche',
+    'granny-s-weed-cnc-aluminium-grinder-pollinator-o-60mm',
+    'purize-086-aktivkohlefilter-xtra-slim-size-rainbow-100er-glas',
+    'raw-z-012-m-smell-proof-smokers-pouch-tabaktasche-m',
+    'stash-162-woodoo-luftdichte-edelstahl-vorratsdose',
+    'raw-z-018-smell-proof-rucksack-schwarz'
+  ];
+  var DEAL_HANDLE = 'granny-s-weed-cnc-aluminium-grinder-pollinator-o-60mm';
+
+  var grid = $('[data-grid]');
+  if (grid) {
+    grid.innerHTML = PICKS.map(function (handle, i) {
+      var p = byHandle[handle];
+      if (!p) { return ''; }
+      var href = 'https://onlybubatz.de/products/' + p.handle;
+      var compare = p.compareAt ? '<s class="p-compare">' + esc(p.compareAt) + '</s>' : '';
+      var deal = handle === DEAL_HANDLE ? '<span class="deal">Deal der Woche</span>' : '';
+      return '<article class="p-card" data-handle="' + esc(p.handle) + '" data-reveal style="--d:' + (i * 70) + 'ms">' +
+          '<a class="p-media" href="' + esc(href) + '" data-page="product" aria-label="' + esc(p.title) + ' ansehen">' +
+            '<span class="p-wash" aria-hidden="true"></span>' +
+            deal +
+            '<img src="' + esc(cdn(p.img, 480)) + '" ' +
+              'srcset="' + esc(cdn(p.img, 480)) + ' 480w, ' + esc(cdn(p.img, 900)) + ' 900w" ' +
+              'sizes="(max-width: 560px) 44vw, (max-width: 980px) 42vw, 340px" ' +
+              'width="900" height="900" alt="' + esc(p.title) + '" loading="lazy" decoding="async">' +
+          '</a>' +
+          '<div class="p-body">' +
+            '<p class="p-vendor">' + esc(p.vendor) + '</p>' +
+            '<h3 class="p-title"><a href="' + esc(href) + '" data-page="product">' + esc(p.title) + '</a></h3>' +
+            '<div class="p-row">' +
+              '<p class="p-price">' + esc(p.price) + compare + '</p>' +
+              '<button class="p-add" type="button" data-add="' + esc(p.handle) + '" aria-label="' + esc(p.title) + ' in den Korb legen">' +
+                '<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>' +
+              '</button>' +
+            '</div>' +
+          '</div>' +
+        '</article>';
+    }).join('');
+  }
+
+  /* ---------------- Kategorie-Zahlen ---------------- */
+  var COUNTS = {
+    papers: function (p) { return /(papier|paper|blättchen|blaettchen|filter|tip|pape)/i.test(p.title); },
+    grind: function (p) { return /(grinder|mühle|muhle|dose|behälter|behalter|glas|stash|jar|box|vac)/i.test(p.title) && !/(tasche|pouch|etui|case)/i.test(p.title); },
+    bags: function (p) { return /(tasche|bag|pouch|etui|case|rucksack)/i.test(p.title); }
+  };
+  $$('[data-count]').forEach(function (el) {
+    var fn = COUNTS[el.getAttribute('data-count')];
+    if (fn) { el.textContent = String(CATALOG.filter(fn).length); }
+  });
+  $$('[data-total]').forEach(function (el) { el.textContent = String(CATALOG.length); });
+
+  /* ---------------- Toast ---------------- */
+  var toastEl = $('[data-toast]');
+  var toastText = $('[data-toast-text]');
+  var toastTimer;
+  function hideToast() {
+    if (!toastEl) { return; }
+    toastEl.classList.remove('is-on');
+    clearTimeout(toastTimer);
+  }
+  function toast(msg) {
+    if (!toastEl || !toastText) { return; }
+    toastText.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('is-on'); }, 2800);
+  }
+
+  /* ---------------- Cart ---------------- */
+  var cart = [];
+  var cartEl = $('#cart');
+  var cartBody = $('[data-cart-body]');
+  var cartFoot = $('[data-cart-foot]');
+  var scrim = $('[data-cart-close][hidden]') || $('.scrim');
+
+  function cartQty() {
+    return cart.reduce(function (n, l) { return n + l.qty; }, 0);
+  }
+  function cartSum() {
+    return cart.reduce(function (n, l) {
+      var p = byHandle[l.handle];
+      return n + (p ? p.priceNum * l.qty : 0);
+    }, 0);
+  }
+  function renderCart() {
+    var count = cartQty();
+    $$('[data-cart-count]').forEach(function (el) { el.textContent = String(count); });
+
+    if (!cartBody) { return; }
+
+    if (!cart.length) {
+      cartBody.innerHTML =
+        '<div class="cart-empty">' +
+          '<svg class="i" aria-hidden="true"><use href="#i-sun"/></svg>' +
+          '<p>Noch nichts drin.</p>' +
+          '<span>Der Sunset wartet schon.</span>' +
+          '<a class="btn btn-primary" href="#produkte" data-cart-close>Kollektion ansehen</a>' +
+        '</div>';
+    } else {
+      cartBody.innerHTML = cart.map(function (line) {
+        var p = byHandle[line.handle];
+        if (!p) { return ''; }
+        var href = 'https://onlybubatz.de/products/' + p.handle;
+        return '<div class="cart-line" data-line="' + esc(p.handle) + '">' +
+            '<img class="cart-thumb" src="' + esc(cdn(p.img, 120)) + '" width="66" height="66" alt="" loading="lazy">' +
+            '<div>' +
+              '<p class="cart-name"><a href="' + esc(href) + '" data-page="product">' + esc(p.title) + '</a></p>' +
+              (line.qty > 1 ? '<p class="cart-meta">' + esc(p.price) + ' / Stück</p>' : '') +
+              '<div class="qty">' +
+                '<button type="button" data-dec="' + esc(p.handle) + '" aria-label="Menge verringern"><svg class="i" aria-hidden="true"><use href="#i-minus"/></svg></button>' +
+                '<span aria-label="Menge">' + line.qty + '</span>' +
+                '<button type="button" data-inc="' + esc(p.handle) + '" aria-label="Menge erhöhen"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button>' +
+              '</div>' +
+            '</div>' +
+            '<div class="cart-side">' +
+              '<span class="cart-line-price">' + money((p.priceNum || 0) * line.qty) + '</span>' +
+              '<button class="cart-remove" type="button" data-remove="' + esc(p.handle) + '">Entfernen</button>' +
+            '</div>' +
+          '</div>';
+      }).join('');
+    }
+
+    if (cartFoot) {
+      if (!cart.length) {
+        cartFoot.innerHTML = '<p class="cart-note">Versand in 24 h · diskret verpackt · ab 49 € versandkostenfrei</p>';
+      } else {
+        var sum = cartSum();
+        var left = Math.max(0, 49 - sum);
+        var pct = Math.min(100, (sum / 49) * 100);
+        cartFoot.innerHTML =
+          '<div class="ship">' +
+            '<p class="ship-label">' + (left > 0 ? 'Noch ' + money(left) + ' bis versandkostenfrei' : 'Versandkostenfrei — geschafft') + '</p>' +
+            '<div class="ship-track"><span class="ship-bar" style="width:' + pct + '%"></span></div>' +
+          '</div>' +
+          '<div class="cart-total"><span>Zwischensumme</span><b>' + money(sum) + '</b></div>' +
+          '<p class="cart-note">Versand in 24 h · diskret verpackt · inkl. MwSt.</p>' +
+          '<button class="btn btn-primary cart-checkout" type="button" data-checkout>Zur Kasse <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>' +
+          '<button class="cart-continue" type="button" data-cart-close>Weiter einkaufen</button>';
+      }
+    }
+  }
+
+  function addToCart(handle) {
+    var p = byHandle[handle];
+    if (!p) { return; }
+    var line = cart.filter(function (l) { return l.handle === handle; })[0];
+    if (line) { line.qty += 1; } else { cart.push({ handle: handle, qty: 1 }); }
+    renderCart();
+    var countEl = $('[data-cart-count]');
+    if (countEl) {
+      countEl.classList.remove('bump');
+      void countEl.offsetWidth;
+      countEl.classList.add('bump');
+    }
+    toast('„' + p.title + '“ liegt im Korb.');
+  }
+
+  function openCart() {
+    if (!cartEl) { return; }
+    hideToast();
+    cartEl.classList.add('is-open');
+    cartEl.setAttribute('aria-hidden', 'false');
+    if (scrim) { scrim.hidden = false; requestAnimationFrame(function () { scrim.classList.add('is-on'); }); }
+    document.body.classList.add('locked');
+    var close = $('.cart-x');
+    if (close) { close.focus(); }
+  }
+  function closeCart() {
+    if (!cartEl) { return; }
+    cartEl.classList.remove('is-open');
+    cartEl.setAttribute('aria-hidden', 'true');
+    if (scrim) {
+      scrim.classList.remove('is-on');
+      setTimeout(function () { scrim.hidden = true; }, 350);
+    }
+    if (!document.querySelector('.search.is-open')) { document.body.classList.remove('locked'); }
+  }
+
+  document.addEventListener('click', function (e) {
+    var add = e.target.closest('[data-add]');
+    if (add) { addToCart(add.getAttribute('data-add')); return; }
+
+    var inc = e.target.closest('[data-inc]');
+    if (inc) {
+      var hInc = inc.getAttribute('data-inc');
+      var lInc = cart.filter(function (l) { return l.handle === hInc; })[0];
+      if (lInc) { lInc.qty += 1; renderCart(); }
+      return;
+    }
+    var dec = e.target.closest('[data-dec]');
+    if (dec) {
+      var hDec = dec.getAttribute('data-dec');
+      var lDec = cart.filter(function (l) { return l.handle === hDec; })[0];
+      if (lDec) {
+        lDec.qty -= 1;
+        if (lDec.qty <= 0) { cart = cart.filter(function (l) { return l.handle !== hDec; }); }
+        renderCart();
+      }
+      return;
+    }
+    var rem = e.target.closest('[data-remove]');
+    if (rem) {
+      var hRem = rem.getAttribute('data-remove');
+      cart = cart.filter(function (l) { return l.handle !== hRem; });
+      renderCart();
+      return;
+    }
+    if (e.target.closest('[data-cart-open]')) { e.preventDefault(); openCart(); return; }
+    var cartClose = e.target.closest('[data-cart-close]');
+    if (cartClose) {
+      if (cartClose.tagName === 'A') { closeCart(); }
+      else { e.preventDefault(); closeCart(); }
+      return;
+    }
+    if (e.target.closest('[data-checkout]')) {
+      toast('Demo-Shop: Hier würde die Kasse starten.');
+      return;
+    }
+
+    var link = e.target.closest('a[href="#"]');
+    if (link) {
+      e.preventDefault();
+      var page = link.getAttribute('data-page');
+      if (page === 'sessions') { toast('Sessions kommen mit dem nächsten Drop.'); }
+    }
+  });
+
+  renderCart();
+
+  /* ---------------- Search ---------------- */
+  var searchEl = $('#search');
+  var searchInput = $('[data-search-input]');
+  var searchResults = $('[data-search-results]');
+  var searchHint = $('[data-search-hint]');
+
+  function openSearch() {
+    if (!searchEl) { return; }
+    hideToast();
+    searchEl.hidden = false;
+    requestAnimationFrame(function () { searchEl.classList.add('is-open'); });
+    document.body.classList.add('locked');
+    setTimeout(function () { if (searchInput) { searchInput.focus(); } }, 60);
+  }
+  function closeSearch() {
+    if (!searchEl) { return; }
+    searchEl.classList.remove('is-open');
+    setTimeout(function () { searchEl.hidden = true; }, 240);
+    if (!document.querySelector('.cart.is-open')) { document.body.classList.remove('locked'); }
+  }
+  function renderSearch(q) {
+    if (!searchResults) { return; }
+    var term = q.trim().toLowerCase();
+    if (term.length < 2) {
+      searchResults.innerHTML = '';
+      if (searchHint) { searchHint.hidden = false; }
+      return;
+    }
+    if (searchHint) { searchHint.hidden = true; }
+    var hits = CATALOG.filter(function (p) {
+      return (p.title + ' ' + p.vendor + ' ' + p.type).toLowerCase().indexOf(term) > -1;
+    }).slice(0, 6);
+    if (!hits.length) {
+      searchResults.innerHTML = '<p class="s-empty">Nichts gefunden. Vielleicht mit weniger Buchstaben?</p>';
+      return;
+    }
+    searchResults.innerHTML = hits.map(function (p) {
+      var href = 'https://onlybubatz.de/products/' + p.handle;
+      var thumb = p.img
+        ? '<img class="s-thumb" src="' + esc(cdn(p.img, 120)) + '" width="56" height="56" alt="" loading="lazy">'
+        : '<span class="s-thumb s-thumb--ph" aria-hidden="true"><svg class="i"><use href="#i-leaf"/></svg></span>';
+      return '<a class="s-item" href="' + esc(href) + '" data-page="product">' +
+          thumb +
+          '<span><span class="s-title">' + esc(p.title) + '</span><span class="s-vendor">' + esc(p.vendor) + '</span></span>' +
+          '<span class="s-price">' + esc(p.price) + '</span>' +
+        '</a>';
+    }).join('');
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function () { renderSearch(searchInput.value); });
+  }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-search-open]')) { e.preventDefault(); openSearch(); }
+    if (e.target.closest('[data-search-close]')) { e.preventDefault(); closeSearch(); }
+    if (e.target.closest('.s-item')) { closeSearch(); }
+  });
+  if (searchEl) {
+    searchEl.addEventListener('click', function (e) {
+      if (e.target === searchEl) { closeSearch(); }
+    });
+  }
+
+  /* ---------------- Mobile Menu ---------------- */
+  var menuBtn = $('[data-menu]');
+  var mnav = $('#mnav');
+  function closeMenu() {
+    if (!mnav) { return; }
+    mnav.classList.remove('is-open');
+    if (menuBtn) { menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Menü öffnen'); }
+  }
+  if (menuBtn && mnav) {
+    menuBtn.addEventListener('click', function () {
+      var open = mnav.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    });
+    mnav.addEventListener('click', function (e) { if (e.target.closest('a')) { closeMenu(); } });
+  }
+
+  /* ---------------- Header scroll ---------------- */
+  var head = $('[data-head]');
+  if (head) {
+    var onScroll = function () { head.classList.toggle('is-scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------------- Newsletter ---------------- */
+  var newsForm = $('[data-news]');
+  if (newsForm) {
+    var newsInput = $('.news-input', newsForm);
+    if (newsInput) {
+      newsInput.addEventListener('input', function () {
+        var errEl = $('[data-news-err]');
+        if (errEl) { errEl.hidden = true; }
+      });
+    }
+    newsForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = $('.news-input', newsForm);
+      var msg = $('[data-news-msg]');
+      if (!input) { return; }
+      var val = input.value.trim();
+      var err = $('[data-news-err]');
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
+      if (!ok) {
+        if (err) { err.hidden = false; }
+        if (msg) { msg.hidden = true; }
+        input.focus();
+        input.style.borderColor = 'var(--burnt-deep)';
+        setTimeout(function () { input.style.borderColor = ''; }, 1600);
+        return;
+      }
+      if (err) { err.hidden = true; }
+      if (msg) { msg.hidden = false; }
+      newsForm.reset();
+      toast('Danke — du stehst auf der Liste.');
+    });
+  }
+
+  /* ---------------- Escape ---------------- */
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') { return; }
+    if (searchEl && !searchEl.hidden) { closeSearch(); return; }
+    if (cartEl && cartEl.classList.contains('is-open')) { closeCart(); return; }
+    closeMenu();
+  });
+
+})();
+</script>
+<script>
+/* Reveal-Fallback — läuft sofort am Ende von <body>, nicht erst nach window.load */
+(function () {
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  if (!els.length) { return; }
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+  function inView(el) {
+    var r = el.getBoundingClientRect();
+    var h = window.innerHeight || document.documentElement.clientHeight || 0;
+    return r.top < h + 140 && r.bottom > -140;
+  }
+  function showVisible() {
+    els.forEach(function (el) {
+      if (reduce || inView(el)) { el.classList.add('is-in'); }
+    });
+  }
+
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '140px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  showVisible();
+  setTimeout(showVisible, 120);
+  setTimeout(showVisible, 400);
+  setTimeout(showVisible, 1200);
+  setTimeout(showVisible, 2500);
+  /* Sicherheitsnetz: nach 2,5 s ist nichts mehr unsichtbar, auch ohne Scroll */
+  setTimeout(function () {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+  }, 2500);
+  document.addEventListener('DOMContentLoaded', showVisible);
+  window.addEventListener('load', showVisible);
+  document.addEventListener('scroll', showVisible, { passive: true });
+  window.addEventListener('resize', showVisible);
+  window.obShowVisible = showVisible;
+})();
+</script>
+</body>
+</html>
