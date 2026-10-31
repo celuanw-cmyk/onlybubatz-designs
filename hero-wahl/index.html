@@ -11,8 +11,8 @@
   :root{
     --paper:#f3e8cf; --ink:#2b2114; --line:rgba(43,33,20,.16);
     --rust:#e04f1a; --green:#0b2418;
-    --slant:13%;                  /* Winkelregler im Theme */
-    --pos:calc(50% + var(--slant) / 2);
+    --slant:13%;                        /* = Winkelregler im Theme */
+    --pos:calc(50% + var(--slant) / 2); /* = object-position aus dem Theme */
     --display:"Anton","Arial Narrow",Impact,sans-serif;
     --ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   }
@@ -20,28 +20,31 @@
   html,body{margin:0}
   body{
     background:var(--paper); color:var(--ink); font-family:var(--ui);
-    -webkit-font-smoothing:antialiased; padding:34px 40px 96px;
+    -webkit-font-smoothing:antialiased; padding:34px 40px 92px;
   }
-  .hd{display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:0 0 26px}
+  .hd{display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:0 0 24px}
   .hd h1{
     font-family:var(--display); font-weight:400; font-size:clamp(26px,3vw,40px);
     line-height:1; letter-spacing:-.01em; margin:0; text-transform:uppercase;
   }
   .hd p{margin:0; font-size:13px; color:rgba(43,33,20,.72)}
 
-  .opts{display:flex; flex-direction:column; gap:26px}
+  .opts{display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap}
+
   .opt{
-    display:grid; grid-template-columns:1fr; gap:14px;
-    padding:16px; border:1px solid transparent; border-radius:4px;
+    --k:.5;
+    flex:0 0 auto; display:flex; flex-direction:column; gap:12px;
+    padding:14px; border:1px solid transparent; border-radius:4px;
+    background:transparent; font:inherit; color:inherit; text-align:left;
     cursor:pointer; transition:border-color .22s ease, background-color .22s ease;
-    background:transparent; text-align:left; font:inherit; color:inherit;
   }
   .opt:hover{border-color:var(--line); background:rgba(255,255,255,.22)}
   .opt:focus-visible{outline:2px solid var(--rust); outline-offset:4px}
   .opt[aria-pressed="true"]{border-color:var(--rust); background:rgba(224,79,26,.05)}
+
   .opt .lbl{
-    display:flex; align-items:center; gap:10px;
-    font-family:ui-monospace,"Courier Prime",monospace; font-size:11px;
+    display:flex; align-items:center; gap:10px; width:100%;
+    font-family:ui-monospace,"Courier Prime","Courier New",monospace; font-size:11px;
     letter-spacing:.16em; text-transform:uppercase; color:rgba(43,33,20,.78);
   }
   .opt .lbl i{display:block; width:26px; height:1px; background:var(--rust)}
@@ -53,48 +56,64 @@
   .tag{
     margin-left:auto; font-family:var(--ui); font-size:11px; letter-spacing:.04em;
     text-transform:none; color:rgba(43,33,20,.6); border:1px solid var(--line);
-    border-radius:999px; padding:3px 9px;
+    border-radius:999px; padding:3px 9px; white-space:nowrap;
   }
   .opt[aria-pressed="true"] .tag{color:var(--rust); border-color:rgba(224,79,26,.45)}
 
-  .panes{display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap}
+  .panes{display:flex; flex-direction:column; gap:12px}
+
+  #detail{display:none; margin:8px 0 0; padding:16px; border:1px solid var(--rust); border-radius:4px}
+  #detail.on{display:block}
+  #detail .pp{--k:1; display:flex; flex-direction:column; gap:14px}
+  @media (min-width:1000px){ #detail .pp{flex-direction:row; align-items:flex-start; gap:22px} }
+
   .pane{position:relative; overflow:hidden; background:var(--green); flex:0 0 auto}
   .pane img{
     position:absolute; inset:0; width:100%; height:100%;
     object-fit:cover; object-position:var(--pos) 50%; display:block;
   }
   .pane--1440{
-    width:min(778px,100%); aspect-ratio:778/699;
+    width:calc(778px * var(--k)); aspect-ratio:778/699;
     clip-path:polygon(var(--slant) 0, 100% 0, 100% 100%, 0 100%);
   }
   .pane--390{
-    width:min(390px,100%); aspect-ratio:390/304;
+    width:calc(390px * var(--k)); aspect-ratio:390/304;
     clip-path:polygon(0 calc(var(--slant) * .7), 100% 0, 100% 100%, 0 100%);
   }
 
   .bar{
     position:fixed; left:0; right:0; bottom:0; z-index:5;
     display:flex; align-items:center; gap:14px; justify-content:space-between;
-    padding:14px 40px; background:var(--ink); color:var(--paper);
-    font-size:14px; transform:translateY(105%); transition:transform .24s cubic-bezier(.22,.61,.36,1);
+    padding:14px 40px; background:var(--ink); color:var(--paper); font-size:14px;
+    transform:translateY(105%); transition:transform .24s cubic-bezier(.22,.61,.36,1);
   }
   .bar.on{transform:none}
   .bar b{font-weight:600}
   .bar button{
     font:inherit; font-size:13px; font-weight:600; color:var(--ink); background:var(--paper);
-    border:0; border-radius:3px; padding:9px 16px; cursor:pointer;
+    border:0; border-radius:3px; padding:9px 16px; cursor:pointer; white-space:nowrap;
   }
   .bar button:active{transform:translateY(1px)}
 
-  @media (max-width:880px){
-    body{padding:24px 18px 96px}
+  @media (max-width:1024px){
+    body{padding:24px 18px 92px}
+    .opt{--k:.42}
     .hd{flex-direction:column; gap:6px}
-    .panes{gap:16px}
-    .bar{padding:12px 18px}
   }
-  @media (prefers-reduced-motion:reduce){
-    *{transition-duration:1ms !important}
+  @media (max-width:880px){
+    body{padding:20px 0 92px}
+    .hd{padding:0 18px}
+    .opts{flex-direction:column; gap:4px; width:100%}
+    .opt{width:100%; padding:12px 0; border-radius:0; border-left:0; border-right:0}
+    .opt .lbl{padding:0 18px}
+    .opt[aria-pressed="true"]{border-left:0; border-right:0}
+    .pane--1440{width:min(calc(778px * var(--k)),100%)}
+    .pane--390{width:min(calc(390px * var(--k)),100%)}
+    #detail{padding:12px 18px; margin:4px 18px 0}
+    #detail .pane--1440{width:min(calc(778px * var(--k)),100%)}
   }
+  @media (max-width:360px){ .opt{--k:.36} }
+  @media (prefers-reduced-motion:reduce){ *{transition-duration:1ms !important} }
 </style>
 </head>
 <body>
@@ -132,6 +151,10 @@
 
 </main>
 
+<section id="detail" aria-live="polite">
+  <div class="pp" id="pp"></div>
+</section>
+
 <div class="bar" id="bar">
   <span>Gewählt: <b id="chosen">—</b></span>
   <button id="copy" type="button">Link kopieren</button>
@@ -146,17 +169,31 @@
 
   function select(key, push){
     opts.forEach(o => o.setAttribute('aria-pressed', String(o.dataset.opt === key)));
+    const detail = document.getElementById('detail');
+    const pp = document.getElementById('pp');
     if (key && names[key]){
+      const src = document.querySelector('[data-opt="'+key+'"] .pane img').getAttribute('src');
+      pp.innerHTML =
+        '<div class="pane pane--1440"><img src="'+src+'" alt=""></div>' +
+        '<div class="pane pane--390"><img src="'+src+'" alt=""></div>';
+      detail.classList.add('on');
       chosen.textContent = names[key];
       bar.classList.add('on');
-      if (push) history.replaceState(null, '', '#' + key);
+      if (push){
+        history.replaceState(null, '', '#' + key);
+        detail.scrollIntoView({behavior:'smooth', block:'nearest'});
+      }
     } else {
+      pp.innerHTML = '';
+      detail.classList.remove('on');
       bar.classList.remove('on');
       if (push) history.replaceState(null, '', location.pathname + location.search);
     }
   }
 
-  opts.forEach(o => o.addEventListener('click', () => select(o.dataset.opt, true)));
+  opts.forEach(o => o.addEventListener('click', () => {
+    select(o.getAttribute('aria-pressed') === 'true' ? null : o.dataset.opt, true);
+  }));
 
   document.getElementById('copy').addEventListener('click', async () => {
     const btn = document.getElementById('copy');
