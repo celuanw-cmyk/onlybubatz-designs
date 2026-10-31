@@ -87,22 +87,6 @@
 .bpitem.hide{display:none}
 .bpempty{font-size:13px;color:rgba(10,15,11,.45);padding:14px 0}
 
-/* ---------- Aktiver Filter + Leerzustand ---------- */
-.bbactive{
-  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-  margin:0 0 18px;font-size:12.5px;color:rgba(10,15,11,.6);
-}
-.bbactive b{color:var(--ink);font-weight:700}
-.bbactive button{background:none;border:0;padding:0;color:var(--accent);
-  font-size:12.5px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
-.bbempty{
-  border:1px dashed var(--line);border-radius:12px;padding:34px 26px;
-  text-align:center;color:rgba(10,15,11,.55);font-size:14px;line-height:1.6;
-}
-.bbempty b{display:block;font-family:var(--display,Anton,sans-serif);font-size:22px;
-  text-transform:uppercase;color:var(--ink);margin-bottom:6px;letter-spacing:.02em}
-.bbempty button{margin-top:14px;background:var(--ink);color:var(--cream);border:0;
-  border-radius:10px;padding:12px 18px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 
 @media (max-width:1080px){
   .bpgrid{grid-template-columns:repeat(3,1fr)}
@@ -120,4 +104,65 @@
   .brandpanel{max-height:calc(100vh - var(--hdr,76px) - 48px)}
   .bpgrid{grid-template-columns:1fr 1fr;gap:0 16px}
   .bpinner{padding-top:16px;padding-bottom:26px}
+}
+
+/* ---------- Ergebnis-Zeile (Filter-Status) ---------- */
+.fstatus{
+  display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;
+  margin:0 0 18px;min-height:26px;font-size:12.5px;color:rgba(10,15,11,.55);
+}
+.fstatus .fcount b{color:var(--ink);font-weight:700;font-family:var(--mono);font-size:12.5px}
+.fpills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.fpills:empty{display:none}
+.fpill{
+  display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+  background:var(--paper);border-radius:999px;padding:4px 9px 4px 12px;
+  font-size:11.5px;font-weight:600;letter-spacing:.02em;color:var(--ink);
+}
+.fpill button{background:none;border:0;color:rgba(10,15,11,.38);font-size:15px;line-height:1;
+  padding:0 2px 1px;cursor:pointer;transition:color .15s}
+.fpill button:hover{color:var(--accent)}
+.freset{
+  margin-left:auto;background:none;border:0;padding:0;color:var(--accent);
+  font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  border-bottom:1.5px solid transparent;transition:border-color .18s;
+}
+.freset:hover{border-color:var(--accent)}
+
+/* Sidebar: Marken-Link statt doppelter Checkboxen */
+.marklink{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;
+  background:var(--paper);border:1px solid var(--line);border-radius:10px;
+  padding:11px 13px;font-size:12.5px;font-weight:600;color:var(--ink);
+  transition:border-color .18s,color .18s;
+}
+.marklink svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.2;flex:0 0 auto}
+.marklink:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- Leerzustand ---------- */
+.bbempty{
+  border:1px dashed var(--line);border-radius:12px;padding:34px 26px;
+  text-align:center;color:rgba(10,15,11,.55);font-size:14px;line-height:1.6;
+}
+.bbempty b{display:block;font-family:var(--display,Anton,sans-serif);font-size:22px;
+  text-transform:uppercase;color:var(--ink);margin-bottom:6px;letter-spacing:.02em}
+.bbempty p{display:block;max-width:44ch;margin:0 auto}
+.bbempty button{display:inline-flex;margin-top:16px;background:var(--ink);color:var(--cream);border:0;
+  border-radius:10px;padding:12px 18px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---------- Kategorie-Chips: eine Zeile, horizontal scrollbar ---------- */
+.shopbar{display:flex;align-items:center;gap:14px;flex-wrap:nowrap;margin-bottom:26px}
+.chipstrip{
+  display:flex;gap:8px;flex:1 1 auto;min-width:0;overflow-x:auto;
+  scrollbar-width:none;-ms-overflow-style:none;padding:2px 0;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+  mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+}
+.chipstrip::-webkit-scrollbar{display:none}
+.chipstrip .chip{flex:0 0 auto;white-space:nowrap}
+.shopbar .sort{flex:0 0 auto;margin-left:0}
+@media (max-width:720px){
+  .shopbar{flex-wrap:wrap;gap:10px}
+  .chipstrip{flex:1 0 100%;order:2;mask-image:none;-webkit-mask-image:none}
+  .shopbar .sort{order:1;margin-left:auto}
 }
