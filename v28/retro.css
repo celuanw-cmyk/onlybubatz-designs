@@ -1,0 +1,361 @@
+/* Only Bubatz · Retro-Edition (v28)
+   Stil nach dem Print-Flyer: gealtertes Papier, tiefes Grün, Rostrot,
+   Slab-Serif + Brush-Script, Stempel-Kanten, Körnung.
+   Ebene liegt ÜBER style.css / fix.css / brandbar.css — nichts wird dort verändert. */
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Pacifico&family=Oswald:wght@400;500;600;700&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap');
+
+:root{
+  --paper:#e5d5b1;
+  --paper-2:#ece0c2;
+  --paper-3:#f3e8cf;
+  --ink:#2b2114;
+  --green:#123a22;
+  --green-d:#0a2416;
+  --rust:#a8341f;
+  --rust-l:#c2452b;
+  --gold:#b08c3f;
+
+  --cream:var(--paper);
+  --accent:var(--rust);
+  --accent-dark:#8a2a18;
+  --deep:var(--green);
+  --line:rgba(43,33,20,.34);
+  --line-soft:rgba(43,33,20,.18);
+  --muted:#d8c9a6;
+  --display:"Alfa Slab One",Rockwell,Georgia,serif;
+  --mono:"Courier Prime",ui-monospace,monospace;
+  --shadow:0 6px 0 -3px rgba(43,33,20,.22);
+}
+
+/* ---------- Papier + Körnung ---------- */
+html{background:var(--green-d)}
+body{
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(120% 90% at 50% -10%, rgba(255,250,235,.55), rgba(255,250,235,0) 55%),
+    radial-gradient(90% 70% at 100% 100%, rgba(90,60,25,.16), rgba(90,60,25,0) 60%),
+    radial-gradient(70% 60% at 0% 90%, rgba(90,60,25,.14), rgba(90,60,25,0) 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");
+  background-attachment:fixed,fixed,fixed,scroll;
+  color:var(--ink);
+  font-family:Bitter,Georgia,serif;
+}
+img{filter:sepia(.12) contrast(1.02)}
+
+/* ---------- Vorschau-Hinweis ---------- */
+.previewflag{
+  background:var(--green-d)!important;color:var(--paper-3)!important;
+  font-family:var(--mono)!important;font-size:10.5px!important;letter-spacing:.06em;
+  border-bottom:2px solid var(--gold);text-transform:uppercase;
+}
+
+/* ---------- Topbar ---------- */
+.topbar{background:var(--green);border-bottom:3px double var(--gold);color:rgba(243,232,207,.82)}
+.topbar .wrap{height:38px}
+.topbar span{font-family:Oswald,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.topbar svg{width:15px;height:15px;stroke:var(--gold)}
+
+/* ---------- Header / Navbar ---------- */
+header.site{
+  background:var(--green);
+  border-bottom:4px double var(--gold);
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+  box-shadow:0 3px 0 0 rgba(43,33,20,.35);
+}
+header.site .wrap{height:88px;gap:26px}
+.logo{
+  gap:7px!important;
+  font-family:Pacifico,cursive!important;font-size:34px!important;line-height:1!important;
+  color:var(--paper-3)!important;text-transform:none!important;letter-spacing:0!important;
+  text-shadow:2px 2px 0 var(--rust),4px 4px 0 rgba(0,0,0,.25);
+  display:flex!important;flex-direction:column;align-items:flex-start;gap:2px;
+}
+.logo small{
+  font-family:Oswald,sans-serif;font-size:9px;font-weight:600;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold);text-shadow:none;padding-left:4px;
+  line-height:1;margin-top:2px;white-space:nowrap;
+}
+nav.main a{
+  font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(243,232,207,.78);
+}
+nav.main a:hover,nav.main a.active{color:var(--paper-3)}
+nav.main a.active::after,nav.main a:hover::after{height:3px;background:var(--rust-l);bottom:-6px}
+nav.main a.deals{color:var(--gold)}
+.actions .icon-btn{
+  font-family:Oswald,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(243,232,207,.85);border-color:rgba(243,232,207,.28);border-radius:3px!important;
+}
+.actions .icon-btn:hover{border-color:var(--gold);color:var(--paper-3)}
+.cart-count{background:var(--rust);color:var(--paper-3);border-radius:2px;font-family:var(--mono)}
+
+/* ---------- Breadcrumbs ---------- */
+.crumbs{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(43,33,20,.6)}
+.crumbs a:hover{color:var(--rust)}
+
+/* ---------- Seitenkopf ---------- */
+.shophead{padding:26px 0 6px}
+.shophead h1{
+  font-family:var(--display)!important;font-weight:400!important;
+  font-size:clamp(38px,5.2vw,62px)!important;line-height:.98!important;letter-spacing:.005em;
+  text-transform:uppercase;color:var(--ink);
+  text-shadow:3px 3px 0 rgba(168,52,31,.18);
+}
+.shophead p{font-family:Bitter,Georgia,serif;font-size:14.5px;color:rgba(43,33,20,.75);max-width:56ch}
+.eyebrow{
+  display:inline-block;background:var(--rust);color:var(--paper-3);
+  font-family:Oswald,sans-serif!important;font-size:10.5px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;padding:5px 12px 4px;border-radius:2px;
+  transform:rotate(-1.2deg);box-shadow:2px 2px 0 rgba(43,33,20,.25);
+}
+
+/* ---------- Marken-Leiste (2. Reiter) ---------- */
+.brandbar{
+  background:var(--paper-2);
+  border-bottom:1px solid var(--line);
+  box-shadow:inset 0 -1px 0 rgba(255,250,235,.6);
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+}
+.bbinner{height:50px}
+.bblabel{
+  font-family:Oswald,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.24em;
+  color:var(--rust);border-right:1px dotted var(--line);height:16px;
+}
+.brandtab{
+  font-family:Oswald,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;
+  color:rgba(43,33,20,.62);
+}
+.brandtab::after{height:3px;background:var(--rust)}
+.brandtab.on{color:var(--ink)}
+.bbmore{
+  font-family:Oswald,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.16em;
+  color:var(--rust);border-left:1px dotted var(--line);
+}
+.brandpanel{background:var(--paper-3);border-bottom:2px solid var(--ink);border-top:1px solid var(--line)}
+.bpsearch{background:var(--paper-2);border:1.5px solid var(--line);border-radius:3px}
+.bpsearch input{font-family:Bitter,Georgia,serif;font-size:13.5px}
+.bpclose{font-family:Oswald,sans-serif;letter-spacing:.16em;color:rgba(43,33,20,.55)}
+.bpitem{font-family:Bitter,Georgia,serif;font-size:13px;border-bottom:1px dotted var(--line-soft)}
+.bpitem span{font-family:var(--mono);color:rgba(43,33,20,.42)}
+.bpitem:hover,.bpitem.on{color:var(--rust)}
+
+/* ---------- Ergebnis-Zeile ---------- */
+.fstatus{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(43,33,20,.62)}
+.fstatus .fcount b{font-family:var(--mono);color:var(--ink)}
+.fpill{border:1.5px solid var(--line);background:var(--paper-2);border-radius:2px;
+  font-family:Oswald,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.freset{font-family:Oswald,sans-serif;color:var(--rust)}
+
+/* ---------- Kategorie-Chips ---------- */
+.chip{
+  background:var(--paper-2);border:1.5px solid var(--line);border-radius:3px!important;
+  font-family:Oswald,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:rgba(43,33,20,.8);padding:8px 14px!important;
+  box-shadow:2px 2px 0 rgba(43,33,20,.14);
+}
+.chip:hover{border-color:var(--rust);color:var(--rust)}
+.chip.on{background:var(--green);color:var(--paper-3);border-color:var(--green);
+  box-shadow:2px 2px 0 rgba(43,33,20,.3)}
+.shopbar .sort{font-family:Oswald,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(43,33,20,.6)}
+.shopbar select{
+  font-family:Oswald,sans-serif;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  border:1.5px solid var(--line);border-radius:3px;background:var(--paper-2);color:var(--ink);padding:8px 12px;
+}
+
+/* ---------- Sidebar ---------- */
+.filters{
+  background:var(--paper-2);border:1.5px solid var(--line);border-radius:3px;
+  padding:18px 18px 20px!important;box-shadow:3px 3px 0 rgba(43,33,20,.12);
+}
+.filters h4{
+  font-family:var(--display)!important;font-size:12px!important;font-weight:400!important;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink);
+  border-bottom:1px dotted var(--line);padding-bottom:6px;margin:18px 0 10px!important;
+}
+.filters h4:first-child{margin-top:0!important}
+.filters label{font-family:Bitter,Georgia,serif;font-size:13px;color:rgba(43,33,20,.85)}
+.filters .cnt{font-family:var(--mono);font-size:10.5px;color:rgba(43,33,20,.45)}
+.filters input[type=radio]{accent-color:var(--rust);width:14px;height:14px}
+.filters .pricebox .row{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:rgba(43,33,20,.65)}
+.filters .pricebox input[type=range]{accent-color:var(--rust)}
+.marklink{
+  background:var(--green);border:1.5px solid var(--green-d);border-radius:3px;
+  color:var(--paper-3);font-family:Oswald,sans-serif;font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;padding:11px 12px;box-shadow:2px 2px 0 rgba(43,33,20,.28);
+}
+.marklink:hover{background:var(--rust);border-color:var(--rust);color:var(--paper-3)}
+.marketnote{
+  font-family:var(--mono);font-size:10.5px;line-height:1.55;color:rgba(43,33,20,.6);
+  border-left:3px solid var(--gold);padding-left:10px;
+}
+.marketnote b{color:var(--rust)}
+
+/* ---------- Produktkarten ---------- */
+.card{
+  background:var(--paper-3)!important;border:1.5px solid var(--line)!important;
+  border-radius:4px!important;overflow:hidden;
+  box-shadow:3px 3px 0 rgba(43,33,20,.16);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{transform:translate(-1px,-2px);box-shadow:5px 6px 0 rgba(43,33,20,.22)}
+.card .ph{border-bottom:1px solid var(--line);background:var(--paper-3)}
+.card .ph, .card .body{border-radius:0!important}
+.card .ph img{filter:sepia(.1) contrast(1.03)}
+.badge{
+  background:var(--rust)!important;border-radius:2px!important;
+  font-family:Oswald,sans-serif!important;font-size:9.5px!important;font-weight:600!important;
+  letter-spacing:.18em!important;padding:4px 9px!important;
+  box-shadow:1.5px 1.5px 0 rgba(43,33,20,.35);transform:rotate(-2.5deg);
+}
+.wish{border-radius:2px!important;background:var(--paper-2);border:1px solid var(--line)}
+.brandline{
+  font-family:Oswald,sans-serif!important;font-size:9.5px!important;font-weight:600!important;
+  letter-spacing:.2em!important;color:var(--rust)!important;
+}
+.card h3{font-family:Bitter,Georgia,serif!important;font-weight:600!important;font-size:14px!important;line-height:1.3!important}
+.pricerow b{font-family:var(--mono)!important;font-size:15px!important;color:var(--ink)!important}
+.pricerow .off{color:var(--rust)!important}
+.stock{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(43,33,20,.6)}
+.dot{background:var(--green)!important}
+.add{
+  background:var(--rust);color:var(--paper-3);border:1.5px solid var(--rust);
+  border-radius:3px!important;
+  font-family:Oswald,sans-serif!important;font-size:11.5px!important;font-weight:600!important;
+  letter-spacing:.14em!important;text-transform:uppercase;
+  box-shadow:2px 2px 0 rgba(43,33,20,.3);
+}
+.add:hover{background:var(--rust-l);border-color:var(--rust-l)}
+.add.added{background:var(--green);border-color:var(--green);color:var(--paper-3)}
+
+/* ---------- Leerzustand ---------- */
+.bbempty{
+  background:var(--paper-2);border:1.5px dashed var(--line);border-radius:3px;
+  font-family:Bitter,Georgia,serif;
+}
+.bbempty b{font-family:var(--display)!important;font-weight:400!important;font-size:20px!important}
+.bbempty button{
+  background:var(--rust);border-radius:3px;font-family:Oswald,sans-serif;letter-spacing:.14em;
+}
+
+/* ---------- Mini-Warenkorb / Footer / Formulare ---------- */
+#minicart{background:var(--paper-2);border-left:2px solid var(--ink)}
+#minicart .mc-head b{font-family:var(--display);font-weight:400}
+.btn-primary{background:var(--rust)!important;border-color:var(--rust)!important;border-radius:3px!important;
+  font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;box-shadow:2px 2px 0 rgba(43,33,20,.3)}
+footer.site{background:var(--green);color:rgba(243,232,207,.8);border-top:4px double var(--gold)}
+footer.site h4,footer.site b{font-family:Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-3)}
+footer.site a{color:rgba(243,232,207,.72)}
+footer.site a:hover{color:var(--gold)}
+footer.site .legal{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;border-top:1px solid rgba(243,232,207,.2)}
+
+/* Ränder-Regel der Retro-Ebene: 2–4 px, quadratisch */
+.card .ph,.cat,.gallery .shot{border-radius:4px!important}
+
+@media (max-width:720px){
+  header.site .wrap{height:74px}
+  .logo{font-size:24px!important}
+  .logo small{font-size:7.5px;letter-spacing:.22em}
+  .shophead h1{font-size:34px!important}
+  .filters{padding:16px}
+}
+
+/* ---------- Druckrahmen + Blatt-Ornamente ---------- */
+body::after{
+  content:"";position:fixed;inset:11px;z-index:9998;pointer-events:none;
+  border:2px double rgba(43,33,20,.32);
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:9997;pointer-events:none;
+  box-shadow:inset 0 0 140px rgba(70,45,15,.22);
+}
+.shophead{position:relative}
+.shophead::after{
+  content:"";position:absolute;right:6px;top:14px;width:132px;height:132px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cg fill='%232b2114'%3E%3Cpath d='M60 116 V62' stroke='%232b2114' stroke-width='3.5'/%3E%3Cellipse cx='60' cy='74' rx='6.5' ry='26'/%3E%3Cellipse cx='60' cy='74' rx='6.5' ry='24' transform='rotate(-22 60 112)'/%3E%3Cellipse cx='60' cy='74' rx='6.5' ry='24' transform='rotate(22 60 112)'/%3E%3Cellipse cx='60' cy='72' rx='6' ry='20' transform='rotate(-45 60 112)'/%3E%3Cellipse cx='60' cy='72' rx='6' ry='20' transform='rotate(45 60 112)'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/contain;opacity:.10;transform:rotate(14deg);
+  pointer-events:none;
+}
+.filters::after{
+  content:"";display:block;height:64px;margin:18px auto 0;width:64px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cg fill='%232b2114'%3E%3Cpath d='M60 116 V62' stroke='%232b2114' stroke-width='3.5'/%3E%3Cellipse cx='60' cy='74' rx='6.5' ry='26'/%3E%3Cellipse cx='60' cy='74' rx='6.5' ry='24' transform='rotate(-22 60 112)'/%3E%3Cellipse cx='60' cy='74' rx='6.5' ry='24' transform='rotate(22 60 112)'/%3E%3Cellipse cx='60' cy='72' rx='6' ry='20' transform='rotate(-45 60 112)'/%3E%3Cellipse cx='60' cy='72' rx='6' ry='20' transform='rotate(45 60 112)'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/contain;opacity:.13;
+}
+
+/* Produktfotos wie gedruckt aufs Papier legen */
+.card .ph{background:var(--paper-3)!important}
+.card .ph img{mix-blend-mode:multiply;filter:sepia(.2) saturate(1.06) contrast(1.04)}
+.card .wish{position:relative;z-index:2}
+
+@media (max-width:720px){
+  body::after{inset:7px}
+  .shophead::after{width:96px;height:96px;top:6px;right:0;opacity:.08}
+  .filters::after{display:none}
+}
+
+/* ---------- Überschriften durchgehend Slab ---------- */
+h1,h2,.hero h1,.sechead h2{font-family:var(--display)!important;font-weight:400!important;
+  text-transform:uppercase;letter-spacing:.004em;line-height:1.02!important}
+h2{text-shadow:2px 2px 0 rgba(168,52,31,.14)}
+.hero h1 em{color:var(--rust-l)!important;font-style:normal}
+
+/* ---------- Hero als Plakat-Fläche ---------- */
+.hero{
+  background:var(--green);color:var(--paper-3);
+  border-bottom:4px double var(--gold);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.10;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n2)'/%3E%3C/svg%3E");
+}
+.hero .wrap{position:relative}
+.hero h1{color:var(--paper-3);text-shadow:3px 3px 0 rgba(0,0,0,.28)}
+.hero p.lead{color:rgba(243,232,207,.82)}
+.hero .meta,.hero small{color:var(--gold)}
+.hero .proof{color:rgba(243,232,207,.72);font-family:Oswald,sans-serif;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase}
+.hero .proof b,.hero .proof span{color:var(--paper-3)}
+.hero .display{color:var(--paper-3)!important}
+.hero .eyebrow{background:var(--rust);color:var(--paper-3)}
+.hero .btn-primary{background:var(--rust)!important;border-color:var(--rust)!important}
+.hero .link-quiet{color:var(--paper-3)!important;border-bottom-color:var(--gold)!important}
+.heroshot,.collage .shot{background:var(--paper-3)!important;border:1.5px solid rgba(43,33,20,.35)!important;
+  border-radius:4px!important;box-shadow:4px 4px 0 rgba(0,0,0,.28)}
+.heroshot img,.collage .shot img{mix-blend-mode:multiply;filter:sepia(.18) saturate(1.05)}
+.collage .price-tag,.hero .tag{background:var(--paper-3)!important;border:1.5px solid rgba(43,33,20,.35)!important;
+  border-radius:2px!important;font-family:Oswald,sans-serif!important;font-size:10.5px!important;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink)!important;box-shadow:2px 2px 0 rgba(0,0,0,.25)}
+
+/* ---------- Kategorie-Kacheln + Deal ---------- */
+.cat{background:var(--paper-3)!important;border:1.5px solid var(--line)!important;border-radius:4px!important;
+  box-shadow:3px 3px 0 rgba(43,33,20,.14);overflow:hidden}
+.cat .ph{background:var(--paper-3)!important;border-bottom:1px solid var(--line)}
+.cat .ph img{mix-blend-mode:multiply;filter:sepia(.2) saturate(1.06) contrast(1.03)}
+.cat b,.cat .name{font-family:var(--display)!important;font-size:13px!important;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink)}
+.cat .cnt,.cat span{font-family:var(--mono)!important;font-size:10px!important;color:var(--rust)!important;
+  letter-spacing:.04em}
+.deal{background:var(--paper-2)!important;border:1.5px solid var(--line)!important;border-radius:4px!important;
+  box-shadow:4px 4px 0 rgba(43,33,20,.16);overflow:hidden}
+.deal .dealtile{background:var(--paper-3)!important}
+.deal .dealtile img{mix-blend-mode:multiply;filter:sepia(.18) saturate(1.05)}
+.deal .txt h2,.deal .txt h3{font-family:var(--display)!important;font-weight:400!important;text-transform:uppercase}
+.deal .prices .off{background:var(--rust)!important;border-radius:2px!important;
+  font-family:Oswald,sans-serif!important;letter-spacing:.14em}
+
+/* ---------- Benefits, Reviews, Newsletter ---------- */
+.benefits{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,250,235,.35)}
+.benefit{border-color:var(--line)!important;font-family:Oswald,sans-serif;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:rgba(43,33,20,.7)}
+.benefit b{font-family:Oswald,sans-serif;color:var(--ink)}
+.benefit svg{stroke:var(--rust)}
+.stars svg{fill:var(--rust)}
+.sec h2,.sechead h2{font-size:clamp(28px,3.4vw,44px)!important}
+.link-quiet{font-family:Oswald,sans-serif;font-size:11.5px;letter-spacing:.16em;color:var(--ink);
+  border-bottom:2px solid var(--rust)}
+.news{background:var(--green)!important;color:var(--paper-3);border-radius:4px!important}
+.news h2{color:var(--paper-3)}
+.news p{color:rgba(243,232,207,.8)}
+.newsform input{background:var(--paper-3);border:1.5px solid var(--line);border-radius:3px!important;
+  font-family:Bitter,Georgia,serif}
+.rev{border:1.5px solid var(--line)!important;border-radius:3px!important;background:var(--paper-3)!important}
+.rev p{font-family:Bitter,Georgia,serif;font-style:italic}
