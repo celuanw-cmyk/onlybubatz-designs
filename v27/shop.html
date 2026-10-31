@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="fix.css">
+  <link rel="stylesheet" href="brandbar.css">
 </head>
 <body>
 <div class="previewflag">VORSCHAU v27 (kein Live-Shop) · <b>Preise und Bestände aus dem Katalog, Texte teils Platzhalter</b> · <a href="index.html" style="color:#1fe9ab">Home</a> · <a href="shop.html" style="color:#1fe9ab">Shop</a> · <a href="produkt.html" style="color:#1fe9ab">Produktseite</a></div>
@@ -38,12 +39,122 @@
     <a class="icon-btn cartmini" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 7h14l-1.3 12H6.3z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg> Warenkorb <span class="cart-count">2</span></a>
   </div>
 </div></header>
+<div class="brandbar" id="brandbar">
+  <div class="wrap bbinner">
+    <span class="bblabel">Marke</span>
+    <div class="bbstrip" id="bbstrip" role="tablist" aria-label="Nach Marke filtern">
+      <a class="brandtab on" href="#" role="tab" data-brand="">Alle</a>
+        <a class="brandtab" href="#" role="tab" data-brand="RAW">RAW</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Smoking">Smoking</a>
+        <a class="brandtab" href="#" role="tab" data-brand="OCB">OCB</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Only Bubatz">Only Bubatz</a>
+        <a class="brandtab" href="#" role="tab" data-brand="V-Syndicate">V-Syndicate</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Hemp">Hemp</a>
+        <a class="brandtab" href="#" role="tab" data-brand="PURIZE">PURIZE</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Juicy Jays">Juicy Jays</a>
+        <a class="brandtab" href="#" role="tab" data-brand="GIZEH">GIZEH</a>
+        <a class="brandtab" href="#" role="tab" data-brand="MEDUSA">MEDUSA</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Elements">Elements</a>
+        <a class="brandtab" href="#" role="tab" data-brand="G-Rollz">G-Rollz</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Kailar">Kailar</a>
+        <a class="brandtab" href="#" role="tab" data-brand="MONKEY KING">MONKEY KING</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Choosypapers">Choosypapers</a>
+        <a class="brandtab" href="#" role="tab" data-brand="WEEDLEZ">WEEDLEZ</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Granny´s Weed">Granny´s Weed</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Blunt Wrap">Blunt Wrap</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Champ High">Champ High</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Hybrid">Hybrid</a>
+        <a class="brandtab" href="#" role="tab" data-brand="ZIPPO">ZIPPO</a>
+        <a class="brandtab" href="#" role="tab" data-brand="My Weigh">My Weigh</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Storz &amp; Bickel">Storz &amp; Bickel</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Tightvac">Tightvac</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Grannys">Grannys</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Skunk">Skunk</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Rizla">Rizla</a>
+        <a class="brandtab" href="#" role="tab" data-brand="CHAMP">CHAMP</a>
+        <a class="brandtab" href="#" role="tab" data-brand="FARO">FARO</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Glossy Genetics">Glossy Genetics</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Beaver">Beaver</a>
+        <a class="brandtab" href="#" role="tab" data-brand="BUDDIES">BUDDIES</a>
+        <a class="brandtab" href="#" role="tab" data-brand="CCELL">CCELL</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Dealer´s Cup">Dealer´s Cup</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Dipse">Dipse</a>
+        <a class="brandtab" href="#" role="tab" data-brand="dubi">dubi</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Futurola">Futurola</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Gunnysack">Gunnysack</a>
+        <a class="brandtab" href="#" role="tab" data-brand="LEAF">LEAF</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Rastaman">Rastaman</a>
+        <a class="brandtab" href="#" role="tab" data-brand="TOBALIQ">TOBALIQ</a>
+        <a class="brandtab" href="#" role="tab" data-brand="Woodoo">Woodoo</a>
+    </div>
+    <button class="bbmore" id="bbmore" type="button" aria-expanded="false" aria-controls="brandpanel">
+      <span class="lbl">Alle 42 Marken</span><span class="lbl-m">Marken</span>
+      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  </div>
+  <div class="brandpanel" id="brandpanel" aria-label="Alle Marken">
+    <div class="wrap bpinner">
+      <div class="bphead">
+        <label class="bpsearch"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+          <input id="bbsearch" type="search" placeholder="Marke suchen …" aria-label="Marke suchen"></label>
+        <button class="bpclose" type="button" data-bpclose>Schliessen</button>
+      </div>
+      <div class="bpgrid" id="bpgrid">
+          <button type="button" class="bpitem" data-brand="">Alle Marken<span>417</span></button>
+          <button type="button" class="bpitem" data-brand="Beaver">Beaver<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="Blunt Wrap">Blunt Wrap<span>6</span></button>
+        <button type="button" class="bpitem" data-brand="BUDDIES">BUDDIES<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="CCELL">CCELL<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="CHAMP">CHAMP<span>2</span></button>
+        <button type="button" class="bpitem" data-brand="Champ High">Champ High<span>6</span></button>
+        <button type="button" class="bpitem" data-brand="Choosypapers">Choosypapers<span>8</span></button>
+        <button type="button" class="bpitem" data-brand="Dealer´s Cup">Dealer´s Cup<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="Dipse">Dipse<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="dubi">dubi<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="Elements">Elements<span>17</span></button>
+        <button type="button" class="bpitem" data-brand="FARO">FARO<span>2</span></button>
+        <button type="button" class="bpitem" data-brand="Futurola">Futurola<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="G-Rollz">G-Rollz<span>16</span></button>
+        <button type="button" class="bpitem" data-brand="GIZEH">GIZEH<span>20</span></button>
+        <button type="button" class="bpitem" data-brand="Glossy Genetics">Glossy Genetics<span>2</span></button>
+        <button type="button" class="bpitem" data-brand="Grannys">Grannys<span>4</span></button>
+        <button type="button" class="bpitem" data-brand="Granny´s Weed">Granny´s Weed<span>7</span></button>
+        <button type="button" class="bpitem" data-brand="Gunnysack">Gunnysack<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="Hemp">Hemp<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="Hybrid">Hybrid<span>6</span></button>
+        <button type="button" class="bpitem" data-brand="Juicy Jays">Juicy Jays<span>25</span></button>
+        <button type="button" class="bpitem" data-brand="Kailar">Kailar<span>11</span></button>
+        <button type="button" class="bpitem" data-brand="LEAF">LEAF<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="MEDUSA">MEDUSA<span>20</span></button>
+        <button type="button" class="bpitem" data-brand="MONKEY KING">MONKEY KING<span>10</span></button>
+        <button type="button" class="bpitem" data-brand="My Weigh">My Weigh<span>5</span></button>
+        <button type="button" class="bpitem" data-brand="OCB">OCB<span>17</span></button>
+        <button type="button" class="bpitem" data-brand="Only Bubatz">Only Bubatz<span>3</span></button>
+        <button type="button" class="bpitem" data-brand="PURIZE">PURIZE<span>27</span></button>
+        <button type="button" class="bpitem" data-brand="Rastaman">Rastaman<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="RAW">RAW<span>92</span></button>
+        <button type="button" class="bpitem" data-brand="Rizla">Rizla<span>3</span></button>
+        <button type="button" class="bpitem" data-brand="Skunk">Skunk<span>4</span></button>
+        <button type="button" class="bpitem" data-brand="Smoking">Smoking<span>33</span></button>
+        <button type="button" class="bpitem" data-brand="Storz &amp; Bickel">Storz &amp; Bickel<span>5</span></button>
+        <button type="button" class="bpitem" data-brand="Tightvac">Tightvac<span>5</span></button>
+        <button type="button" class="bpitem" data-brand="TOBALIQ">TOBALIQ<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="V-Syndicate">V-Syndicate<span>2</span></button>
+        <button type="button" class="bpitem" data-brand="WEEDLEZ">WEEDLEZ<span>8</span></button>
+        <button type="button" class="bpitem" data-brand="Woodoo">Woodoo<span>1</span></button>
+        <button type="button" class="bpitem" data-brand="ZIPPO">ZIPPO<span>6</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="wrap">
   <div class="crumbs"><a href="index.html">Home</a> · Shop</div>
   <div class="shophead">
     <div><div class="eyebrow">417 Produkte</div><h1>Alle Produkte</h1>
       <p>Sortiert nach Relevanz. Alles auf Lager, was du siehst — Versand noch heute bei Bestellung vor 15 Uhr.</p></div>
   </div>
+  <div class="bbactive" id="bbactive" hidden></div>
   <div class="shopbar"><a class="chip on" href="#">Alle</a><a class="chip" href="#">Grinder</a><a class="chip" href="#">Bongs</a><a class="chip" href="#">Blättchen</a><a class="chip" href="#">Filter &amp; Tips</a><a class="chip" href="#">Vaporizer</a><a class="chip" href="#">Stash</a><a class="chip" href="#">Feuerzeuge</a><a class="chip" href="#">Merch</a><div class="sort">Sortieren:
     <select><option>Beliebteste</option><option>Preis aufsteigend</option><option>Preis absteigend</option><option>Neuheiten</option></select>
   </div></div>
@@ -60,16 +171,16 @@
       <h4>Preis</h4>
       <div class="pricebox"><div class="row"><span>0 €</span><span>bis 600 €</span></div><input type="range" min="0" max="600" value="80"></div>
       <h4>Marke</h4>
-      <label><input type="checkbox"> RAW <span class="cnt">58</span></label>
-      <label><input type="checkbox"> Smoking <span class="cnt">41</span></label>
-      <label><input type="checkbox"> PURIZE <span class="cnt">19</span></label>
-      <label><input type="checkbox"> Storz &amp; Bickel <span class="cnt">12</span></label>
-      <label><input type="checkbox"> Only Bubatz <span class="cnt">8</span></label>
-      <div class="marketnote"><b>Hinweis:</b> Filter sind Platzhalter für die Vorschau — im Live-Shop greifen sie auf die echten Facetten zu.</div>
+      <label><input type="checkbox"> RAW <span class="cnt">92</span></label>
+      <label><input type="checkbox"> Smoking <span class="cnt">33</span></label>
+      <label><input type="checkbox"> PURIZE <span class="cnt">27</span></label>
+      <label><input type="checkbox"> Storz &amp; Bickel <span class="cnt">5</span></label>
+      <label><input type="checkbox"> Only Bubatz <span class="cnt">3</span></label>
+      <div class="marketnote"><b>Hinweis:</b> Die Marken-Leiste oben filtert echt (Katalog-Zahlen). Kategorie- und Preis-Filter sind in der Vorschau noch Platzhalter.</div>
     </aside>
     <div>
       <div class="pgrid" style="grid-template-columns:repeat(3,1fr)">
-      <article class="card" data-stock="18" data-price="6.90" data-type="Grinder" data-reviews="0">
+      <article class="card" data-brand="V-Syndicate" data-stock="18" data-price="6.90" data-type="Grinder" data-reviews="0">
         <div class="ph">
           <span class='badge'>Bestseller</span>
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -83,7 +194,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="8" data-price="6.90" data-type="Grinder" data-reviews="0">
+      <article class="card" data-brand="V-Syndicate" data-stock="8" data-price="6.90" data-type="Grinder" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -97,7 +208,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="3" data-price="9.49" data-type="Grinder" data-reviews="0">
+      <article class="card" data-brand="RAW" data-stock="3" data-price="9.49" data-type="Grinder" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -111,7 +222,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="6" data-price="21.99" data-type="Grinder" data-reviews="0">
+      <article class="card" data-brand="RAW" data-stock="6" data-price="21.99" data-type="Grinder" data-reviews="0">
         <div class="ph">
           <span class='badge'>Deal</span>
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -125,7 +236,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="6" data-price="21.99" data-type="Grinder" data-reviews="0">
+      <article class="card" data-brand="RAW" data-stock="6" data-price="21.99" data-type="Grinder" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -139,7 +250,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="8" data-price="19.90" data-type="Grinder" data-reviews="0">
+      <article class="card" data-brand="RAW" data-stock="8" data-price="19.90" data-type="Grinder" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -153,7 +264,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="46" data-price="9.99" data-type="Only Bubatz" data-reviews="0">
+      <article class="card" data-brand="Only Bubatz" data-stock="46" data-price="9.99" data-type="Only Bubatz" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -167,7 +278,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="23" data-price="7.99" data-type="Stash" data-reviews="0">
+      <article class="card" data-brand="Hemp" data-stock="23" data-price="7.99" data-type="Stash" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -181,7 +292,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="10" data-price="44.90" data-type="Purpfeifen" data-reviews="0">
+      <article class="card" data-brand="OCB" data-stock="10" data-price="44.90" data-type="Purpfeifen" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -195,7 +306,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="10" data-price="3.95" data-type="Bong" data-reviews="0">
+      <article class="card" data-brand="" data-stock="10" data-price="3.95" data-type="Bong" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -209,7 +320,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="10" data-price="9.95" data-type="Bong" data-reviews="0">
+      <article class="card" data-brand="" data-stock="10" data-price="9.95" data-type="Bong" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -223,7 +334,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="2" data-price="14.95" data-type="Purpfeifen" data-reviews="0">
+      <article class="card" data-brand="" data-stock="2" data-price="14.95" data-type="Purpfeifen" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -237,7 +348,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="2" data-price="14.95" data-type="Bong" data-reviews="0">
+      <article class="card" data-brand="" data-stock="2" data-price="14.95" data-type="Bong" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -251,7 +362,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="2" data-price="19.95" data-type="Bong" data-reviews="0">
+      <article class="card" data-brand="Only Bubatz" data-stock="2" data-price="19.95" data-type="Bong" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -265,7 +376,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="50" data-price="1.25" data-type="Blättchen" data-reviews="0">
+      <article class="card" data-brand="Smoking" data-stock="50" data-price="1.25" data-type="Blättchen" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -279,7 +390,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card" data-stock="47" data-price="1.29" data-type="Smoking" data-reviews="0">
+      <article class="card" data-brand="Smoking" data-stock="47" data-price="1.29" data-type="Smoking" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -294,6 +405,7 @@
         </div>
       </article>
       </div>
+      <div class="bbempty" id="bbempty" hidden style="display:none"><b>Keine Produkte in der Vorschau</b>Diese Marke ist im Live-Sortiment vertreten, in dieser Vorschau sind nur 16 Beispielprodukte geladen.<button type="button" data-reset>Alle Marken zeigen</button></div>
       <div style="display:flex;justify-content:center;margin-top:44px"><a class="btn btn-ghost" href="#">Mehr laden (401)</a></div>
     </div>
   </div>
@@ -317,4 +429,5 @@
   <div id="mcFoot"></div>
 </div>
 <script src="app.js" defer></script>
+<script src="brandbar.js" defer></script>
 </body></html>
