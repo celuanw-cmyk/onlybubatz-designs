@@ -1,0 +1,85 @@
+/* Only Bubatz · v28 — Design-Schicht über Bubatz' v27-Filter.
+   Lädt NACH brandbar.css: nur Kontrast, Touchziele und Zustände, keine Struktur.
+
+   Gemessen gegen --cream #f4f0e4 (Grund der Seite):
+     rgba(10,15,11,.38) = 2,48:1   .42 = 2,75:1   .45 = 3,10:1
+     .5 = 3,50:1                   .55 = 4,14:1   .68 = 6,43:1
+     --accent #e04f1a = 3,48:1 (nur Grafik)   #8c3410 = 7,05:1 (Text)
+   Regel: Text >= 4,5:1 -> .68, Aktions-Text in Rost -> #8c3410.            */
+
+/* ---------- Marken-Leiste ---------- */
+.brandtab{font-size:12px;letter-spacing:.08em;color:rgba(10,15,11,.68)}
+.bbmore{height:44px;min-height:44px;padding-left:18px;font-size:12px;font-weight:600;color:var(--ink)}
+.bbmore:hover{color:#8c3410}
+.bbcount{
+  font-family:var(--mono);font-style:normal;font-size:10px;font-weight:700;letter-spacing:.02em;
+  background:rgba(10,15,11,.07);color:#8c3410;border-radius:999px;
+  min-width:22px;height:19px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px;
+}
+
+/* ---------- Panel ---------- */
+.bpitem{min-height:44px;align-items:center;padding:8px 0}
+.bpitem span{color:rgba(10,15,11,.68)}
+.bpitem.on,.bpitem.on span{color:#8c3410}
+.bpclose{
+  min-height:44px;display:inline-flex;align-items:center;padding:0 2px;
+  font-size:12px;font-weight:600;letter-spacing:.02em;text-transform:none;color:rgba(10,15,11,.68);
+}
+.bpclose:hover{color:#8c3410}
+.bpmeta{
+  flex:0 0 auto;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(10,15,11,.68);
+}
+.bpsearch svg{stroke:rgba(10,15,11,.55)}
+
+/* ---------- Kategorie-Chips ---------- */
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;color:rgba(10,15,11,.8)}
+.chip.on{color:var(--cream)}
+.shopbar .sort{color:rgba(10,15,11,.68)}
+
+/* ---------- Statuszeile ---------- */
+.fstatus{color:rgba(10,15,11,.68);min-height:40px}
+.fpill{height:40px;padding:0 0 0 14px;font-size:12px}
+.fpill button{
+  width:40px;height:40px;display:grid;place-items:center;font-size:16px;
+  color:rgba(10,15,11,.62);border-radius:999px;
+}
+.fpill button:hover{color:#8c3410;background:rgba(10,15,11,.05)}
+.freset{color:#8c3410;min-height:40px;display:inline-flex;align-items:center;font-size:11.5px}
+/* display:inline-flex wuerde sonst [hidden] aushebeln — der Reset-Button blieb nach dem Reset stehen */
+.freset[hidden]{display:none}
+.freset:hover{border-color:#8c3410}
+
+/* ---------- Sidebar ---------- */
+.filters label{min-height:40px;padding:0;color:rgba(10,15,11,.82)}
+.filters .cnt{color:rgba(10,15,11,.68)}
+.marklink{min-height:44px}
+.marklink:hover{color:#8c3410;border-color:var(--accent)}
+.marketnote{color:rgba(10,15,11,.78)}
+
+/* ---------- Karten ---------- */
+.brandline{color:rgba(10,15,11,.68)}
+.card .add{min-height:44px}
+.card .add[disabled]{border-color:var(--line);color:rgba(10,15,11,.5);background:none;cursor:not-allowed}
+.card.is-out .ph img{opacity:.72}
+
+/* ---------- Leerzustand ---------- */
+.bbempty{color:rgba(10,15,11,.68)}
+.bbempty button{min-height:44px;display:inline-flex;align-items:center;border-radius:999px;padding:0 20px}
+
+/* ---------- Fokus ---------- */
+.brandtab:focus-visible,.bbmore:focus-visible,.bpitem:focus-visible,.bpclose:focus-visible,
+.chip:focus-visible,.fpill button:focus-visible,.freset:focus-visible,.marklink:focus-visible,
+.card .add:focus-visible,.bbempty button:focus-visible{
+  outline:2px solid #8c3410;outline-offset:4px;border-radius:999px;
+}
+.bbstrip .brandtab:focus-visible{outline-offset:-2px}
+
+/* ---------- Mobil ---------- */
+@media (max-width:720px){
+  .brandtab{font-size:11.5px;letter-spacing:.06em}
+  .chip{min-height:44px;padding:0 16px;font-size:11.5px}
+  .bbmore{font-size:11.5px;padding-left:12px}
+  .bpmeta{display:none}
+  .fstatus{min-height:0}
+}

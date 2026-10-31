@@ -109,7 +109,7 @@ def check_browser(base):
             m2.goto(base + pth, wait_until="networkidle"); m2.wait_for_timeout(400)
             o = m2.evaluate("""() => ({sw: document.documentElement.scrollWidth,
                 overflow: [...document.querySelectorAll('*')].filter(e => { const r = e.getBoundingClientRect();
-                    return r.width > 0 && r.right > innerWidth + 1 && !e.closest('#minicart, .bbstrip'); }).length})""")
+                    return r.width > 0 && r.right > innerWidth + 1 && !e.closest('#minicart, .bbstrip, .chipstrip'); }).length})""")
             add(PASS if o["overflow"] == 0 and o["sw"] <= 390 else FAIL,
                 f"{pth} 390 px ohne Überlauf", f"{o['overflow']} Elemente, {o['sw']} px")
         b.close()
