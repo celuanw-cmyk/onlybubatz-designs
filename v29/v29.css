@@ -159,7 +159,7 @@ h1 em{font-style:normal;color:var(--rust);display:block}
   animation:drift 30s ease-in-out infinite alternate;
   will-change:transform;
 }
-.stage::after{
+body.hero-cutout .stage::after{
   content:"";position:absolute;inset:0;pointer-events:none;
   background:
     linear-gradient(96deg, rgba(10,36,22,.55) 0%, rgba(10,36,22,.10) 34%, rgba(10,36,22,0) 60%),
