@@ -132,8 +132,8 @@ nav.main a.deals{color:var(--accent)}
 .deal .timer b{display:block;font-family:var(--mono);font-size:18px}
 .deal .timer span{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
 .deal .ph{padding:44px;display:flex;align-items:center;justify-content:center}
-.deal .dealtile{background:var(--paper);border-radius:22px;padding:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.deal .ph img{width:100%;max-width:380px;object-fit:contain}
+.deal .dealtile{background:transparent;border-radius:0;padding:0;box-shadow:none}
+.deal .ph img{width:100%;max-width:460px;object-fit:contain}
 
 /* ---------- Produktkarten ---------- */
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
