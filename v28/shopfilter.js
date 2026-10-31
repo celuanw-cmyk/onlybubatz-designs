@@ -51,7 +51,20 @@
 
     // Zähler + Leerzustand
     if (count) count.textContent = shown;
-    if (empty) empty.hidden = shown !== 0;
+    if (empty) {
+      empty.hidden = shown !== 0;
+      /* v28: zwei Leerfaelle — Marke allein nennt die Katalogzahl, Kombination nennt die Kombination */
+      if (!shown) {
+        var akt = document.querySelector('.brandtab[data-brand="' + CSS.escape(state.brand || '') + '"]');
+        var bcnt = akt ? parseInt(akt.dataset.count || '0', 10) : 0;
+        var nurMarke = state.brand && !state.cat && p >= PMAX;
+        var kombi = [state.brand, state.cat].filter(Boolean).join(' + ');
+        empty.querySelector('b').textContent = nurMarke ? 'Keine ' + state.brand + '-Artikel in dieser Vorschau' : 'Keine Treffer';
+        empty.querySelector('p').textContent = nurMarke
+          ? 'Im Sortiment sind ' + bcnt + '.'
+          : kombi + ' gibt es in dieser Vorschau nicht.' + (state.brand && bcnt ? ' Im Sortiment sind ' + bcnt + ' ' + state.brand + '-Artikel.' : '');
+      }
+    }
 
     // Marken-Tabs / Panel
     tabs.forEach(t => t.classList.toggle('on', key(t.dataset.brand) === b));
