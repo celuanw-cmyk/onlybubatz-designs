@@ -1,0 +1,142 @@
+/* Only Bubatz · v28 — Marken-Leiste (2. Reiter unter der Navbar, nur Shop)
+   Aenderungen gegen v27, alle gemessen:
+   Tabs 9 statt 43 (Top 8 nach Katalogzahl + "Alle"), Kontrast >= 4.5:1,
+   Touchziele >= 44px, Zaehler-Badge, Fokusring, "MARKE"-Label entfernt.      */
+
+.brandbar{
+  position:sticky;top:var(--hdr,76px);z-index:55;
+  background:rgba(244,240,228,.97);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);
+  backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .25s ease;
+}
+.brandbar.scrolled{box-shadow:0 14px 26px -22px rgba(10,15,11,.55)}
+.bbinner{display:flex;align-items:center;gap:18px;height:52px}
+
+.bbstrip{
+  display:flex;align-items:stretch;gap:26px;flex:1 1 auto;min-width:0;
+  height:52px;overflow-x:auto;overflow-y:hidden;
+  scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 30px),transparent 100%);
+  mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 30px),transparent 100%);
+}
+.bbstrip::-webkit-scrollbar{display:none}
+
+.brandtab{
+  position:relative;flex:0 0 auto;display:inline-flex;align-items:center;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(10,15,11,.68);white-space:nowrap;padding:0 1px;
+  transition:color .18s ease;
+}
+.brandtab::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left center;transition:transform .24s cubic-bezier(.2,.7,.3,1);
+}
+.brandtab:hover{color:var(--ink)}
+.brandtab:hover::after{transform:scaleX(.55)}
+.brandtab.on{color:var(--ink)}
+.brandtab.on::after{transform:scaleX(1)}
+
+.bbmore{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:9px;
+  background:none;border:0;padding:0 0 0 18px;border-left:1px solid var(--line);
+  min-height:44px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);transition:color .18s ease;
+}
+.bbcount{
+  font-family:var(--mono);font-style:normal;font-size:10px;font-weight:700;letter-spacing:.02em;
+  background:rgba(10,15,11,.07);color:#8c3410;border-radius:999px;
+  min-width:22px;height:19px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px;
+}
+.bbmore .lbl-m{display:none}
+.bbmore svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.2;
+  transition:transform .24s ease}
+.bbmore:hover{color:#8c3410}
+.bbmore[aria-expanded="true"] svg{transform:rotate(180deg)}
+
+.brandtab:focus-visible,.bbmore:focus-visible,.bpitem:focus-visible,.bpclose:focus-visible,
+.bbactive button:focus-visible,.bbempty button:focus-visible{
+  outline:2px solid #8c3410;outline-offset:5px;border-radius:6px;
+}
+
+/* ---------- Panel "Alle Marken" ---------- */
+.brandpanel{
+  position:absolute;left:0;right:0;top:100%;z-index:54;
+  background:var(--paper);border-bottom:1px solid var(--line);
+  box-shadow:0 40px 70px -50px rgba(10,15,11,.6);
+  max-height:calc(100vh - var(--hdr,76px) - 52px);overflow:auto;
+  opacity:0;transform:translateY(-10px);pointer-events:none;
+  transition:opacity .22s ease,transform .26s cubic-bezier(.2,.7,.3,1);
+}
+.brandpanel.open{opacity:1;transform:none;pointer-events:auto}
+.bpinner{padding-top:22px;padding-bottom:30px}
+.bphead{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.bpsearch{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:10px;
+  border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:0 14px;height:44px}
+.bpsearch svg{width:16px;height:16px;stroke:rgba(10,15,11,.5);fill:none;stroke-width:1.8;flex:0 0 auto}
+.bpsearch input{border:0;outline:0;background:none;font:inherit;font-size:14px;width:100%;min-width:0;color:var(--ink)}
+.bpmeta{flex:0 0 auto;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(10,15,11,.68)}
+.bpclose{flex:0 0 auto;white-space:nowrap;background:none;border:0;min-height:44px;
+  display:inline-flex;align-items:center;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(10,15,11,.68);padding:0 2px}
+.bpclose:hover{color:#8c3410}
+.bpgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 26px}
+.bpitem{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:none;border:0;border-bottom:1px solid var(--line-soft);
+  min-height:44px;padding:10px 0;text-align:left;font-size:13.5px;font-weight:500;
+  color:rgba(10,15,11,.8);transition:color .16s ease,border-color .16s ease;
+}
+.bpitem span{font-family:var(--mono);font-size:10.5px;color:rgba(10,15,11,.68)}
+.bpitem:hover{color:#8c3410;border-color:var(--accent)}
+.bpitem.on{color:#8c3410;font-weight:700}
+.bpitem.on span{color:#8c3410}
+.bpitem.hide{display:none}
+.bpempty{font-size:13px;color:rgba(10,15,11,.68);padding:14px 0}
+
+/* ---------- Aktiver Filter + Leerzustand ---------- */
+.bbactive{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  margin:0 0 18px;font-size:13px;color:rgba(10,15,11,.7);
+}
+.bbactive b{color:var(--ink);font-weight:700}
+.bbactive button{background:none;border:0;padding:0;min-height:44px;display:inline-flex;align-items:center;
+  color:#8c3410;font-size:13px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.bbempty{
+  border:1px dashed var(--line);border-radius:12px;padding:34px 26px;
+  text-align:center;color:rgba(10,15,11,.7);font-size:14px;line-height:1.6;
+}
+.bbempty b{display:block;font-family:var(--display,Anton,sans-serif);font-size:22px;
+  text-transform:uppercase;color:var(--ink);margin-bottom:6px;letter-spacing:.02em}
+.bbempty button{margin-top:14px;background:var(--ink);color:var(--cream);border:0;
+  border-radius:999px;padding:13px 20px;min-height:44px;font-size:12px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase}
+
+/* Markenname auf der Karte: 10,5px, war .45 = 3,1:1 -> .68 = 5,5:1 */
+.brandline{color:rgba(10,15,11,.68)}
+
+@media (max-width:1080px){
+  .bpgrid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:720px){
+  .bbinner{gap:12px;height:48px}
+  .bbstrip{height:48px;gap:18px;
+    -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 22px),transparent 100%);
+    mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 22px),transparent 100%)}
+  .brandtab{font-size:11.5px;letter-spacing:.06em}
+  .bbmore{font-size:11.5px;padding-left:12px}
+  .bbmore .lbl{display:none}
+  .bbmore .lbl-m{display:inline}
+  .bpmeta{display:none}
+  .brandpanel{max-height:calc(100vh - var(--hdr,76px) - 48px)}
+  .bpgrid{grid-template-columns:1fr 1fr;gap:0 16px}
+  .bpinner{padding-top:16px;padding-bottom:26px}
+}
+
+/* ---------- Kartendetails der Vorschau (Touchziel + Ausverkauft-Zustand) ---------- */
+.card .add{min-height:44px}
+.card .add[disabled]{border-color:var(--line);color:rgba(10,15,11,.5);background:none;cursor:not-allowed}
+.card.is-out .ph img{opacity:.72}
+.card .stock{margin-top:0}
