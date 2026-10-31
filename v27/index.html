@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fix.css">
 </head>
 <body>
 <div class="previewflag">VORSCHAU v27 (kein Live-Shop) · <b>Bewertungen, Texte und Bestände sind Platzhalter</b> · <a href="index.html" style="color:#1fe9ab">Home</a> · <a href="shop.html" style="color:#1fe9ab">Shop</a> · <a href="produkt.html" style="color:#1fe9ab">Produktseite</a></div>
@@ -128,7 +129,7 @@
     <a class="link-quiet" href="shop.html">Alle 417 Produkte</a>
   </div>
   <div class="pgrid">
-      <article class="card">
+      <article class="card" data-stock="46" data-price="9.99" data-type="Only Bubatz" data-reviews="0">
         <div class="ph">
           <span class='badge'>Bestseller</span>
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -143,7 +144,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="2" data-price="14.95" data-type="Bong" data-reviews="0">
         <div class="ph">
           <span class='badge dark'>Neu</span>
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -158,7 +159,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="6" data-price="21.99" data-type="Grinder" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -168,12 +169,12 @@
           <div class="brandline">RAW</div>
           <h3>RAW x Hammercraft Aluminium Grinder/Pollinator, 4-part, ø 62mm, L  schwarz</h3>
           <div class="rate"><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><span>4,8 (96)</span></div>
-          <div class="pricerow"><b>24,99 €</b></div>
+          <div class="pricerow"><b>21,99 €</b><s>24,99 €</s><span class='off'>-12%</span></div>
           <div class="stock"><i class="dot"></i>Auf Lager</div>
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="3" data-price="13.99" data-type="Stash" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -183,12 +184,12 @@
           <div class="brandline">WOODOO</div>
           <h3>Woodoo luftdichte Edelstahl Vorratsdose 0,7l</h3>
           <div class="rate"><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><span>4,6 (233)</span></div>
-          <div class="pricerow"><b>12,49 €</b></div>
+          <div class="pricerow"><b>13,99 €</b></div>
           <div class="stock"><i class="dot"></i>Auf Lager</div>
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="22" data-price="6.95" data-type="Filter &amp; Tips" data-reviews="0">
         <div class="ph">
           <span class='badge'>-18%</span>
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -198,12 +199,12 @@
           <div class="brandline">PURIZE</div>
           <h3>PURIZE X Tyson 2.0 XTRA Slim Size Aktivkohlefilter 33er Beutel</h3>
           <div class="rate"><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><span>4,9 (74)</span></div>
-          <div class="pricerow"><b>6,95 €</b><s>8,20 €</s><span class='off'>-15%</span></div>
+          <div class="pricerow"><b>6,95 €</b></div>
           <div class="stock"><i class="dot low"></i>Nur noch 3 Stück</div>
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="10" data-price="39.95" data-type="Feuerzeuge" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -218,7 +219,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="47" data-price="1.29" data-type="Smoking" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -228,12 +229,12 @@
           <div class="brandline">SMOKING</div>
           <h3>Smoking Red King Size Zigarettenpapier</h3>
           <div class="rate"><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><span>4,5 (620)</span></div>
-          <div class="pricerow"><b>1,25 €</b></div>
+          <div class="pricerow"><b>1,29 €</b></div>
           <div class="stock"><i class="dot"></i>Auf Lager</div>
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="23" data-price="7.99" data-type="Stash" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -298,4 +299,10 @@
   </div>
   <div class="legal"><span>© 2026 Only Bubatz — Verkauf nur an Personen ab 18 Jahren.</span><span>Impressum · Datenschutz · AGB · Widerruf</span></div>
 </div></footer>
+<div id="minicart" role="dialog" aria-modal="true" aria-label="Warenkorb">
+  <div class="mc-head"><b>Warenkorb</b><button data-close aria-label="Schliessen">&times;</button></div>
+  <div id="mcBody"></div>
+  <div id="mcFoot"></div>
+</div>
+<script src="app.js" defer></script>
 </body></html>

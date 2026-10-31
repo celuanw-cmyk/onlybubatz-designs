@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fix.css">
 </head>
 <body>
 <div class="previewflag">VORSCHAU v27 (kein Live-Shop) · <b>Bewertungen, Texte und Bestände sind Platzhalter</b> · <a href="index.html" style="color:#1fe9ab">Home</a> · <a href="shop.html" style="color:#1fe9ab">Shop</a> · <a href="produkt.html" style="color:#1fe9ab">Produktseite</a></div>
@@ -101,7 +102,7 @@
     <div class="sechead"><div><div class="eyebrow">Passt dazu</div><h2>Wird oft zusammen gekauft</h2></div>
       <a class="link-quiet" href="shop.html">Alles fürs Drehen</a></div>
     <div class="pgrid">
-      <article class="card">
+      <article class="card" data-stock="6" data-price="21.99" data-type="Grinder" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -111,12 +112,12 @@
           <div class="brandline">RAW</div>
           <h3>RAW x Hammercraft Aluminium Grinder/Pollinator, 4-part, ø 62mm, L  schwarz</h3>
           <div class="rate"><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><span>4,9 (412)</span></div>
-          <div class="pricerow"><b>24,99 €</b></div>
+          <div class="pricerow"><b>21,99 €</b><s>24,99 €</s><span class='off'>-12%</span></div>
           <div class="stock"><i class="dot"></i>Auf Lager</div>
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="9" data-price="5.95" data-type="Filter &amp; Tips" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -131,7 +132,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="28" data-price="3.49" data-type="Stash" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -146,7 +147,7 @@
           <button class="add">In den Warenkorb</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-stock="2" data-price="8.99" data-type="Tightvac" data-reviews="0">
         <div class="ph">
           
           <button class="wish" aria-label="Merken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg></button>
@@ -195,4 +196,10 @@
   </div>
   <div class="legal"><span>© 2026 Only Bubatz — Verkauf nur an Personen ab 18 Jahren.</span><span>Impressum · Datenschutz · AGB · Widerruf</span></div>
 </div></footer>
+<div id="minicart" role="dialog" aria-modal="true" aria-label="Warenkorb">
+  <div class="mc-head"><b>Warenkorb</b><button data-close aria-label="Schliessen">&times;</button></div>
+  <div id="mcBody"></div>
+  <div id="mcFoot"></div>
+</div>
+<script src="app.js" defer></script>
 </body></html>

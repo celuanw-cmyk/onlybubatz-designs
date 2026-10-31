@@ -1,0 +1,222 @@
+{
+ "V-Syndicate Card - Metall-Grinderkarte 420 LEAVES": {
+  "handle": "v-gri-049-grinder-card-metall-420-leaves",
+  "type": "Grinder",
+  "price": 6.9,
+  "compareAt": null,
+  "stock": 18,
+  "available": true,
+  "v27_price": "6,90",
+  "v27_old": null
+ },
+ "V-Syndicate Card - Metall-Grinderkarte Amsterdam Leaf": {
+  "handle": "v-gri-003-grinder-card-metall",
+  "type": "Grinder",
+  "price": 6.9,
+  "compareAt": null,
+  "stock": 8,
+  "available": true,
+  "v27_price": "6,90",
+  "v27_old": null
+ },
+ "RAW V-Shredder Card - Metall-Grinderkarte": {
+  "handle": "raw-v-shredder-card-metall-grinderkarte",
+  "type": "Grinder",
+  "price": 9.49,
+  "compareAt": null,
+  "stock": 3,
+  "available": true,
+  "v27_price": "9,49",
+  "v27_old": null
+ },
+ "RAW x Hammercraft Aluminium Grinder/Pollinator, 4-part, ø 62mm, L schwarz": {
+  "handle": "raw-x-hammercraft-aluminium-grinder-pollinator-4-part-o-55mm-m-schwarz",
+  "type": "Grinder",
+  "price": 21.99,
+  "compareAt": 24.99,
+  "stock": 6,
+  "available": true,
+  "v27_price": "24,99",
+  "v27_old": "29,99"
+ },
+ "RAW x Hammercraft Aluminium Grinder/Pollinator, 4-part, ø 55mm, M schwarz": {
+  "handle": "raw-x-hammercraft-aluminium-grinder-pollinator-4-part-o-55mm-m-schwarz",
+  "type": "Grinder",
+  "price": 21.99,
+  "compareAt": 24.99,
+  "stock": 6,
+  "available": true,
+  "v27_price": "21,99",
+  "v27_old": null
+ },
+ "RAW CNC Aluminium Mühle/Grinder Polinator": {
+  "handle": "raw-cnc-aluminium-muhle-grinder-polinator",
+  "type": "Grinder",
+  "price": 19.9,
+  "compareAt": null,
+  "stock": 8,
+  "available": true,
+  "v27_price": "19,90",
+  "v27_old": null
+ },
+ "Only Bubatz CNC Aluminium Mühle / Grinder 4-teilig": {
+  "handle": "faro-grinder-handgranate-metall-camouflage",
+  "type": "Only Bubatz",
+  "price": 9.99,
+  "compareAt": null,
+  "stock": 46,
+  "available": true,
+  "v27_price": "9,99",
+  "v27_old": null
+ },
+ "OCB Premium Purpfeife mit Filteradapter": {
+  "handle": "ocb-premium-purpfeife-mit-filteradapter",
+  "type": "Purpfeifen",
+  "price": 44.9,
+  "compareAt": null,
+  "stock": 10,
+  "available": true,
+  "v27_price": "44,90",
+  "v27_old": null
+ },
+ "Acryl Mini Bong Straight &quot;Rastaman&quot;": {
+  "handle": "acryl-mini-bong-straight-rastaman",
+  "type": "Bong",
+  "price": 3.95,
+  "compareAt": null,
+  "stock": 10,
+  "available": true,
+  "v27_price": "3,95",
+  "v27_old": null
+ },
+ "Acryl Mini Bong Bubble Straight &#x27;&#x27; LEAF&#x27;&#x27;": {
+  "handle": "acryl-mini-bong-bubble-straight-leaf",
+  "type": "Bong",
+  "price": 9.95,
+  "compareAt": null,
+  "stock": 10,
+  "available": true,
+  "v27_price": "9,95",
+  "v27_old": null
+ },
+ "Rosenholz Pfeife, XL 28cm": {
+  "handle": "rosenholz-pfeife-xl-28cm",
+  "type": "Purpfeifen",
+  "price": 14.95,
+  "compareAt": null,
+  "stock": 2,
+  "available": true,
+  "v27_price": "14,95",
+  "v27_old": null
+ },
+ "Acryl Bong Joystick Hand Grip - &quot;Leaf Design&quot;": {
+  "handle": "acryl-bong-joystick-hand-grip-leaf-design",
+  "type": "Bong",
+  "price": 14.95,
+  "compareAt": null,
+  "stock": 2,
+  "available": true,
+  "v27_price": "14,95",
+  "v27_old": null
+ },
+ "Glas-Bong Beaker Kolbenbong, ca. 25cm, &quot;Dollar&quot;": {
+  "handle": "glas-bong-beaker-kolbenbong-ca-25cm-dollar",
+  "type": "Bong",
+  "price": 19.95,
+  "compareAt": null,
+  "stock": 2,
+  "available": true,
+  "v27_price": "19,95",
+  "v27_old": null
+ },
+ "Smoking THINNEST (rot) King Size Zigarettenpapier": {
+  "handle": "smoking-thinnest-rot-king-size-zigarettenpapier",
+  "type": "Blättchen",
+  "price": 1.25,
+  "compareAt": null,
+  "stock": 50,
+  "available": true,
+  "v27_price": "1,25",
+  "v27_old": null
+ },
+ "Smoking Red King Size Zigarettenpapier": {
+  "handle": "smo-red-ks-paper-108x37mm-50er",
+  "type": "Smoking",
+  "price": 1.29,
+  "compareAt": null,
+  "stock": 47,
+  "available": true,
+  "v27_price": "1,25",
+  "v27_old": null
+ },
+ "Woodoo luftdichte Edelstahl Vorratsdose 0,7l": {
+  "handle": "stash-162-woodoo-luftdichte-edelstahl-vorratsdose",
+  "type": "Stash",
+  "price": 13.99,
+  "compareAt": null,
+  "stock": 3,
+  "available": true,
+  "v27_price": "12,49",
+  "v27_old": null
+ },
+ "PURIZE X Tyson 2.0 XTRA Slim Size Aktivkohlefilter 33er": {
+  "handle": "x-tyson-2-0-xtra-slim-5-9-mm-filter-33er-onlybubatz",
+  "type": "Filter & Tips",
+  "price": 6.95,
+  "compareAt": null,
+  "stock": 22,
+  "available": true,
+  "v27_price": "6,95",
+  "v27_old": null
+ },
+ "ZIPPO Feuerzeug, &quot;Elements Pink&quot;": {
+  "handle": "zippo-feuerzeug-elements-pink",
+  "type": "Feuerzeuge",
+  "price": 39.95,
+  "compareAt": null,
+  "stock": 10,
+  "available": true,
+  "v27_price": "39,95",
+  "v27_old": null
+ },
+ "Hemp Metallmühle mit Aufbewahrungsglas": {
+  "handle": "gri-132-metall-muhle-grinder-aufbewarungsglas-60mm-h",
+  "type": "Stash",
+  "price": 7.99,
+  "compareAt": null,
+  "stock": 23,
+  "available": true,
+  "v27_price": "7,99",
+  "v27_old": null
+ },
+ "SMOKING Active Filters Aktivkohlefilter Slim ø6mm 300 Stück": {
+  "handle": "smo-tip-08-active-filters-aktivkohlefilter-l-27mm-6m",
+  "type": "Filter & Tips",
+  "price": 5.95,
+  "compareAt": null,
+  "stock": 9,
+  "available": true,
+  "v27_price": "5,95",
+  "v27_old": null
+ },
+ "RAW - King Size Paper Tin - Metall Dose": {
+  "handle": "raw-king-size-paper-tin-metall-dose",
+  "type": "Stash",
+  "price": 3.49,
+  "compareAt": null,
+  "stock": 28,
+  "available": true,
+  "v27_price": "3,49",
+  "v27_old": null
+ },
+ "Tightvac Vakuum Kunstoffbehälter 0,29 Liter": {
+  "handle": "t-vac-062-eco-tightpac-vakuum-kunstoffbehalter-0-29-",
+  "type": "Tightvac",
+  "price": 8.99,
+  "compareAt": null,
+  "stock": 2,
+  "available": true,
+  "v27_price": "8,99",
+  "v27_old": null
+ }
+}

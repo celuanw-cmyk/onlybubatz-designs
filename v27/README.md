@@ -53,3 +53,24 @@ Umsetzung in Hydrogen (Live-Shop) bzw. Theme — Reihenfolge nach Wirkung:
 2. Produktseite: Kaufbox nach oben
 3. Karten + Grid auf v27-Layout
 4. Reviews-App + Cross-Sell
+
+## v27 — Interaktionsschicht (dev)
+
+Drei Dateien, die `index.html`, `shop.html` und `produkt.html` erweitern:
+
+| Datei | Zweck |
+|---|---|
+| `app.js` | Warenkorb (localStorage), Quick-Add, Benachrichtigen, Filter, Varianten, Accordion, Liefer-Cutoff |
+| `fix.css` | Radien (12/10/999), 44-px-Klickziele, Ausverkauft-Zustand, Mini-Warenkorb, Mobil-Grid |
+| `stock.json` | Echte Katalogdaten je Karte: `price`, `compareAt` (nur mit Guard `> price × 1.05`), `stock`, `available` |
+
+**Keine Zahl im JS.** `_apply.py` schreibt `data-stock`, `data-price`, `data-type` aus `stock.json`
+in die Karten und ersetzt jede Preiszeile. Quelle der Daten ist die Shopify Admin API
+(`productByHandle` → `variants { price compareAtPrice inventoryQuantity availableForSale }`).
+
+```
+python _apply.py       # Karten mit Daten versorgen, CSS/JS verdrahten (idempotent)
+python _check390.py    # Regressionstest bei 390 px: Überlauf, Klickziele, Quick-Add
+```
+
+Versand-Regel im Mini-Warenkorb: **ab 49 € frei, sonst 7,49 €** (Verbindliche Policy, nicht 6,90 €).
