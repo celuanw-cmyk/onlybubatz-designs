@@ -28,7 +28,16 @@ th{font:400 10.5px/1.3 ui-monospace,monospace;letter-spacing:.1em;text-transform
 td.p{font-variant-numeric:tabular-nums;white-space:nowrap}
 tr.never td{color:rgba(43,33,20,.62)}
 .m{font:400 10.5px/1.2 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--rust)}
-@media(max-width:720px){td.hide,th.hide{display:none}}
+td .meta{display:none}
+@media(max-width:720px){
+  td.hide,th.hide{display:none}
+  td .meta{display:block;font:400 11.5px/1.35 ui-monospace,monospace;letter-spacing:.03em;color:rgba(43,33,20,.62);margin-top:3px}
+  th,td{padding:9px 8px}
+  table{table-layout:fixed;width:100%}
+  th:nth-child(1),td:nth-child(1){width:74px}
+  th:nth-child(6),td:nth-child(6){width:86px;text-align:right}
+  .m{overflow-wrap:anywhere}
+}
 </style>
 </head>
 <body>
@@ -46,7 +55,7 @@ tr.never td{color:rgba(43,33,20,.62)}
     <a class="dl" href="ausverkauft-shopify-2026-10-31.csv" download>CSV herunterladen</a>
   </div>
   <table>
-    <thead><tr><th>Marke</th><th>Titel</th><th class="hide">SKU</th><th>Preis</th><th>Bestand</th><th>Letzter Verkauf 2026</th></tr></thead>
+    <thead><tr><th>Marke</th><th>Titel</th><th class="hide">SKU</th><th class="hide">Preis</th><th class="hide">Bestand</th><th>Verkauf 2026</th></tr></thead>
     <tbody id="rows"></tbody>
   </table>
   <p class="lead" style="margin-top:18px;font-size:13px">Die zwei „echt leergekauften": OMURA Complete Set X1 Jade (zuletzt 04.09., 6 Stück) und Purize Aktivkohletasche Bauchtasche (24.09., 1 Stück) — die gehören nachbestellt. Die übrigen 220 hatten 2026 keinen einzigen Verkauf: Bestand/Preis prüfen oder archivieren, nicht ausgrauen.</p>
@@ -59,8 +68,8 @@ fetch("ausverkauft-shopify-2026-10-31.json").then(r=>r.json()).then(rows=>{
 }).catch(()=>{document.getElementById("rows").innerHTML="<tr><td colspan='6'>Liste konnte nicht geladen werden.</td></tr>";});
 function render(rows){
   document.getElementById("rows").innerHTML = rows.map(r=>`<tr class="${r.letzter_verkauf_2026==="nie"?"never":""}">
-    <td class="m">${esc(r.marke)}</td><td>${esc(r.titel)}</td><td class="hide m">${esc(r.sku)}</td>
-    <td class="p">${esc(String(r.preis_eur).replace(".",","))} €</td><td class="p">${esc(r.bestand)}</td>
+    <td class="m">${esc(r.marke)}</td><td><span>${esc(r.titel)}</span><span class="meta">${esc(String(r.preis_eur).replace(".",","))} € · Bestand ${esc(r.bestand)}${r.sku?" · "+esc(r.sku):""}</span></td><td class="hide m">${esc(r.sku)}</td>
+    <td class="hide p">${esc(String(r.preis_eur).replace(".",","))} €</td><td class="hide p">${esc(r.bestand)}</td>
     <td class="p">${r.letzter_verkauf_2026==="nie"?"<span class='m'>nie</span>":esc(r.letzter_verkauf_2026)}</td></tr>`).join("");
 }
 document.getElementById("q").addEventListener("input",e=>{
